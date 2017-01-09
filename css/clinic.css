@@ -60,3 +60,36 @@ body,html {
     border-color: rgba(34,34,34,.05);
     transition: all .35s;
 }
+
+@media (min-width: 768px) {
+        /* ============================================= */
+    /* =============GLOBAL STYLES=================== */
+    /* ============================================= */
+    header  {
+        min-height: 100%;
+    }
+    /* ============================================= */
+    /* =============NAVIGATION====================== */
+    /* ============================================= */
+    .navbar-default.affix {
+        background-color: #fff;
+        border-color: rgba(34,34,34,.05);
+    }
+    .navbar-default.affix .navbar-header .navbar-brand {
+        color: #a185ae;
+        font-size: 17px;
+    }
+    .navbar-default {
+        background-color: rgba(255,255,255,.5);
+    }
+    .navbar .navbar-header {
+        float: left;
+    }
+    .navbar #collapseNavbar {
+        float: right;
+    }
+    .navbar-default .nav > li > a.active, 
+    .navbar-default .nav > li > a:focus {
+        color: #a185ae !important;
+    }
+}
