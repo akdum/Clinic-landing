@@ -1,0 +1,48 @@
+/*
+Made by Ivan Steblenko 01/09/17.
+
+Content:
+Global Styles
+Navigation
+Header
+Text Styles
+Page Structure
+Headings
+Forms
+Comments
+Extras
+*/
+/* ============================================= */
+/* =============GLOBAL STYLES=================== */
+/* ============================================= */
+* {
+    margin: 0;
+    padding: 0;
+}
+body,html {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+/* ============================================= */
+/* =============NAVIGATION====================== */
+/* ============================================= */
+.navbar .container-fluid {
+    padding: 0;
+}
+.navbar .navbar-header .navbar-brand {
+    color: rgba(0,0,0,.5);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.navbar .navbar-header .navbar-brand img {
+    height: 5rem;
+}
+.navbar-light .navbar-nav .nav-link {
+    text-transform: uppercase;
+}
+.navbar-default {
+    background-color: #fff;
+    border-color: rgba(34,34,34,.05);
+    transition: all .35s;
+}
