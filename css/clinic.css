@@ -30,6 +30,9 @@ body,html {
 .navbar .container-fluid {
     padding: 0;
 }
+.navbar .navbar-header {
+    height: 100px;
+}
 .navbar .navbar-header .navbar-brand {
     color:rgb(89, 119, 164);
     white-space: nowrap;
@@ -38,19 +41,27 @@ body,html {
     height: 5rem;
     float: left;
     margin-right: 1rem;
+    position: relative;
+    top: 5px;
 }
-.navbar .navbar-header .navbar-brand .clinic-academy {
-    font-family: "Exo 2";
+.navbar .navbar-header .navbar-brand .clinic-logo-title {
+    
+}
+.navbar .navbar-header .navbar-brand .clinic-logo-title .clinic-academy {
+    font-family: 'Exo 2', sans-serif;
     font-weight: 400;
     font-size: 1rem;    
     height: 1.5rem;
     line-height: 1.5rem;
 }
-.navbar .navbar-header .navbar-brand .clinic-title {
-    font-size: 1.5rem;
+.navbar .navbar-header .navbar-brand .clinic-logo-title .clinic-title {
+    font-size: 2rem;
     height: 3.5rem;
     line-height: 2rem;
-    font-weight: 500;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    width: 600px;
+    white-space: normal;
 }
 .navbar-light .navbar-nav .nav-link {
     text-transform: uppercase;
