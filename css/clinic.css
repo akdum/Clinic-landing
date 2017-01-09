@@ -31,12 +31,26 @@ body,html {
     padding: 0;
 }
 .navbar .navbar-header .navbar-brand {
-    color: rgba(0,0,0,.5);
-    font-weight: 700;
-    text-transform: uppercase;
+    color:rgb(89, 119, 164);
+    white-space: nowrap;
 }
 .navbar .navbar-header .navbar-brand img {
     height: 5rem;
+    float: left;
+    margin-right: 1rem;
+}
+.navbar .navbar-header .navbar-brand .clinic-academy {
+    font-family: "Exo 2";
+    font-weight: 400;
+    font-size: 1rem;    
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+.navbar .navbar-header .navbar-brand .clinic-title {
+    font-size: 1.5rem;
+    height: 3.5rem;
+    line-height: 2rem;
+    font-weight: 500;
 }
 .navbar-light .navbar-nav .nav-link {
     text-transform: uppercase;
