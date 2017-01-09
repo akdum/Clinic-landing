@@ -23,6 +23,86 @@ body,html {
     height: 100%;
     width: 100%;
     font-size: 16px;
+    color: #777;
+}
+a {
+    transition: all .35s;
+    color: #a185ae;
+}
+hr {
+    border-width: 0;
+    margin: 50px 0;
+}
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 30px;
+}
+p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+header {
+    height: 650px;
+    background-size: cover;
+    background-position: center top;
+    background:  linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/header.jpg");
+    color: #fff;
+    position: relative;
+    width: 100%;
+    text-align: center
+}
+section {
+    padding: 100px 0;
+}
+.btn {
+    border: none;
+    border-radius: 300px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #a185ae;
+    border-color: #a185ae;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover{
+    color: #fff;
+    background-color: #a185ae;
+    border-color: #a185ae;
+}
+.btn-default {
+    color: #222;
+    background-color: #fff;
+    border-color: #fff;
+    transition: all .35s;
+}
+.btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover {
+    color: #222;
+    background-color: #fff;
+    border-color: #fff;
+}
+.no-gutter>[class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+}
+.no-padding {
+    padding: 0;
+}
+[class*="col-"] {
+    margin-bottom: 30px;
+}
+[class*="col-"]:last-of-type {
+    margin-bottom: 0px;
+}
+.hidden-column {
+    visibility: hidden;
+    height: 0;
 }
 /* ============================================= */
 /* =============NAVIGATION====================== */
@@ -33,8 +113,7 @@ body,html {
 .navbar .navbar-header {
     height: 100px;
 }
-.navbar .navbar-header .navbar-brand {
-    color:rgb(89, 119, 164);
+.navbar .navbar-header .navbar-brand {    
     white-space: nowrap;
 }
 .navbar .navbar-header .navbar-brand img {
@@ -53,6 +132,7 @@ body,html {
     font-size: 1rem;    
     height: 1.5rem;
     line-height: 1.5rem;
+    color: #777;
 }
 .navbar .navbar-header .navbar-brand .clinic-logo-title .clinic-title {
     font-size: 2rem;
@@ -62,6 +142,7 @@ body,html {
     font-family: 'Roboto', sans-serif;
     width: 600px;
     white-space: normal;
+    color: rgb(30, 128, 185);
 }
 .navbar-light .navbar-nav .nav-link {
     text-transform: uppercase;
@@ -71,14 +152,28 @@ body,html {
     border-color: rgba(34,34,34,.05);
     transition: all .35s;
 }
+/* ============================================= */
+/* =============HEADER========================== */
+/* ============================================= */
+header .header-content {
+    padding: 100px 15px;
+}
+header .header-content {
+    position: relative;
+    width: 100%;
+    text-align: center
+}
+header .header-content .header-content-inner p {
+    font-weight: 400;
+    color: rgba(255,255,255,.95);
+    font-size: 16px;
+    margin-bottom: 50px;
+}
 
 @media (min-width: 768px) {
         /* ============================================= */
     /* =============GLOBAL STYLES=================== */
     /* ============================================= */
-    header  {
-        min-height: 100%;
-    }
     /* ============================================= */
     /* =============NAVIGATION====================== */
     /* ============================================= */
@@ -91,7 +186,7 @@ body,html {
         font-size: 17px;
     }
     .navbar-default {
-        background-color: rgba(255,255,255,.5);
+        background-color: rgba(255,255,255,.8);
     }
     .navbar .navbar-header {
         float: left;
@@ -102,5 +197,29 @@ body,html {
     .navbar-default .nav > li > a.active, 
     .navbar-default .nav > li > a:focus {
         color: #a185ae !important;
+    }
+    /* ============================================= */
+    /* =============HEADER========================== */
+    /* ============================================= */
+    header .header-content {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        padding: 0 50px;
+    }
+    header .header-content .header-content-inner {
+        text-align: left;
+        margin-left: 5rem;
+    }
+    header .header-content .header-content-inner h1 {
+        font-size: 50px;
+    }
+    header .header-content .header-content-inner p {
+        font-size: 20px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
