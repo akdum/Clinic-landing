@@ -106,6 +106,12 @@ section {
     visibility: hidden;
     height: 0;
 }
+.text-decoration-none {
+    text-decoration: none !important;
+}
+.padding-left-2 {
+    padding-left: 2rem !important;
+}
 /* ============================================= */
 /* =============NAVIGATION====================== */
 /* ============================================= */
@@ -182,18 +188,76 @@ header .header-content .header-content-inner p {
     background-color: rgb(30, 128, 185) !important;
 }
 .bg-secondary {
-    background-color: #f4f4f4;
+    background-color: #2d529f !important;
+}
+.bg-tertiary  {
+    background-color: #3aabdd !important;
 }
 .bg-primary h2 {
     color: #fff;
 }
 .medical-treatment {
     margin: -147px 0 0 0;
+    color: #fff;
+}
+.medical-treatment h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+}
+.medical-treatment h5 {
+    font-family: 'Open Sans', sans-serif;
+}
+.medical-treatment a {
+    color: #fff;
 }
 .medical-treatment > div {
     height: 94px;
     position: relative;
-    background-color: rgb(30, 128, 185) !important;
+    z-index: 2;
+}
+.medical-treatment > div:nth-child(1) {
+    z-index: 3;
+}
+.medical-treatment > div:nth-child(1)::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -40px;
+    width: 0;
+    height: 0;
+    border-top: 47px solid transparent;
+    border-bottom: 47px solid transparent;
+    border-left: 40px solid rgb(30, 128, 185);
+    z-index: 5;
+}
+.medical-treatment .medical-treatment-box {
+    height: 100%;
+    width: 100%;
+}
+.medical-treatment .medical-treatment-box .medical-treatment-box-icon {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    margin-top: -20px;
+    text-align: center;
+    width: 60px;
+}
+.medical-treatment .medical-treatment-box .medical-treatment-box-info {
+    padding-left: 4rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+}
+.medical-treatment .medical-treatment-box .medical-treatment-box-info label {
+    opacity: 0.5;
+    margin: -3px 0 0;
+    display: block;
+}
+.medical-treatment .medical-treatment-box .medical-treatment-box-info strong {
+    font-size: 1.4rem;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
 }
 @media (min-width: 768px) {
         /* ============================================= */
