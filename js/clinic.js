@@ -9,6 +9,8 @@ var Clinic = (function(){
 
     root.Init = function() {
         ScrollRevealInit();
+        ScrollInit();
+        AffixBehaviour();
     };
 
     function ScrollRevealInit() {
@@ -30,6 +32,33 @@ var Clinic = (function(){
             easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',           
             distance: "150px"
         }, 200);
+    }
+
+    function ScrollInit() {
+        $("a.page-scroll").bind("click", function (e) {
+            var l = $(this);
+            $("html, body").stop().animate({
+                scrollTop: $(l.attr("href")).offset().top - 50
+            }, 1000);
+            e.preventDefault();
+        });
+
+        $("body").scrollspy({
+            target: ".navbar-fixed-top",
+            offset: 51
+        });
+    }
+
+    function AffixBehaviour() {
+        $(window).on('scroll', function(event) {
+            var navBar =  $('#mainNavBar');
+            var scrollValue = $(window).scrollTop();
+            if (scrollValue > 100) {
+                navBar.addClass('affix');
+            } else {
+                navBar.removeClass('affix');
+            }
+        });
     }
 
     return root;

@@ -34,15 +34,17 @@ hr {
     margin: 50px 0;
 }
 h1 {
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 300;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 30px;
+    font-size: 3rem;
+}
+h2 {
+    font-weight: 300;
 }
 p {
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin: 1rem 0 1rem 0;
 }
 header {
     height: 650px;
@@ -123,8 +125,11 @@ section {
     position: relative;
     top: 5px;
 }
-.navbar .navbar-header .navbar-brand .clinic-logo-title {
-    
+.navbar .navbar-header .navbar-brand img,
+.navbar .navbar-header .navbar-brand div  {
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
 }
 .navbar .navbar-header .navbar-brand .clinic-logo-title .clinic-academy {
     font-family: 'Exo 2', sans-serif;
@@ -170,6 +175,18 @@ header .header-content .header-content-inner p {
     margin-bottom: 50px;
 }
 
+/* ============================================= */
+/* =============PAGE STRUCTURE=================== */
+/* ============================================= */
+.bg-primary {
+    background-color: rgb(30, 128, 185) !important;
+}
+.bg-secondary {
+    background-color: #f4f4f4;
+}
+.bg-primary h2 {
+    color: #fff;
+}
 @media (min-width: 768px) {
         /* ============================================= */
     /* =============GLOBAL STYLES=================== */
@@ -181,22 +198,47 @@ header .header-content .header-content-inner p {
         background-color: #fff;
         border-color: rgba(34,34,34,.05);
     }
-    .navbar-default.affix .navbar-header .navbar-brand {
-        color: #a185ae;
-        font-size: 17px;
+    .navbar-default.affix .navbar-header {
+        height: 4rem;
+    }
+    .navbar-default.affix .navbar-header .navbar-brand img {
+        height: 3rem;
+    }    
+    .navbar-default.affix .navbar-header .navbar-brand .clinic-academy {
+        font-size: 0.8rem;
+    }
+    .navbar-default.affix .navbar-header .navbar-brand .clinic-title {
+        font-size: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        width: 800px;
+        white-space: normal;
     }
     .navbar-default {
         background-color: rgba(255,255,255,.8);
+    }
+    .navbar-default .container-fluid {
+        position: relative;
     }
     .navbar .navbar-header {
         float: left;
     }
     .navbar #collapseNavbar {
         float: right;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .navbar-default .nav > li > a {
+        font-size: 1.6rem;
+    }
+    .navbar-default.affix .nav > li > a {
+        font-size: 1.2rem;
     }
     .navbar-default .nav > li > a.active, 
     .navbar-default .nav > li > a:focus {
-        color: #a185ae !important;
+        color: rgb(30, 128, 185) !important;
     }
     /* ============================================= */
     /* =============HEADER========================== */
@@ -211,15 +253,17 @@ header .header-content .header-content-inner p {
     }
     header .header-content .header-content-inner {
         text-align: left;
-        margin-left: 5rem;
+        margin-left: 10rem;
     }
     header .header-content .header-content-inner h1 {
         font-size: 50px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
     }
     header .header-content .header-content-inner p {
         font-size: 20px;
-        max-width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+        margin-top: 1rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
     }
 }
