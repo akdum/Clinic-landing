@@ -11,6 +11,7 @@ var Clinic = (function(){
         ScrollRevealInit();
         ScrollInit();
         AffixBehaviour();
+        HoverBehaviour();
     };
 
     function ScrollRevealInit() {
@@ -29,7 +30,7 @@ var Clinic = (function(){
             opacity: 0, 
             easing: 'ease-in-out',           
             distance: "150px"
-        }, 700);
+        }, 400);
 
         sr.reveal(".sr-bottom", {
             origin: 'bottom',
@@ -65,6 +66,20 @@ var Clinic = (function(){
             } else {
                 navBar.removeClass('affix');
             }
+        });
+    }
+
+    function HoverBehaviour() {
+        $("div.hover-action").hover(function() {
+            var $this = $(this);            
+            var id = $this.data("expand-id");
+            $this.find("i").text('expand_less');
+            $("#" + id).addClass("opacity-visible");
+        }, function() {
+            var $this = $(this);
+            var id = $this.data("expand-id");
+            $this.find("i").text('expand_more');
+            $("#" + id).removeClass("opacity-visible");
         });
     }
 
