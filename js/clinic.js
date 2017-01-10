@@ -23,6 +23,13 @@ var Clinic = (function(){
             easing: 'ease-in-out',           
             distance: "150px"
         }, 200);
+        sr.reveal(".sr-left-delay", {
+            origin: 'left',
+            duration: 300,
+            opacity: 0, 
+            easing: 'ease-in-out',           
+            distance: "150px"
+        }, 700);
 
         sr.reveal(".sr-bottom", {
             origin: 'bottom',
