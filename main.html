@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400|Roboto:300|Open+Sans:400,600" rel="stylesheet">
 </head>
+
 <body>
     <nav id="mainNavBar" class="navbar navbar-default navbar-fixed-top navbar-light">
         <div class="container-fluid">
@@ -53,7 +54,7 @@
         <div class="container">
             <div class="row medical-treatment">
                 <div class="col-lg-3 sr-left-delay bg-primary">
-                    <div class="medical-treatment-box">                        
+                    <div class="medical-treatment-box">
                         <div class="medical-treatment-box-info ">
                             <h4>Записаться на прием</h4>
                         </div>
@@ -70,34 +71,14 @@
                             <div>Закрыто</div>
                         </div>
                     </div>
-                    <h5>Рабочие часы<i class="material-icons md-48">expand_more</i></h5>                    
-                </div>
-                <div class="col-lg-3 sr-left-delay bg-primary">
-                    <a href="tel:+7(3412)233327" class="text-decoration-none">
-                        <div class="medical-treatment-box">
-                            <div class="medical-treatment-box-icon"><i class="material-icons md-48">call</i></div>                            
-                            <div class="medical-treatment-box-info">
-                                <label>Городской</label>
-                                <strong>+7(3412)23-33-27</strong>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 sr-left-delay bg-secondary">
-                    <a href="tel:+7(909)0538753" class="text-decoration-none">
-                        <div class="medical-treatment-box">
-                            <div class="medical-treatment-box-icon"><i class="material-icons md-48">call</i></div>                            
-                            <div class="medical-treatment-box-info">
-                                <label>Сотовый</label>
-                                <strong>+7(909)053-87-53</strong>
-                            </div>
-                        </div>
-                    </a>
+                    <h5>Рабочие часы<i class="material-icons md-48">expand_more</i></h5>
                 </div>
             </div>
             <div class="row description-row">
                 <h1>О клинике</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, leo vitae interdum pretium, tortor risus dapibus tortor, eu suscipit orci leo sed nisl. Integer et ipsum eu nulla auctor mattis sit amet in diam. Vestibulum non ornare arcu. Class aptent taciti sociosqu ad...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, leo vitae interdum pretium,
+                    tortor risus dapibus tortor, eu suscipit orci leo sed nisl. Integer et ipsum eu nulla auctor mattis sit
+                    amet in diam. Vestibulum non ornare arcu. Class aptent taciti sociosqu ad...</p>
             </div>
             <div class="row">
                 <h2>Лицензия</h2>
@@ -112,13 +93,31 @@
     </section>
     <section></section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
-    <script src="./js/clinic.js"></script>
+    <script id="phones-template" type="x-tmpl-mustache">
+        {{#phones}}
+        <div class="col-lg-3 sr-left-delay {{ bgClassName}}">
+            <a href="tel:{{phoneNumber}}" class="text-decoration-none">
+                <div class="medical-treatment-box">
+                    <div class="medical-treatment-box-icon"><i class="material-icons md-48">call</i></div>
+                    <div class="medical-treatment-box-info">
+                        <label>{{label}}</label>
+                        <strong>{{phoneNumberLong}}</strong>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{/phones}}
+    </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+<script src="./js/model.js"></script>
+<script src="./js/clinic.js"></script>
 </body>
 
 </html>

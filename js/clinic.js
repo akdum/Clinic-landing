@@ -8,11 +8,24 @@ var Clinic = (function(){
     var root = {};
 
     root.Init = function() {
+        InitTemplates();
         ScrollRevealInit();
         ScrollInit();
         AffixBehaviour();
-        HoverBehaviour();
+        HoverBehaviour();        
     };
+
+    function InitTemplates() {
+        InitPhones($("#about .medical-treatment"));
+    }
+
+    function InitPhones(container) {
+        var phoneTemplate = $('#phones-template').html();
+        Mustache.parse(phoneTemplate);   // optional, speeds up future uses
+        var phones = Mustache.render(phoneTemplate, {"phones": window.ClinicModel.Phones});
+
+        container.append(phones);
+    }
 
     function ScrollRevealInit() {
         window.sr = ScrollReveal();
