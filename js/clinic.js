@@ -74,12 +74,12 @@ var Clinic = (function(){
             var $this = $(this);            
             var id = $this.data("expand-id");
             $this.find("i").text('expand_less');
-            $("#" + id).addClass("opacity-visible");
+            $("#" + id).addClass("opacity-visible").find(".info").addClass('opacity-visible');
         }, function() {
             var $this = $(this);
             var id = $this.data("expand-id");
             $this.find("i").text('expand_more');
-            $("#" + id).removeClass("opacity-visible");
+            $("#" + id).removeClass("opacity-visible").find(".info").removeClass('opacity-visible');
         });
     }
 

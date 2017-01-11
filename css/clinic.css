@@ -289,6 +289,27 @@ header .header-content .header-content-inner p {
     transition: all 0.5s ease;
     padding: 30px !important;
 }
+.medical-treatment .expanded-info .info {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease 0.4s;
+    -moz-transition: all 0.3s ease 0.4s;
+    transition: all 0.3s ease 0.4s;
+}
+.medical-treatment .expanded-info div.info:nth-child(1) {
+    margin-bottom: 1rem;
+    -webkit-transition: all 0.3s ease 0.4s;
+    -moz-transition: all 0.3s ease 0.4s;
+    transition: all 0.3s ease 0.4s;
+}
+.medical-treatment .expanded-info div.info:nth-child(2) {
+    -webkit-transition: all 0.3s ease 0.5s;
+    -moz-transition: all 0.3s ease 0.5s;
+    transition: all 0.3s ease 0.5s;
+}
+.medical-treatment .expanded-info .info > div:nth-child(1) {
+    color: #90c9ea;
+    font-size: 1rem;
+}
 @media (min-width: 768px) {
         /* ============================================= */
     /* =============GLOBAL STYLES=================== */
