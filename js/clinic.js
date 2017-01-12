@@ -104,8 +104,19 @@ var Clinic = (function(){
             var card = $this.closest('.row').find('.card-detail');
             if (card.length >0) {
                 $this.on('click', function() {
-                    $this.find(".card-detail-button-label").addClass('opacity-non-visible');
-                    card.addClass('expanded');
+                    var label = $this.find(".card-detail-button-label");
+                    var icon = $this.find('i');
+                    if (!card.hasClass('expanded')) {
+                        label.addClass('opacity-non-visible');
+                        $this.find('.card-detail-button').addClass('close-cirlce');
+                        card.addClass('expanded');
+                        icon.text('cancel');
+                    } else {
+                        card.removeClass('expanded');
+                        $this.find('.card-detail-button').removeClass('close-cirlce');
+                        icon.text('add_circle');
+                        label.removeClass('opacity-non-visible');
+                    }
                 });
             }
         });
