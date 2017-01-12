@@ -41,6 +41,7 @@ h1 {
 }
 h2 {
     font-weight: 300;
+    margin-bottom: 1rem;
 }
 p {
     line-height: 1.5;
@@ -118,6 +119,9 @@ section {
 .material-icons.md-48 { font-size: 48px; }
 .opacity-visible {
     opacity: 1 !important;
+}
+.opacity-non-visible {
+    opacity: 0 !important;
 }
 /* ============================================= */
 /* =============NAVIGATION====================== */
@@ -310,12 +314,6 @@ header .header-content .header-content-inner p {
     color: #90c9ea;
     font-size: 1rem;
 }
-.expand-complete .card-detail {
-    display: block;
-    margin-top: -100px;
-    z-index: 3;
-    height: 200px;    
-}
 .card-trigger {    
     margin: 2rem auto 0 auto;
     width: 90px;
@@ -325,19 +323,43 @@ header .header-content .header-content-inner p {
 .card-trigger:hover .card-detail-button-label label,
 .card-trigger:hover .card-detail-button {
     color: rgba(30, 128, 185, 0.76);
-    cursor: pointer;
+    cursor: pointer;    
 }
 .card-detail {
-    overflow: visible;
+    height: 0px;
+    opacity: 0;
     position: relative;
     width: 100%;
-    display: none;
     z-index: 1;
     transition: all 1s ease;
+}
+.card-detail [class*="col-"] {
+    margin: 0;
+    height: 0;
+}
+.card-detail h2,
+.card-detail img {
+    height: 0;
+}
+.card-detail.expanded {
+    height: 200px;
+    opacity: 1;
+}
+.card-detail.expanded h2,
+.card-detail.expanded img,
+.card-detail.expanded [class*="col-"] {
+    height: auto;
+}
+.card-detail.expanded [class*="col-"] {
+    margin-bottom: 30px;
+}
+.card-detail.expanded [class*="col-"]:last-of-type {
+    margin-bottom: 0px;
 }
 .card-detail-button,
 .card-detail-button-label {
     color: rgb(30, 128, 185);
+    transition: all .5s ease;
 }
 
 @media (min-width: 768px) {

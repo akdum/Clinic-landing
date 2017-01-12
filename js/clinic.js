@@ -17,15 +17,16 @@ var Clinic = (function(){
     };
 
     function InitTemplates() {
-        InitPhones($("#about .medical-treatment"));
+        InitTemplate($("#about .medical-treatment"), $("#phones-template"), {"phones" : window.ClinicModel.Phones});
+        InitTemplate($("#about .license"), $("#license-template"), {"licenses" : window.ClinicModel.Licenses});
     }
 
-    function InitPhones(container) {
-        var phoneTemplate = $('#phones-template').html();
-        Mustache.parse(phoneTemplate);   // optional, speeds up future uses
-        var phones = Mustache.render(phoneTemplate, {"phones": window.ClinicModel.Phones});
+    function InitTemplate(container, templateContainer, view) {
+        var template = templateContainer.html();
+        Mustache.parse(template);   // optional, speeds up future uses
+        var html = Mustache.render(template, view);
 
-        container.append(phones);
+        container.append(html);
     }
 
     function ScrollRevealInit() {
@@ -100,10 +101,13 @@ var Clinic = (function(){
     function CardShow() {
         $(".card-trigger").each(function() {
             var $this = $(this);
-            var section = $this.closest('section');
-            $this.on('click', function() {
-                section.addClass('expand-complete');
-            });
+            var card = $this.closest('.row').find('.card-detail');
+            if (card.length >0) {
+                $this.on('click', function() {
+                    $this.find(".card-detail-button-label").addClass('opacity-non-visible');
+                    card.addClass('expanded');
+                });
+            }
         });
     }
 

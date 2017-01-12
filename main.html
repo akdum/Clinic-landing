@@ -87,6 +87,8 @@
                 </div>
                 <div class="card-detail">
                     <h2>Лицензия</h2>
+                    <div class="row license">                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -114,7 +116,13 @@
         </div>
         {{/phones}}
     </script>
-
+    <script id="license-template" type="x-tmpl-mustache">
+        {{#licenses}}
+        <div class="col-lg-3">
+            <img src="./img/license/thumbnails/{{name}}" />
+        </div>
+        {{/licenses}}
+    </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
