@@ -125,6 +125,8 @@ section {
 }
 .close-cirlce {
     color: rgba(210,210,210,0.8) !important;
+    transform: rotate(45deg);
+    margin-top: 2rem;
 }
 /* ============================================= */
 /* =============NAVIGATION====================== */
@@ -316,6 +318,9 @@ header .header-content .header-content-inner p {
 .medical-treatment .expanded-info .info > div:nth-child(1) {
     color: #90c9ea;
     font-size: 1rem;
+}
+.description-row img {
+    width: 100%;
 }
 .card-trigger {    
     margin: 2rem auto 0 auto;

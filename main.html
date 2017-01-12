@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400|Roboto:300|Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
 </head>
 
 <body>
@@ -76,9 +77,14 @@
             </div>
             <div class="row description-row">
                 <h1>О клинике</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, leo vitae interdum pretium,
-                    tortor risus dapibus tortor, eu suscipit orci leo sed nisl. Integer et ipsum eu nulla auctor mattis sit
-                    amet in diam. Vestibulum non ornare arcu. Class aptent taciti sociosqu ad...</p>
+                <div class="col-sm-8 col-md-8">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, leo vitae interdum pretium,
+                        tortor risus dapibus tortor, eu suscipit orci leo sed nisl. Integer et ipsum eu nulla auctor mattis
+                        sit amet in diam. Vestibulum non ornare arcu. Class aptent taciti sociosqu ad...</p>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <img src="./img/reception.jpg" />
+                </div>
             </div>
             <div class="row">
                 <div class="card-trigger">
@@ -87,7 +93,7 @@
                 </div>
                 <div class="card-detail">
                     <h2>Лицензия</h2>
-                    <div class="row license">                        
+                    <div class="row license">
                     </div>
                 </div>
             </div>
@@ -116,10 +122,12 @@
         </div>
         {{/phones}}
     </script>
-    <script id="license-template" type="x-tmpl-mustache">
+<script id="license-template" type="x-tmpl-mustache">
         {{#licenses}}
-        <div class="col-lg-3">
-            <img src="./img/license/thumbnails/{{name}}" />
+        <div class="col-lg-3 col-md-4">
+            <a href="./img/license/fullsize/{{ name }}">
+                <img src="./img/license/thumbnails/{{name}}" />
+            </a>
         </div>
         {{/licenses}}
     </script>
@@ -130,6 +138,7 @@
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 <script src="./js/model.js"></script>
 <script src="./js/clinic.js"></script>
 </body>

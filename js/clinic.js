@@ -13,7 +13,8 @@ var Clinic = (function(){
         ScrollInit();
         AffixBehaviour();
         HoverBehaviour();   
-        CardShow();     
+        CardShow();    
+        GalleryInit(); 
     };
 
     function InitTemplates() {
@@ -103,23 +104,39 @@ var Clinic = (function(){
             var $this = $(this);
             var card = $this.closest('.row').find('.card-detail');
             if (card.length >0) {
+                var label = $this.find(".card-detail-button-label");
+                var icon = $this.find('i');
+                var button = $this.find('.card-detail-button');
                 $this.on('click', function() {
-                    var label = $this.find(".card-detail-button-label");
-                    var icon = $this.find('i');
                     if (!card.hasClass('expanded')) {
                         label.addClass('opacity-non-visible');
-                        $this.find('.card-detail-button').addClass('close-cirlce');
+                        button.addClass('close-cirlce');
                         card.addClass('expanded');
-                        icon.text('cancel');
                     } else {
                         card.removeClass('expanded');
-                        $this.find('.card-detail-button').removeClass('close-cirlce');
-                        icon.text('add_circle');
+                        button.removeClass('close-cirlce');
                         label.removeClass('opacity-non-visible');
                     }
                 });
             }
         });
+    }
+
+    function GalleryInit() {
+        $(".license").magnificPopup({
+            delegate: "a",
+            type: "image",
+            tLoading: "Загружается изображение #%curr%...",
+            mainClass: "mfp-img-mobile",
+            gallery: {
+                enabled: !0,
+                navigateByImgClick: !0,
+                preload: [0, 1]
+            },
+            image: {
+                tError: '<a href="%url%">Изображение #%curr%</a> не загрузилось.'
+            }
+        })
     }
 
     return root;
