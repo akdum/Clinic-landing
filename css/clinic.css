@@ -310,6 +310,36 @@ header .header-content .header-content-inner p {
     color: #90c9ea;
     font-size: 1rem;
 }
+.expand-complete .card-detail {
+    display: block;
+    margin-top: -100px;
+    z-index: 3;
+    height: 200px;    
+}
+.card-trigger {    
+    margin: 2rem auto 0 auto;
+    width: 90px;
+    text-align: center;
+}
+.card-trigger:hover,
+.card-trigger:hover .card-detail-button-label label,
+.card-trigger:hover .card-detail-button {
+    color: rgba(30, 128, 185, 0.76);
+    cursor: pointer;
+}
+.card-detail {
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    display: none;
+    z-index: 1;
+    transition: all 1s ease;
+}
+.card-detail-button,
+.card-detail-button-label {
+    color: rgb(30, 128, 185);
+}
+
 @media (min-width: 768px) {
         /* ============================================= */
     /* =============GLOBAL STYLES=================== */

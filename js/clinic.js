@@ -12,7 +12,8 @@ var Clinic = (function(){
         ScrollRevealInit();
         ScrollInit();
         AffixBehaviour();
-        HoverBehaviour();        
+        HoverBehaviour();   
+        CardShow();     
     };
 
     function InitTemplates() {
@@ -93,6 +94,16 @@ var Clinic = (function(){
             var id = $this.data("expand-id");
             $this.find("i").text('expand_more');
             $("#" + id).removeClass("opacity-visible").find(".info").removeClass('opacity-visible');
+        });
+    }
+
+    function CardShow() {
+        $(".card-trigger").each(function() {
+            var $this = $(this);
+            var section = $this.closest('section');
+            $this.on('click', function() {
+                section.addClass('expand-complete');
+            });
         });
     }
 
