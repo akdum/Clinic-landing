@@ -169,7 +169,6 @@ section {
     font-family: 'Roboto', sans-serif;
     width: 600px;
     white-space: normal;
-    color: rgb(30, 128, 185);
 }
 .navbar-light .navbar-nav .nav-link {
     text-transform: uppercase;
@@ -200,6 +199,9 @@ header .header-content .header-content-inner p {
 /* ============================================= */
 /* =============PAGE STRUCTURE=================== */
 /* ============================================= */
+.color-primary {
+    color: rgb(30, 128, 185);
+}
 .bg-primary {
     background-color: rgb(30, 128, 185) !important;
 }
@@ -366,10 +368,14 @@ header .header-content .header-content-inner p {
 }
 .card-detail-button,
 .card-detail-button-label {
-    color: rgb(30, 128, 185);
     transition: all .5s ease;
 }
-
+.adv .promo-icon {
+    
+}
+.adv .promo-text h3 {
+    font-weight: 400;
+}
 @media (min-width: 768px) {
         /* ============================================= */
     /* =============GLOBAL STYLES=================== */
@@ -412,6 +418,9 @@ header .header-content .header-content-inner p {
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+    }
+    .navbar-default .nav > li {
+        margin-right: 1rem;
     }
     .navbar-default .nav > li > a {
         font-size: 1.6rem;

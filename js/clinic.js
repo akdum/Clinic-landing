@@ -20,6 +20,7 @@ var Clinic = (function(){
     function InitTemplates() {
         InitTemplate($("#about .medical-treatment"), $("#phones-template"), {"phones" : window.ClinicModel.Phones});
         InitTemplate($("#about .license"), $("#license-template"), {"licenses" : window.ClinicModel.Licenses});
+        InitTemplate($("#about .row.adv"), $("#promo-icon-template"), {"promo" : window.ClinicModel.Promo});
     }
 
     function InitTemplate(container, templateContainer, view) {
