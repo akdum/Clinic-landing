@@ -324,6 +324,19 @@ header .header-content .header-content-inner p {
 .description-row img {
     width: 100%;
 }
+.description-row .adv-header {
+    margin-top: 2rem;
+}
+.adv [class*="col-"] {
+    position: relative;
+}
+.adv .promo-icon {
+    float: left;
+    padding: 1rem;
+}
+.adv .promo-text h3 {
+    font-weight: 400;
+}
 .card-trigger {    
     margin: 2rem auto 0 auto;
     width: 90px;
@@ -369,12 +382,6 @@ header .header-content .header-content-inner p {
 .card-detail-button,
 .card-detail-button-label {
     transition: all .5s ease;
-}
-.adv .promo-icon {
-    
-}
-.adv .promo-text h3 {
-    font-weight: 400;
 }
 @media (min-width: 768px) {
         /* ============================================= */

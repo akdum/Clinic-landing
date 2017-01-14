@@ -13,6 +13,6 @@ window.ClinicModel = {
     Promo : [
         {iconName: "fa-user-md", title: "Квалифицированный персонал", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, leo vitae interdum pretium, tortor risus dapibus tortor."},
         {iconName: "fa-list", title: "Широкий спектр услуг", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, leo vitae interdum pretium, tortor risus dapibus tortor."},
-        {iconName: "", title: "", comment: ""}
+        {iconName: "fa-graduation-cap", title: "Научные методы", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, leo vitae interdum pretium, tortor risus dapibus tortor."}
     ]
 }
