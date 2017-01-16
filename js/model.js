@@ -1,12 +1,12 @@
 window.ClinicModel = {
     Doctors : [
-        {name: "lyalin.jpg"},
-        {name: "perevozchikov.jpg"},
-        {name: "reverchuk.jpg"},
-        {name: "rumyanceva.jpg"},
-        {name: "shutov.jpg"},
-        {name: "zagrtdinova-rizida.jpg"},
-        {name: "zagrtdinova-rizilya.jpg"}
+        {name: "lyalin.jpg", title: {row1: "Заведующий кафедрой", row2: "Главный врач", row3: "Профессор"}},
+        {name: "perevozchikov.jpg", title: {row1: "Заведующий кафедрой", row2: "Главный врач", row3: "Профессор"}},
+        {name: "reverchuk.jpg", title: {row1: "Заведующий кафедрой", row2: "Главный врач", row3: "Профессор"}},
+        {name: "rumyanceva.jpg", title: {row1: "Заведующий кафедрой", row2: "Главный врач", row3: "Профессор"}},
+        {name: "shutov.jpg", title: {row1: "Врач-висчеральный терапевт", row2: "Реабилитолог", row3: ""}},
+        {name: "zagrtdinova-rizida.jpg", title: {row1: "Заведующий кафедрой", row2: "Главный врач", row3: "Профессор"}},
+        {name: "zagrtdinova-rizilya.jpg", title: {row1: "Заведующий кафедрой", row2: "Главный врач", row3: "Профессор"}}
     ],
     Licenses : [
         {name: "license1.jpg"},

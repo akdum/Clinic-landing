@@ -390,6 +390,13 @@ header .header-content .header-content-inner p {
 #doctors h1 {
     padding-bottom: 2rem;
 }
+#doctors .doctor-card {
+    cursor: pointer;
+    float: left;
+    height: 400px;
+    width: 220px;
+    margin: 1rem;
+}
 @media (min-width: 768px) {
         /* ============================================= */
     /* =============GLOBAL STYLES=================== */
