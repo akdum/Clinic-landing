@@ -9,12 +9,13 @@ var Clinic = (function(){
 
     root.Init = function() {
         InitTemplates();
+        DoctorsGalleryInit();
         ScrollRevealInit();
         ScrollInit();
         AffixBehaviour();
         HoverBehaviour();   
         CardShow();    
-        GalleryInit(); 
+        GalleryInit();
     };
 
     function InitTemplates() {
@@ -49,7 +50,6 @@ var Clinic = (function(){
             easing: 'ease-in-out',           
             distance: "150px"
         }, 400);
-
         sr.reveal(".sr-bottom", {
             origin: 'bottom',
             duration: 1000,
@@ -58,6 +58,13 @@ var Clinic = (function(){
             easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',           
             distance: "150px"
         }, 200);
+        sr.reveal(".sr-doctors", {
+            origin: 'left',
+            duration: 500,
+            opacity: 0, 
+            easing: 'ease-in-out',           
+            distance: "150px"
+        }, 400);
     }
 
     function ScrollInit() {
@@ -139,6 +146,62 @@ var Clinic = (function(){
                 tError: '<a href="%url%">Изображение #%curr%</a> не загрузилось.'
             }
         })
+    }
+
+    function DoctorsGalleryInit() {
+        var doctorsColumns = $(".row.doctors [class*='col-']");
+        var commonWidth = 0;
+        var containerWidth = $("#doctors .container").width();
+        doctorsColumns.each(function() {
+            var $this = $(this);
+            commonWidth += $this.width();
+            if (commonWidth > containerWidth) {
+                $this.removeClass('sr-doctors').addClass('display-none');
+            }
+        });
+
+        $(".doctors-navigation .next-doctor").on('click', function() {
+            var hiddenCount = 0;
+            var hiddenIndex = -1;
+
+            doctorsColumns.each(function(index) {
+                var $this = $(this);
+                if ($this.hasClass('display-none')) {
+                    hiddenCount +=1;
+                    if (hiddenIndex == -1) hiddenIndex = index;
+                } else {
+                    hiddenCount = 0;
+                    hiddenIndex = -1;
+                }
+            });
+            if (hiddenCount > 0) {
+                doctorsColumns.filter(function() {
+                    return !$(this).hasClass('display-none');
+                }).first().addClass('display-none');
+                $(doctorsColumns[hiddenIndex]).removeClass('display-none');
+            }
+        });
+
+        $(".doctors-navigation .prev-doctor").on('click', function() {
+            var hiddenCount = 0;
+            var hiddenIndex = -1;
+
+            doctorsColumns.each(function(index) {
+                var $this = $(this);
+                if ($this.hasClass('display-none')) {
+                    hiddenCount +=1;
+                    hiddenIndex = index;
+                } else {
+                    return false;
+                }
+            });
+            if (hiddenCount > 0) {
+                doctorsColumns.filter(function() {
+                    return !$(this).hasClass('display-none');
+                }).last().addClass('display-none');
+                $(doctorsColumns[hiddenIndex]).removeClass('display-none');
+            }
+        });
     }
 
     return root;

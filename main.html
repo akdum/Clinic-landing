@@ -116,7 +116,11 @@
     <section id="doctors">
         <div class="container">
             <div class="row doctors">
-                <h1>Доктора</h1>                
+                <h1>Доктора</h1>
+                <div class="doctors-navigation">
+                    <i class="material-icons md-36 prev-doctor">arrow_back</i>
+                    <i class="material-icons md-36 next-doctor">arrow_forward</i>
+                </div>               
             </div>
         </div>
     </section>
@@ -160,7 +164,7 @@
     </script>
     <script id="doctors-template" type="x-tmpl-mustache">
         {{#doctors}}
-        <div class="col-lg-3 col-md-4">
+        <div class="col-lg-3 col-md-4 sr-doctors">
             <div class="doctor-card">            
                 <img src="./img/doctors/{{photoName}}" />
                 <div class="doctor-card-info">
