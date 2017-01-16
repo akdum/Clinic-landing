@@ -1,12 +1,11 @@
 window.ClinicModel = {
     Doctors : [
-        {name: "lyalin.jpg", title: {row1: "Заведующий кафедрой", row2: "Главный врач", row3: "Профессор"}},
-        {name: "perevozchikov.jpg", title: {row1: "Заведующий кафедрой", row2: "Главный врач", row3: "Профессор"}},
-        {name: "reverchuk.jpg", title: {row1: "Заведующий кафедрой", row2: "Главный врач", row3: "Профессор"}},
-        {name: "rumyanceva.jpg", title: {row1: "Заведующий кафедрой", row2: "Главный врач", row3: "Профессор"}},
-        {name: "shutov.jpg", title: {row1: "Врач-висчеральный терапевт", row2: "Реабилитолог", row3: ""}},
-        {name: "zagrtdinova-rizida.jpg", title: {row1: "Заведующий кафедрой", row2: "Главный врач", row3: "Профессор"}},
-        {name: "zagrtdinova-rizilya.jpg", title: {row1: "Заведующий кафедрой", row2: "Главный врач", row3: "Профессор"}}
+        {photoName: "perevozchikov.jpg", title: {surname: "Перевозчиков", name: "Александр Палович", spec: "врач-психотерапевт, специалист по БОС-ЭЭГ"}},
+        {photoName: "reverchuk.jpg", title: {surname: "Реверчук", name: "Игорь Васильевич", spec: "заведующий кафедрой, главный врач, профессор"}},
+        {photoName: "rumyanceva.jpg", title: {surname: "Румянцева", name: "Наталья Анатольевна", spec: "врач-психотерапевт"}},
+        {photoName: "shutov.jpg", title: {surname: "Шутов", name: "Игорь Леонидович", spec: "врач-висцеральный терапевт, специалист по оздоровительным техникам"}},
+        {photoName: "zagrtdinova-rizida.jpg", title: {surname: "Загртдинова", name: "Ризида Миннесагитовна", spec: "врач-дерматовенеролог-дерматолог-косметолог, заведующая кафедрой, профессор"}},
+        {photoName: "pakriev.jpg", title: {surname: "Пакриев", name: "Сергей Галлинурович", spec: "врач-психиатр, доктор медицинских наук"}}
     ],
     Licenses : [
         {name: "license1.jpg"},
@@ -16,7 +15,7 @@ window.ClinicModel = {
         {name: "license5.jpg"}
     ],
     Phones : [
-        {bgClassName: "bg-primary", phoneNumber: "+7(3412)233327", label: "Городской", phoneNumberLong: "+7(3412)23-33-27"},
+        {bgClassName: "bg-primary", phoneNumber: "+7(3412)233327", label: "Городской", phoneNumberLong: "+7(3412)23-33-25"},
         {bgClassName: "bg-secondary", phoneNumber: "+7(909)0538753", label: "Сотовый", phoneNumberLong: "+7(909)053-87-53"}
     ],
     Promo : [

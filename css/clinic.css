@@ -392,10 +392,19 @@ header .header-content .header-content-inner p {
 }
 #doctors .doctor-card {
     cursor: pointer;
-    float: left;
-    height: 400px;
-    width: 220px;
-    margin: 1rem;
+    text-align: center;
+}
+#doctors .doctor-card img {
+    width: 100%;
+}
+#doctors .doctor-card-info h3 {
+    margin: 1rem 0 0 0;
+}
+#doctors .doctor-card-info div:nth-of-type(2) {
+    font-size: 1.25rem;
+}
+#doctors .doctor-card-info div:last-of-type {
+    margin-top: 0.5rem;
 }
 @media (min-width: 768px) {
         /* ============================================= */
