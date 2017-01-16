@@ -109,12 +109,14 @@
     <section id="services" class="bg-primary">
         <div class="container">
             <div class="row description-row">
+                <h1>Услуги</h1>
             </div>
         </div>
     </section>
     <section id="doctors">
         <div class="container">
             <div class="row doctors">
+                <h1>Доктора</h1>                
             </div>
         </div>
     </section>
@@ -155,6 +157,13 @@
             </a>
         </div>
         {{/licenses}}
+    </script>
+    <script id="doctors-template" type="x-tmpl-mustache">
+        {{#doctors}}
+        <div class="col-lg-3 col-md-3">
+            <img src="./img/doctors/{{name}}" />
+        </div>
+        {{/doctors}}
     </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>

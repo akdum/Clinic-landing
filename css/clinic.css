@@ -58,7 +58,7 @@ header {
     text-align: center
 }
 section {
-    padding: 100px 0;
+    padding: 50px 0px;
 }
 .btn {
     border: none;
@@ -211,8 +211,12 @@ header .header-content .header-content-inner p {
 .bg-tertiary  {
     background-color: #3aabdd !important;
 }
+.bg-primary h1,
 .bg-primary h2 {
     color: #fff;
+}
+#about {
+    padding-top: 100px;
 }
 .medical-treatment {
     margin: -147px 0 0 0;
@@ -382,6 +386,9 @@ header .header-content .header-content-inner p {
 .card-detail-button,
 .card-detail-button-label {
     transition: all .5s ease;
+}
+#doctors h1 {
+    padding-bottom: 2rem;
 }
 @media (min-width: 768px) {
         /* ============================================= */

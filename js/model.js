@@ -1,4 +1,13 @@
 window.ClinicModel = {
+    Doctors : [
+        {name: "lyalin.jpg"},
+        {name: "perevozchikov.jpg"},
+        {name: "reverchuk.jpg"},
+        {name: "rumyanceva.jpg"},
+        {name: "shutov.jpg"},
+        {name: "zagrtdinova-rizida.jpg"},
+        {name: "zagrtdinova-rizilya.jpg"}
+    ],
     Licenses : [
         {name: "license1.jpg"},
         {name: "license2.jpg"},
