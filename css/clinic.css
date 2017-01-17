@@ -432,7 +432,7 @@ header .header-content .header-content-inner p {
     position: relative;
 }
 #contacts .contact-map {
-    height: 500px;
+    height: 600px;
     width: 100%;
 }
 #contacts .contacts-layer {
@@ -465,7 +465,7 @@ header .header-content .header-content-inner p {
     color: rgb(30, 128, 185);
 }
 footer {
-    height: 200px;
+    height: 55px;
 }
 @media (min-width: 768px) {
         /* ============================================= */
