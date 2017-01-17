@@ -156,7 +156,7 @@ var Clinic = (function(){
             var $this = $(this);
             commonWidth += $this.width();
             if (commonWidth > containerWidth) {
-                $this.removeClass('sr-doctors').addClass('display-none opacity-non-visible');
+                $this.removeClass('sr-doctors').hide();
             }
         });
 
@@ -166,7 +166,7 @@ var Clinic = (function(){
 
             doctorsColumns.each(function(index) {
                 var $this = $(this);
-                if ($this.hasClass('display-none')) {
+                if (!$this.is(':visible')) {
                     hiddenCount +=1;
                     if (hiddenIndex == -1) hiddenIndex = index;
                 } else {
@@ -176,9 +176,9 @@ var Clinic = (function(){
             });
             if (hiddenCount > 0) {
                 doctorsColumns.filter(function() {
-                    return !$(this).hasClass('display-none');
-                }).first().addClass('display-none opacity-non-visible');
-                $(doctorsColumns[hiddenIndex]).removeClass('display-none opacity-non-visible');
+                    return $(this).is(':visible');
+                }).first().removeAttr('style').hide();
+                $(doctorsColumns[hiddenIndex]).fadeIn("slow");
             }
         });
 
@@ -188,7 +188,7 @@ var Clinic = (function(){
 
             doctorsColumns.each(function(index) {
                 var $this = $(this);
-                if ($this.hasClass('display-none')) {
+                if (!$this.is(':visible')) {
                     hiddenCount +=1;
                     hiddenIndex = index;
                 } else {
@@ -197,9 +197,9 @@ var Clinic = (function(){
             });
             if (hiddenCount > 0) {
                 doctorsColumns.filter(function() {
-                    return !$(this).hasClass('display-none');
-                }).last().addClass('display-none opacity-non-visible');
-                $(doctorsColumns[hiddenIndex]).removeClass('display-none opacity-non-visible');
+                    return $(this).is(':visible');
+                }).last().hide();
+                $(doctorsColumns[hiddenIndex]).fadeIn("slow");
             }
         });
     }

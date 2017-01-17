@@ -120,9 +120,6 @@ section {
 .opacity-visible {
     opacity: 1 !important;
 }
-.opacity-non-visible {
-    opacity: 0 !important;
-}
 .close-cirlce {
     color: rgba(210,210,210,0.8) !important;
     transform: rotate(45deg);
@@ -412,10 +409,6 @@ header .header-content .header-content-inner p {
     margin-right: 1rem;
 }
 #doctors .row.doctors .doctor-column {
-    opacity: 1;
-    -webkit-transition: all 0.3s ease 0.4s;
-    -moz-transition: all 0.3s ease 0.4s;
-    transition: all 0.3s ease 0.4s;
 }
 #doctors .doctor-card {
     cursor: pointer;
