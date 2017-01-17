@@ -16,6 +16,7 @@ var Clinic = (function(){
         HoverBehaviour();   
         CardShow();    
         GalleryInit();
+        MapInit();
     };
 
     function InitTemplates() {
@@ -23,6 +24,7 @@ var Clinic = (function(){
         InitTemplate($("#about .license"), $("#license-template"), {"licenses" : window.ClinicModel.Licenses});
         InitTemplate($("#about .row.adv"), $("#promo-icon-template"), {"promo" : window.ClinicModel.Promo});
         InitTemplate($("#doctors .row.doctors"), $("#doctors-template"), {"doctors" : window.ClinicModel.Doctors});
+        InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), {"contacts" : window.ClinicModel.Contacts});
     }
 
     function InitTemplate(container, templateContainer, view) {
@@ -200,6 +202,24 @@ var Clinic = (function(){
                     return $(this).is(':visible');
                 }).last().hide();
                 $(doctorsColumns[hiddenIndex]).fadeIn("slow");
+            }
+        });
+    }
+
+    function MapInit() {
+        ymaps.ready( function() {
+            var location1 = 56.86211253;
+            var location2 = 53.28120296;
+            try {
+                var map = new ymaps.Map('map', {
+                    center: [location1, location2],
+                    zoom: 16
+                });
+                map.geoObjects.add(new ymaps.Placemark([location1, location2], {
+                    hintContent: 'Клиническая больница восстановительной медицины'
+                }));
+            } catch (error) {
+                console.log(error);
             }
         });
     }

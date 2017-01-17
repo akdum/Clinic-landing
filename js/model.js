@@ -1,4 +1,9 @@
 window.ClinicModel = {
+    Contacts : [
+        {title: "Адрес:", value: "г. Ижевск, ул. Труда, 48а"},
+        {title: "Телефоны городские:", value: "8(3412) 23-33-25"},
+        {title: "Телефон сотовый:", value: "8-909-053-87-53"}
+    ],
     Doctors : [
         {photoName: "perevozchikov.jpg", title: {surname: "Перевозчиков", name: "Александр Палович", spec: "врач-психотерапевт, специалист по БОС-ЭЭГ"}},
         {photoName: "reverchuk.jpg", title: {surname: "Реверчук", name: "Игорь Васильевич", spec: "заведующий кафедрой, главный врач, профессор"}},
