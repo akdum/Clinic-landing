@@ -27,7 +27,6 @@ body,html {
 }
 a {
     transition: all .35s;
-    color: #a185ae;
 }
 hr {
     border-width: 0;
@@ -464,6 +463,9 @@ header .header-content .header-content-inner p {
 #contacts .contacts-layer .contact-item span {
     font-weight: 700;
     color: rgb(30, 128, 185);
+}
+footer {
+    height: 200px;
 }
 @media (min-width: 768px) {
         /* ============================================= */

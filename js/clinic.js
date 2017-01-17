@@ -215,6 +215,7 @@ var Clinic = (function(){
                     center: [location1, location2],
                     zoom: 16
                 });
+                map.behaviors.disable('scrollZoom');
                 map.geoObjects.add(new ymaps.Placemark([location1, location2], {
                     hintContent: 'Клиническая больница восстановительной медицины'
                 }));

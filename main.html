@@ -128,15 +128,15 @@
             </div>
         </div>
     </section>
-    <section id="contacts" class="bg-primary">
+    <section id="contacts">
         <div class="container-fluid">
             <div id="map" class="contact-map"></div>
-            <div class="contacts-layer">
+            <div class="contacts-layer sr-left">
                 <h1>Контакты</h1>
             </div>
         </div>
     </section>
-    <footer></footer>
+    <footer class="bg-primary"></footer>
     <script id="phones-template" type="x-tmpl-mustache">
         {{#phones}}
         <div class="col-lg-3 sr-left-delay {{ bgClassName}}">
@@ -192,7 +192,7 @@
         {{#contacts}}
         <div class="contact-item">
             <span>{{ title }}</span>
-            <div>{{ value }}</div>
+            <div>{{{ value }}}</div>
         </div>
         {{/contacts}}
     </script>
