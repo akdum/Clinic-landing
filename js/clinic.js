@@ -156,7 +156,7 @@ var Clinic = (function(){
             var $this = $(this);
             commonWidth += $this.width();
             if (commonWidth > containerWidth) {
-                $this.removeClass('sr-doctors').addClass('display-none');
+                $this.removeClass('sr-doctors').addClass('display-none opacity-non-visible');
             }
         });
 
@@ -177,8 +177,8 @@ var Clinic = (function(){
             if (hiddenCount > 0) {
                 doctorsColumns.filter(function() {
                     return !$(this).hasClass('display-none');
-                }).first().addClass('display-none');
-                $(doctorsColumns[hiddenIndex]).removeClass('display-none');
+                }).first().addClass('display-none opacity-non-visible');
+                $(doctorsColumns[hiddenIndex]).removeClass('display-none opacity-non-visible');
             }
         });
 
@@ -198,8 +198,8 @@ var Clinic = (function(){
             if (hiddenCount > 0) {
                 doctorsColumns.filter(function() {
                     return !$(this).hasClass('display-none');
-                }).last().addClass('display-none');
-                $(doctorsColumns[hiddenIndex]).removeClass('display-none');
+                }).last().addClass('display-none opacity-non-visible');
+                $(doctorsColumns[hiddenIndex]).removeClass('display-none opacity-non-visible');
             }
         });
     }

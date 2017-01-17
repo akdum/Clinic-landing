@@ -5,7 +5,9 @@ window.ClinicModel = {
         {photoName: "rumyanceva.jpg", title: {surname: "Румянцева", name: "Наталья Анатольевна", spec: "врач-психотерапевт"}},
         {photoName: "shutov.jpg", title: {surname: "Шутов", name: "Игорь Леонидович", spec: "врач-висцеральный терапевт, специалист по оздоровительным техникам"}},
         {photoName: "zagrtdinova-rizida.jpg", title: {surname: "Загртдинова", name: "Ризида Миннесагитовна", spec: "врач-дерматовенеролог-дерматолог-косметолог, заведующая кафедрой, профессор"}},
-        {photoName: "pakriev.jpg", title: {surname: "Пакриев", name: "Сергей Галлинурович", spec: "врач-психиатр, доктор медицинских наук"}}
+        {photoName: "pakriev.jpg", title: {surname: "Пакриев", name: "Сергей Галлинурович", spec: "врач-психиатр, доктор медицинских наук"}},
+        {photoName: "osmina.jpg", title: {surname: "Осмина", name: "Елена Викторовна", spec: "нейропсихолог, доктор психологических наук"}},
+        {photoName: "shirobokova.jpg", title: {surname: "Широбокова", name: "Марина Николаевна", spec: "старшая медицинская сестра"}},
     ],
     Licenses : [
         {name: "license1.jpg"},

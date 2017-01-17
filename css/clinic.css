@@ -411,6 +411,12 @@ header .header-content .header-content-inner p {
 #doctors .row.doctors .doctors-navigation i:nth-of-type(1) {
     margin-right: 1rem;
 }
+#doctors .row.doctors .doctor-column {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease 0.4s;
+    -moz-transition: all 0.3s ease 0.4s;
+    transition: all 0.3s ease 0.4s;
+}
 #doctors .doctor-card {
     cursor: pointer;
     text-align: center;
