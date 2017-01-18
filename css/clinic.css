@@ -61,22 +61,22 @@ section {
 }
 .btn {
     border: none;
-    border-radius: 300px;
+    border-radius: 10px;
     font-weight: 700;
     text-transform: uppercase;
 }
 .btn-primary {
-    color: #fff;
-    background-color: #a185ae;
-    border-color: #a185ae;
+    color: rgb(30, 128, 185);
+    background-color: #fff;
+    border-color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
 }
 .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover{
     color: #fff;
-    background-color: #a185ae;
-    border-color: #a185ae;
+    background-color: #3aabdd;
+    border-color: #3aabdd;
 }
 .btn-default {
     color: #222;
@@ -389,6 +389,10 @@ header .header-content .header-content-inner p {
 .card-detail-button,
 .card-detail-button-label {
     transition: all .5s ease;
+}
+#services .all-services {
+    text-align: center;
+    margin-top: 2rem;
 }
 #doctors h1 {
     padding-bottom: 2rem;
