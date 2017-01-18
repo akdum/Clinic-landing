@@ -201,6 +201,9 @@ header .header-content .header-content-inner p {
 .color-primary {
     color: rgb(30, 128, 185);
 }
+.color-white {
+    color: #fff;
+}
 .bg-primary {
     background-color: rgb(30, 128, 185) !important;
 }
@@ -466,6 +469,19 @@ header .header-content .header-content-inner p {
 }
 footer {
     height: 55px;
+    position: relative;
+}
+footer .copyright {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+}
+footer .footer-social-links {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
 }
 @media (min-width: 768px) {
         /* ============================================= */

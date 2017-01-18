@@ -80,7 +80,7 @@ var Clinic = (function(){
 
         $("body").scrollspy({
             target: ".navbar-fixed-top",
-            offset: 51
+            offset: 100
         });
     }
 
