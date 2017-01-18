@@ -119,6 +119,9 @@ section {
 .opacity-visible {
     opacity: 1 !important;
 }
+.opacity-non-visible {
+    opacity: 0 !important;
+}
 .close-cirlce {
     color: rgba(210,210,210,0.8) !important;
     transform: rotate(45deg);
