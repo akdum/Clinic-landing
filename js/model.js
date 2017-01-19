@@ -12,7 +12,8 @@ window.ClinicModel = {
         {photoName: "pomyitkina.jpg", title: {surname: "Помыткина", name: "Татьяна Юрьевна", spec: "психолог, семей психолог, специалист по профоринтации, кандидат психологических наук"}},
         {photoName: "zagrtdinova-rizida.jpg", title: {surname: "Загртдинова", name: "Ризида Миннесагитовна", spec: "врач-дерматовенеролог-дерматолог-косметолог, заведующая кафедрой, профессор"}},
         {photoName: "pakriev.jpg", title: {surname: "Пакриев", name: "Сергей Галлинурович", spec: "врач-психиатр, доктор медицинских наук"}},
-        {photoName: "osmina.jpg", title: {surname: "Осмина", name: "Елена Викторовна", spec: "нейропсихолог, доктор психологических наук"}},        
+        {photoName: "osmina.jpg", title: {surname: "Осмина", name: "Елена Викторовна", spec: "нейропсихолог, доктор психологических наук"}},      
+        {photoName: "buldakov.jpg", title: {surname: "Булдаков", name: "Сергей Сергеевич", spec: "врач-невролог"}},
         {photoName: "shirobokova.jpg", title: {surname: "Широбокова", name: "Марина Николаевна", spec: "старшая медицинская сестра"}}        
     ],
     Licenses : [
