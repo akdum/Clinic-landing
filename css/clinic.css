@@ -393,6 +393,12 @@ header .header-content .header-content-inner p {
 .card-detail-button-label {
     transition: all .5s ease;
 }
+#services .popular-services-row [class*="col-"] {
+    margin-top: 2rem;
+}
+#services .service-box {
+    color: #fff;
+}
 #services .all-services {
     text-align: center;
     margin-top: 2rem;

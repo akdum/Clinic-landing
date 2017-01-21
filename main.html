@@ -113,7 +113,7 @@
     <section id="services" class="bg-primary">
         <div class="container">
             <div class="row popular-services-row">
-                <h1>Популярные услуги</h1>
+                <h1>Основные направления клиники</h1>
             </div>
             <div class="row all-services">
                 <a href="https://drive.google.com/file/d/0B5-Aar8wusiubzhXaTFOTER6VEk/view" target="_blank" class="btn btn-primary btn-lg">Цены на услуги</a>
@@ -206,6 +206,16 @@
         </div>
         {{/contacts}}
     </script>
+    <script id="services-template" type="x-tmpl-mustache">
+        {{#services}}
+        <div class="col-lg-3 col-md-6 col-xs-12 text-xs-center">
+            <div class="service-box">
+                <i class="fa fa-4x {{ className }} sr-icons"></i>
+                <p class="{{ textClassName}}">{{ title }}</p>
+            </div>
+        </div>
+        {{/services}}
+    </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
@@ -216,7 +226,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 <script src="./js/model.js"></script>
 <script src="./js/clinic.js"></script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-586be04627105d57"></script>
+<!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-586be04627105d57"></script>-->
 </body>
 
 </html>

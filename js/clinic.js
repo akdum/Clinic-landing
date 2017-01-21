@@ -23,6 +23,7 @@ var Clinic = (function(){
         InitTemplate($("#about .medical-treatment"), $("#phones-template"), {"phones" : window.ClinicModel.Phones});
         InitTemplate($("#about .license"), $("#license-template"), {"licenses" : window.ClinicModel.Licenses});
         InitTemplate($("#about .row.adv"), $("#promo-icon-template"), {"promo" : window.ClinicModel.Promo});
+        InitTemplate($("#services .row.popular-services-row"), $("#services-template"), {"services" : window.ClinicModel.Services});
         InitTemplate($("#doctors .row.doctors"), $("#doctors-template"), {"doctors" : window.ClinicModel.Doctors});
         InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), {"contacts" : window.ClinicModel.Contacts});
     }
@@ -67,6 +68,11 @@ var Clinic = (function(){
             easing: 'ease-in-out',           
             distance: "150px"
         }, 400);
+        sr.reveal(".sr-icons", {
+            duration: 1000,
+            scale: .1,
+            distance: "0px"
+        }, 300);
     }
 
     function ScrollInit() {
