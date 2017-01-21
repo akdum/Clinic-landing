@@ -464,6 +464,7 @@ header .header-content .header-content-inner p {
     -ms-box-shadow: 0 2px 1px rgba(0,0,0,.2);
     box-shadow: 0 2px 1px rgba(0,0,0,.2);
     padding: 1rem;
+    z-index: 3;
 }
 #contacts .contacts-layer h1 {
     color: inherit;
@@ -580,27 +581,95 @@ footer .footer-social-links {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {    
+    /* ============================================= */
+    /* =============GLOBAL STYLES=================== */
+    /* ============================================= */
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
     /* ============================================= */
     /* =============NAVIGATION====================== */
     /* ============================================= */
-    .navbar .navbar-header .navbar-brand img {
-        
+    .navbar-fixed-bottom, .navbar-fixed-top {
+        position: initial;
     }
     .navbar .navbar-header .navbar-brand .clinic-logo-title .clinic-academy {
         width: 100%;
-        height: initial;
-        line-height: 1rem;
+        height: 5.5rem;
+        line-height: 1.4rem;
         white-space: initial;
     }
     .navbar .navbar-header .navbar-brand .clinic-logo-title .clinic-title {
-        width: 100%;
-        font-size: 1rem;
-        line-height: 1rem;
+        width: 80%;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
         height: initial;
         white-space: initial;
     }
     .navbar-toggler {
         float: right;
+        position: absolute;
+        top: 6.5rem;
+        right: 1rem;
+    }
+    /* ============================================= */
+    /* =============PAGE STRUCTURE=================== */
+    /* ============================================= */
+    header {
+        height: 450px;
+    }
+    #about .description-row {
+        margin-top: 1rem;
+    }
+    #about .description-row > div:nth-of-type(1) {
+        padding: 0;
+    }
+    #about .description-row img {
+        display: none;
+    }
+    #about .adv [class*="col-"] {
+        padding: 0;
+    }
+    #about .adv .promo-icon {
+        float: initial;
+        padding: 1rem;
+        width: 115px;
+        margin: auto;
+    }
+    #about .card-trigger.license-trigger {
+        display: none;
+    }
+    .medical-treatment > div:nth-child(1),
+    .medical-treatment > div:nth-child(1)::after {
+        display: none;
+    }
+    #services .popular-services-row [class*="col-"] {
+        margin-top: 0rem;
+    }
+    #services .popular-services-row [class*="col-"]:nth-of-type(1) {
+        margin-top: 1rem;
+    }
+    #doctors h1 {
+        padding-bottom: 4rem;
+    }
+    #doctors .row.doctors .doctors-navigation {
+        top: 4rem;
+    }
+    #contacts .contacts-layer {
+        position: initial;
+        height: initial;
+        width: 100%;
+    }
+    #contacts .contact-map {
+        height: 300px;
+    }
+    footer {
+        height: 80px;
+    }
+    footer .copyright {
+        font-size: 0.9rem;
+        width: 80%;
     }
 }
