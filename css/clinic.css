@@ -497,7 +497,7 @@ footer .footer-social-links {
     transform: translateY(-50%);
     right: 5%;
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
         /* ============================================= */
     /* =============GLOBAL STYLES=================== */
     /* ============================================= */
@@ -581,7 +581,7 @@ footer .footer-social-links {
     }
 }
 
-@media (max-width: 768px) {    
+@media (max-width: 736px) {    
     /* ============================================= */
     /* =============GLOBAL STYLES=================== */
     /* ============================================= */
@@ -656,6 +656,9 @@ footer .footer-social-links {
     }
     #doctors .row.doctors .doctors-navigation {
         top: 4rem;
+    }
+    #doctors .doctor-card img {
+        width: auto;
     }
     #contacts .contacts-layer {
         position: initial;
