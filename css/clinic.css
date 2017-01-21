@@ -579,3 +579,28 @@ footer .footer-social-links {
         font-weight: 600;
     }
 }
+
+@media (max-width: 768px) {
+    /* ============================================= */
+    /* =============NAVIGATION====================== */
+    /* ============================================= */
+    .navbar .navbar-header .navbar-brand img {
+        
+    }
+    .navbar .navbar-header .navbar-brand .clinic-logo-title .clinic-academy {
+        width: 100%;
+        height: initial;
+        line-height: 1rem;
+        white-space: initial;
+    }
+    .navbar .navbar-header .navbar-brand .clinic-logo-title .clinic-title {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1rem;
+        height: initial;
+        white-space: initial;
+    }
+    .navbar-toggler {
+        float: right;
+    }
+}
