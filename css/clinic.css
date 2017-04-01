@@ -580,7 +580,24 @@ footer .footer-social-links {
         font-weight: 600;
     }
 }
+@media (max-width: 1024px) {
+    .medical-treatment .work-hours h5 {
+        padding-left: 2rem;
+    }
+    .medical-treatment .work-hours i {
+        margin-left: 0.5rem;
+    }
+    .medical-treatment .medical-treatment-box .medical-treatment-box-icon {
+        text-align: left;
+    }
 
+    .medical-treatment .medical-treatment-box .medical-treatment-box-info {
+        padding-left: 3rem;
+    }
+    .medical-treatment .medical-treatment-box .medical-treatment-box-info strong {
+        font-size: 1.2rem;
+    }
+}
 @media (max-width: 736px) {    
     /* ============================================= */
     /* =============GLOBAL STYLES=================== */
