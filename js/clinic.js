@@ -24,6 +24,7 @@ var Clinic = (function(){
         InitTemplate($("#about .license"), $("#license-template"), {"licenses" : window.ClinicModel.Licenses});
         InitTemplate($("#about .row.adv"), $("#promo-icon-template"), {"promo" : window.ClinicModel.Promo});
         InitTemplate($("#services .row.popular-services-row"), $("#services-template"), {"services" : window.ClinicModel.Services});
+        InitTemplate($("#advertises .row.advertises-row"), $("#advertise-template"), {"advertises" : window.ClinicModel.Advertises});
         InitTemplate($("#doctors .row.doctors"), $("#doctors-template"), {"doctors" : window.ClinicModel.Doctors});
         InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), {"contacts" : window.ClinicModel.Contacts});
     }
@@ -61,6 +62,11 @@ var Clinic = (function(){
             easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',           
             distance: "150px"
         }, 200);
+        sr.reveal(".sr-adv", {
+            duration: 1000,
+            scale: 1,
+            distance: "0px"
+        }, 1000);
         sr.reveal(".sr-doctors", {
             origin: 'left',
             duration: 500,

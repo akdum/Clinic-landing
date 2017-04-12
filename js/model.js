@@ -33,9 +33,12 @@ window.ClinicModel = {
         {iconName: "fa-graduation-cap", title: "Научные методы", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, leo vitae interdum pretium, tortor risus dapibus tortor."}
     ],
     Services : [
-        {title: "Лечение алкогольной и игровой зависимости", className: "fa-gamepad"},
         {title: "Консультация врача-психотерапевта и психолога детского, подросткового, взрослого, семейного", className: "fa-puzzle-piece"},
+        {title: "Лечение алкогольной и игровой зависимости", className: "fa-gamepad"},        
         {title: "Врач - невролог", className: "fa-user-md"},
         {title: "Услуги висцерального терапевта, остеопата, мануального терапевта", className: "fa-hand-paper-o"}
+    ],
+    Advertises : [
+        {src: "./img/adv/Kailas160417.jpg"}
     ]
 }
