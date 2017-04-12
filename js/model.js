@@ -28,9 +28,9 @@ window.ClinicModel = {
         {bgClassName: "bg-secondary", phoneNumber: "+7(909)0538753", label: "Сотовый", phoneNumberLong: "+7(909)053-87-53"}
     ],
     Promo : [
-        {iconName: "fa-user-md", title: "Квалифицированный персонал", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, leo vitae interdum pretium, tortor risus dapibus tortor."},
-        {iconName: "fa-list", title: "Широкий спектр услуг", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, leo vitae interdum pretium, tortor risus dapibus tortor."},
-        {iconName: "fa-graduation-cap", title: "Научные методы", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, leo vitae interdum pretium, tortor risus dapibus tortor."}
+        {iconName: "fa-user-md", title: "Квалифицированный персонал", comment: "В клинике ведут прием специалисты высшей квалификационной категории - профессора, доктора медицинских наук, кандидаты медицинских наук, доктора психологических наук, кандидаты психологических наук."},
+        {iconName: "fa-list", title: "Широкий спектр услуг", comment: "У нас вы можете получить полный перечень услуг для восстановления или укрепления организма."},
+        {iconName: "fa-graduation-cap", title: "Научные методы", comment: "Мы практикуем только проверенные и научно обоснованные подходы к лечению."}
     ],
     Services : [
         {title: "Консультация врача-психотерапевта и психолога детского, подросткового, взрослого, семейного", className: "fa-puzzle-piece"},
