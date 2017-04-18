@@ -39,6 +39,6 @@ window.ClinicModel = {
         {title: "Услуги висцерального терапевта, остеопата, мануального терапевта", className: "fa-hand-paper-o"}
     ],
     Advertises : [
-        {src: "./img/offers/Kailas160417.jpg"}
+        {src: "./img/offers/Kailas160417.jpg", dueDate: "16/04/2017"}
     ]
 }

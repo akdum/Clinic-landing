@@ -24,7 +24,7 @@ var Clinic = (function(){
         InitTemplate($("#about .license"), $("#license-template"), {"licenses" : window.ClinicModel.Licenses});
         InitTemplate($("#about .row.adv"), $("#promo-icon-template"), {"promo" : window.ClinicModel.Promo});
         InitTemplate($("#services .row.popular-services-row"), $("#services-template"), {"services" : window.ClinicModel.Services});
-        InitTemplate($("#advertises .row.advertises-row"), $("#advertise-template"), {"advertises" : window.ClinicModel.Advertises});
+        InitTemplate($("#advertises .row.advertises-row"), $("#advertise-template"), {"advertises" : window.ClinicModel.Advertises.filter(function(val){ var now = moment(); return moment(val.dueDate) >= now; })});
         InitTemplate($("#doctors .row.doctors"), $("#doctors-template"), {"doctors" : window.ClinicModel.Doctors});
         InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), {"contacts" : window.ClinicModel.Contacts});
     }
