@@ -74,9 +74,6 @@
                         <a class="nav-item nav-link page-scroll" href="#services">Услуги</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-item nav-link page-scroll" href="#advertises">Акции</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-item nav-link page-scroll" href="#doctors">Специалисты</a>
                     </li>
                     <li class="nav-item">
@@ -152,16 +149,7 @@
             </div>
         </div>
     </section>
-    <section id="advertises">
-        <div class="container">
-            <div class="row">
-                <h1>Акции</h1>
-            </div>
-            <div class="row advertises-row">
-            </div>
-        </div>
-    </section>
-    <section id="doctors" class="bg-primary">
+    <section id="doctors" class="">
         <div class="container">
             <div class="row doctors">
                 <h1>Специалисты</h1>
@@ -231,11 +219,11 @@
             <div class="doctor-card">
                 <img src="./img/doctors/{{photoName}}" />
                 <div class="doctor-card-info">
-                    <div class="color-white">
+                    <div class="">
                         <h3>{{ title.surname }}</h3>
                     </div>
-                    <div class="color-white">{{ title.name }}</div>
-                    <div class="color-white">{{ title.spec }}</div>
+                    <div class="">{{ title.name }}</div>
+                    <div class="">{{ title.spec }}</div>
                 </div>
             </div>
         </div>
@@ -258,13 +246,6 @@
             </div>
         </div>
         {{/services}}
-    </script>
-    <script id="advertise-template" type="x-tmpl-mustache">
-        {{#advertises}}
-        <div>
-            <img src="{{ src }}" class="sr-adv" />
-        </div>
-        {{/advertises}}
     </script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>

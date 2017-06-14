@@ -4,7 +4,7 @@ window.onerror = function(error) {
     alert(error);
 };
 
-var Clinic = (function(){
+var Clinic = (function() {
     var root = {};
 
     root.Init = function() {
@@ -13,30 +13,24 @@ var Clinic = (function(){
         ScrollRevealInit();
         ScrollInit();
         AffixBehaviour();
-        HoverBehaviour();   
-        CardShow();    
+        HoverBehaviour();
+        CardShow();
         GalleryInit();
         MapInit();
     };
 
     function InitTemplates() {
-        InitTemplate($("#about .medical-treatment"), $("#phones-template"), {"phones" : window.ClinicModel.Phones});
-        InitTemplate($("#about .license"), $("#license-template"), {"licenses" : window.ClinicModel.Licenses});
-        InitTemplate($("#about .row.adv"), $("#promo-icon-template"), {"promo" : window.ClinicModel.Promo});
-        InitTemplate($("#services .row.popular-services-row"), $("#services-template"), {"services" : window.ClinicModel.Services});
-        InitTemplate($("#advertises .row.advertises-row"), $("#advertise-template"), {"advertises" : window.ClinicModel.Advertises.filter(function(val){ 
-                                                                                                                                                var now = moment(); 
-                                                                                                                                                if (val.dueDate)
-                                                                                                                                                    return moment(val.dueDate, "DD.MM.YYYY") >= now;
-                                                                                                                                                else return false;
-                                                                                                                                            })});
-        InitTemplate($("#doctors .row.doctors"), $("#doctors-template"), {"doctors" : window.ClinicModel.Doctors});
-        InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), {"contacts" : window.ClinicModel.Contacts});
+        InitTemplate($("#about .medical-treatment"), $("#phones-template"), { "phones": window.ClinicModel.Phones });
+        InitTemplate($("#about .license"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });
+        InitTemplate($("#about .row.adv"), $("#promo-icon-template"), { "promo": window.ClinicModel.Promo });
+        InitTemplate($("#services .row.popular-services-row"), $("#services-template"), { "services": window.ClinicModel.Services });
+        InitTemplate($("#doctors .row.doctors"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
+        InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), { "contacts": window.ClinicModel.Contacts });
     }
 
     function InitTemplate(container, templateContainer, view) {
         var template = templateContainer.html();
-        Mustache.parse(template);   // optional, speeds up future uses
+        Mustache.parse(template); // optional, speeds up future uses
         var html = Mustache.render(template, view);
 
         container.append(html);
@@ -48,35 +42,30 @@ var Clinic = (function(){
         sr.reveal(".sr-left", {
             origin: 'left',
             duration: 1000,
-            opacity: 0, 
-            easing: 'ease-in-out',           
+            opacity: 0,
+            easing: 'ease-in-out',
             distance: "150px"
         }, 200);
         sr.reveal(".sr-left-delay", {
             origin: 'left',
             duration: 300,
-            opacity: 0, 
-            easing: 'ease-in-out',           
+            opacity: 0,
+            easing: 'ease-in-out',
             distance: "150px"
         }, 400);
         sr.reveal(".sr-bottom", {
             origin: 'bottom',
             duration: 1000,
             delay: 800,
-            opacity: 0, 
-            easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',           
+            opacity: 0,
+            easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
             distance: "150px"
         }, 200);
-        sr.reveal(".sr-adv", {
-            duration: 1000,
-            scale: 1,
-            distance: "0px"
-        }, 1000);
         sr.reveal(".sr-doctors", {
             origin: 'left',
             duration: 500,
-            opacity: 0, 
-            easing: 'ease-in-out',           
+            opacity: 0,
+            easing: 'ease-in-out',
             distance: "150px"
         }, 400);
         sr.reveal(".sr-icons", {
@@ -87,7 +76,7 @@ var Clinic = (function(){
     }
 
     function ScrollInit() {
-        $("a.page-scroll").bind("click", function (e) {
+        $("a.page-scroll").bind("click", function(e) {
             var l = $(this);
             $("html, body").stop().animate({
                 scrollTop: $(l.attr("href")).offset().top - 50
@@ -103,7 +92,7 @@ var Clinic = (function(){
 
     function AffixBehaviour() {
         $(window).on('scroll', function(event) {
-            var navBar =  $('#mainNavBar');
+            var navBar = $('#mainNavBar');
             var scrollValue = $(window).scrollTop();
             if (scrollValue > 100) {
                 navBar.addClass('affix');
@@ -115,7 +104,7 @@ var Clinic = (function(){
 
     function HoverBehaviour() {
         $("div.hover-action").hover(function() {
-            var $this = $(this);            
+            var $this = $(this);
             var id = $this.data("expand-id");
             $this.find("i").text('expand_less');
             $("#" + id).addClass("opacity-visible").find(".info").addClass('opacity-visible');
@@ -131,7 +120,7 @@ var Clinic = (function(){
         $(".card-trigger").each(function() {
             var $this = $(this);
             var card = $this.closest('.row').find('.card-detail');
-            if (card.length >0) {
+            if (card.length > 0) {
                 var label = $this.find(".card-detail-button-label");
                 var icon = $this.find('i');
                 var button = $this.find('.card-detail-button');
@@ -186,7 +175,7 @@ var Clinic = (function(){
             doctorsColumns.each(function(index) {
                 var $this = $(this);
                 if (!$this.is(':visible')) {
-                    hiddenCount +=1;
+                    hiddenCount += 1;
                     if (hiddenIndex == -1) hiddenIndex = index;
                 } else {
                     hiddenCount = 0;
@@ -208,7 +197,7 @@ var Clinic = (function(){
             doctorsColumns.each(function(index) {
                 var $this = $(this);
                 if (!$this.is(':visible')) {
-                    hiddenCount +=1;
+                    hiddenCount += 1;
                     hiddenIndex = index;
                 } else {
                     return false;
@@ -224,7 +213,7 @@ var Clinic = (function(){
     }
 
     function MapInit() {
-        ymaps.ready( function() {
+        ymaps.ready(function() {
             var location1 = 56.86211253;
             var location2 = 53.28120296;
             try {
