@@ -92,6 +92,25 @@ section {
     transition: all .35s;
 }
 
+.btn-secondary {
+    color: #fff;
+    background-color: #3aabdd;
+    border-color: #3aabdd;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.btn-secondary.active,
+.btn-secondary.focus,
+.btn-secondary:active,
+.btn-secondary:focus,
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #2d529f;
+    border-color: #2d529f;
+}
+
 .btn-primary.active,
 .btn-primary.focus,
 .btn-primary:active,
@@ -238,6 +257,11 @@ section {
     white-space: normal;
 }
 
+.nav .navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
 .navbar-light .navbar-nav .nav-link {
     text-transform: uppercase;
 }
@@ -247,7 +271,6 @@ section {
     border-color: rgba(34, 34, 34, .05);
     transition: all .35s;
 }
-
 
 /* ============================================= */
 
@@ -553,7 +576,6 @@ header .header-content .header-content-inner p {
 
 #doctors .row.doctors .doctors-navigation i {
     cursor: pointer;
-    color: #fff;
 }
 
 #doctors .row.doctors .doctors-navigation i:nth-of-type(1) {
@@ -580,7 +602,22 @@ header .header-content .header-content-inner p {
 #doctors .doctor-card-info div:last-of-type {
     margin-top: 0.5rem;
 }
-
+#skype-cons .skype-request-header {
+    margin-top: 2em;
+}
+#skype-cons .skype-form-send {
+    display: flex;
+    justify-content: center;
+}
+#skype-cons .skype-send-form {
+    margin-top: 1rem;
+}
+#skype-cons .thankyou_message {
+    display: none;
+}
+#skype-cons .thankyou_message span {
+    font-size: 2rem;
+}
 #contacts {
     padding: 0;
 }
@@ -701,10 +738,6 @@ footer .footer-social-links {
     }
     .navbar-default.affix .nav>li>a {
         font-size: 1.2rem;
-    }
-    .navbar-default .nav>li>a.active,
-    .navbar-default .nav>li>a:focus {
-        color: rgb(30, 128, 185) !important;
     }
     /* ============================================= */
     /* =============HEADER========================== */

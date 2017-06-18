@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400|Roboto:300|Open+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=package.standard&mode=release" type="text/javascript"></script>
+    <script src="https://vk.com/js/api/openapi.js?146" type="text/javascript"></script>
 </head>
 
 <body>
@@ -53,7 +54,7 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/44724454" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 
-    <nav id="mainNavBar" class="navbar navbar-default navbar-fixed-top navbar-light">
+    <nav id="mainNavBar" class="navbar navbar-default navbar-fixed-top navbar-light affix">
         <div class="container-fluid">
             <div class="navbar-header clearfix">
                 <div class="navbar-brand">
@@ -68,16 +69,13 @@
             <div class="collapse navbar-toggleable-sm" id="collapseNavbar">
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-item nav-link page-scroll" href="#about">О клинике</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-item nav-link page-scroll" href="#services">Услуги</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-item nav-link page-scroll" href="#doctors">Специалисты</a>
+                        <a class="nav-item nav-link page-scroll" href="#services">Услуги и цены</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-item nav-link page-scroll" href="#contacts">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skype-cons" class="btn btn-secondary btn-lg page-scroll skype-cons">Skype-консультация</a>
                     </li>
                 </ul>
             </div>
@@ -124,7 +122,7 @@
                     <div class="row adv"></div>
                 </div>
                 <div class="col-sm-4 col-md-4">
-                    <img src="./img/reception.jpg" />
+                    <div id="vk_group"></div>
                 </div>
             </div>
             <div class="row">
@@ -160,6 +158,56 @@
             </div>
         </div>
     </section>
+    <section id="skype-cons" class="bg-primary">
+        <div class="container">
+            <div class="row skype-cons">
+                <h1>Заказ консультации по Skype</h1>
+                <div class="color-white">
+                    <p>В нашей клинике доступна услуга консультации психолога удаленно по Skype. Услуга будет оказана в следущей последовательности:</p>
+                    <ol>
+                        <li>Вам нужно заполнить форму ниже и нажать на кнопку "Отправить".</li>
+                        <li>Администратор клиники свяжется с Вами по указанному номеру телефона или E-mail и согласует время консультации.</li>
+                        <li>В договоренное время Вы сможете связаться с указанным лицом через Skype.</li>
+                    </ol>
+                </div>
+                <div class="skype-request-header">
+                    <h2>Форма запроса консультации</h2>
+                    <form method="POST" id="gform" action="https://script.google.com/macros/s/AKfycbwWs0KkRKtkbPq_00Z6zrQLKSjJMRELUyrDdCGV3l9BKjkMX7v6/exec">
+                        <div class="form-group color-white row">
+                            <label for="form_name" class="col-sm-2 col-form-label">Как к Вам обращаться</label>
+                            <div class="col-sm-12">
+                                <input class="form-control" name="name" type="text" value="" placeholder="Иван Иванов" id="form_name">
+                            </div>
+                        </div>
+                        <div class="form-group color-white row">
+                            <label for="form_phone" class="col-sm-2 col-form-label">Телефон</label>
+                            <div class="col-sm-12">
+                                <input class="form-control" name="phone" id="form_phone" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group color-white row">
+                            <label for="form_email" class="col-sm-2 col-form-label">E-mail</label>
+                            <div class="col-sm-12">
+                                <input type="email" class="form-control" name="email" id="form_email" aria-describedby="emailHelp" placeholder="E-mail">
+                            </div>
+                        </div>
+                        <div class="form-group color-white row">
+                            <label for="form_comments" class="col-sm-2 col-form-label">Комментарии</label>
+                            <div class="col-sm-12">
+                                <textarea class="form-control" name="comments" id="form_comments" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="row skype-form-send">
+                            <button type="submit" class="btn btn-primary btn-lg skype-send-form">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="thankyou_message color-white">
+                    <span>Запрос отправлен!</span>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="contacts">
         <div class="container-fluid">
             <div class="contacts-layer sr-left">
@@ -171,9 +219,6 @@
     <footer class="bg-primary color-white">
         <div class="copyright">© 2017 Клиническая больница восстановительной медицины. Все права защищены.</div>
         <div class="footer-social-links">
-            <a href="https://vk.com/club133747176" target="_blank">
-                <img src="./img/vk.png">
-            </a>
         </div>
     </footer>
     <script id="phones-template" type="x-tmpl-mustache">
@@ -257,7 +302,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="./js/model.js"></script>
     <script src="./js/clinic.js"></script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-586be04627105d57"></script>
+    <script src="./js/form-submission-handler.js"></script>
 </body>
 
 </html>

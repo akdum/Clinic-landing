@@ -8,15 +8,15 @@ var Clinic = (function() {
     var root = {};
 
     root.Init = function() {
-        InitTemplates();
+        InitTemplates();        
         DoctorsGalleryInit();
         ScrollRevealInit();
         ScrollInit();
-        AffixBehaviour();
         HoverBehaviour();
         CardShow();
         GalleryInit();
-        MapInit();
+        MapInit();        
+        VkInit();
     };
 
     function InitTemplates() {
@@ -61,13 +61,13 @@ var Clinic = (function() {
             easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
             distance: "150px"
         }, 200);
-        sr.reveal(".sr-doctors", {
-            origin: 'left',
-            duration: 500,
-            opacity: 0,
-            easing: 'ease-in-out',
-            distance: "150px"
-        }, 400);
+        // sr.reveal(".sr-doctors", {
+        //     origin: 'left',
+        //     duration: 500,
+        //     opacity: 0,
+        //     easing: 'ease-in-out',
+        //     distance: "150px"
+        // }, 400);
         sr.reveal(".sr-icons", {
             duration: 1000,
             scale: .1,
@@ -82,23 +82,6 @@ var Clinic = (function() {
                 scrollTop: $(l.attr("href")).offset().top - 50
             }, 1000);
             e.preventDefault();
-        });
-
-        $("body").scrollspy({
-            target: ".navbar-fixed-top",
-            offset: 100
-        });
-    }
-
-    function AffixBehaviour() {
-        $(window).on('scroll', function(event) {
-            var navBar = $('#mainNavBar');
-            var scrollValue = $(window).scrollTop();
-            if (scrollValue > 100) {
-                navBar.addClass('affix');
-            } else {
-                navBar.removeClass('affix');
-            }
         });
     }
 
@@ -229,6 +212,17 @@ var Clinic = (function() {
                 console.log(error);
             }
         });
+    }
+
+    function VkInit() {
+        var options = {
+            mode: 2, 
+            no_cover: 1,
+            width: "auto",
+            wide: 1,
+            height: "600px"
+        }
+        VK.Widgets.Group("vk_group", options, 133747176);
     }
 
     return root;
