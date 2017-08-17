@@ -11,7 +11,7 @@
     <meta name="yandex-verification" content="5cbf5d462d873f37" />
     <link rel="shortcut icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/clinic.css">
+    <link rel="stylesheet" href="./css/clinic.css?v=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400|Roboto:300|Open+Sans:400,600" rel="stylesheet">
@@ -68,12 +68,12 @@
             </div>
             <div class="collapse navbar-toggleable-sm" id="collapseNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-item nav-link page-scroll" href="#services">Услуги и цены</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-item nav-link page-scroll" href="#contacts">Контакты</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a href="#skype-cons" class="btn btn-secondary btn-lg page-scroll skype-cons">Skype-консультация</a>
                     </li>
@@ -99,8 +99,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 sr-left-delay bg-tertiary work-hours hover-action" data-expand-id="work_hours">
-                    <div id="work_hours" class="expanded-info bg-primary">
+                <div class="col-lg-3 sr-left-delay bg-tertiary expand-section hover-action" data-expand-id="work_hours">
+                    <div id="work_hours" class="expanded-info bg-tertiary">
                         <div class="info">
                             <div>Понедельник - Пятница</div>
                             <div>с 09-00 до 18-00</div>
@@ -111,6 +111,27 @@
                         </div>
                     </div>
                     <h5>Рабочие часы<i class="material-icons md-48">expand_more</i></h5>
+                </div>
+                <div class="col-lg-3 sr-left-delay bg-primary expand-section hover-action" data-expand-id="phones-expand">
+                    <div id="phones-expand" class="expanded-info bg-primary">
+                        <div class="info">
+                            <div>Городской</div>
+                            <div><a href='tel:+73412233325'>+7(3412)23-33-25</a></div>
+                        </div>
+                        <div class="info">
+                            <div>Сотовый</div>
+                            <div><a href='tel:+79090538753'>+7(909)053-87-53</a></div>
+                        </div>
+                    </div>
+                    <h5>Телефоны<i class="material-icons md-48">expand_more</i></h5>
+                </div>
+                <div class="col-lg-3 sr-left-delay bg-secondary expand-section hover-action" data-expand-id="mail-expand">
+                    <div id="mail-expand" class="expanded-info bg-secondary">
+                        <div class="info">
+                            <div><a href='mailto:centr_psy@mail.ru'>centr_psy@mail.ru</a></div>
+                        </div>
+                    </div>
+                    <h5>Почта<i class="material-icons md-48">expand_more</i></h5>
                 </div>
             </div>
             <div class="row description-row">
@@ -221,21 +242,6 @@
         <div class="footer-social-links">
         </div>
     </footer>
-    <script id="phones-template" type="x-tmpl-mustache">
-        {{#phones}}
-        <div class="col-lg-3 sr-left-delay {{ bgClassName}}">
-            <a href="tel:{{phoneNumber}}" class="text-decoration-none">
-                <div class="medical-treatment-box">
-                    <div class="medical-treatment-box-icon"><i class="material-icons md-48">call</i></div>
-                    <div class="medical-treatment-box-info">
-                        <label>{{label}}</label>
-                        <strong>{{phoneNumberLong}}</strong>
-                    </div>
-                </div>
-            </a>
-        </div>
-        {{/phones}}
-    </script>
     <script id="promo-icon-template" type="x-tmpl-mustache">
         {{#promo}}
         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
@@ -300,8 +306,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script src="./js/model.js"></script>
-    <script src="./js/clinic.js"></script>
+    <script src="./js/model.js?v=1.0"></script>
+    <script src="./js/clinic.js?v=1.0"></script>
     <script src="./js/form-submission-handler.js"></script>
 </body>
 

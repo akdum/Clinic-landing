@@ -32,7 +32,6 @@ html {
     height: 100%;
     width: 100%;
     font-size: 16px;
-    color: #777;
 }
 
 a {
@@ -345,7 +344,7 @@ header .header-content .header-content-inner p {
     font-size: 1.6rem;
 }
 
-.medical-treatment .work-hours h5 {
+.medical-treatment .expand-section h5 {
     font-family: 'Open Sans', sans-serif;
     position: absolute;
     top: 50%;
@@ -353,7 +352,7 @@ header .header-content .header-content-inner p {
     padding-left: 2.5rem;
 }
 
-.medical-treatment .work-hours i {
+.medical-treatment .expand-section i {
     position: absolute;
     margin-left: 1rem;
     top: 50%;
@@ -637,7 +636,6 @@ header .header-content .header-content-inner p {
     position: absolute;
     top: 30%;
     left: 10%;
-    height: 320px;
     width: 300px;
     margin-top: -50px;
     background-color: #fff;
@@ -703,16 +701,18 @@ footer .footer-social-links {
     }
     .navbar-default.affix .navbar-header .navbar-brand img {
         height: 3rem;
+        position: relative;
+        top: 4px;
     }
     .navbar-default.affix .navbar-header .navbar-brand .clinic-academy {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
     .navbar-default.affix .navbar-header .navbar-brand .clinic-title {
-        font-size: 1.2rem;
-        height: 1.2rem;
-        line-height: 1.2rem;
-        width: 800px;
-        white-space: normal;
+        font-size: 1.6rem;
+        height: 1.6rem;
+        line-height: 1.6rem;
+        width: 100%;
+        white-space: nowrap;
     }
     .navbar-default {
         background-color: rgba(255, 255, 255, .8);
@@ -724,7 +724,6 @@ footer .footer-social-links {
         float: left;
     }
     .navbar #collapseNavbar {
-        float: right;
         position: absolute;
         right: 0;
         top: 50%;
@@ -768,10 +767,10 @@ footer .footer-social-links {
 }
 
 @media (max-width: 1024px) {
-    .medical-treatment .work-hours h5 {
+    .medical-treatment .expand-section h5 {
         padding-left: 2rem;
     }
-    .medical-treatment .work-hours i {
+    .medical-treatment .expand-section i {
         margin-left: 0.5rem;
     }
     .medical-treatment .medical-treatment-box .medical-treatment-box-icon {
@@ -849,6 +848,9 @@ footer .footer-social-links {
     .medical-treatment>div:nth-child(1),
     .medical-treatment>div:nth-child(1)::after {
         display: none;
+    }
+    #vk_group {
+        display: inline-block;
     }
     #services .popular-services-row [class*="col-"] {
         margin-top: 0rem;

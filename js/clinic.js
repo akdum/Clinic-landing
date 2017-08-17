@@ -20,7 +20,6 @@ var Clinic = (function() {
     };
 
     function InitTemplates() {
-        InitTemplate($("#about .medical-treatment"), $("#phones-template"), { "phones": window.ClinicModel.Phones });
         InitTemplate($("#about .license"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });
         InitTemplate($("#about .row.adv"), $("#promo-icon-template"), { "promo": window.ClinicModel.Promo });
         InitTemplate($("#services .row.popular-services-row"), $("#services-template"), { "services": window.ClinicModel.Services });
@@ -79,7 +78,7 @@ var Clinic = (function() {
         $("a.page-scroll").bind("click", function(e) {
             var l = $(this);
             $("html, body").stop().animate({
-                scrollTop: $(l.attr("href")).offset().top - 50
+                scrollTop: $(l.attr("href")).offset().top - 100
             }, 1000);
             e.preventDefault();
         });
