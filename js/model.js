@@ -6,7 +6,7 @@ window.ClinicModel = {
         { title: "Телефон сотовый:", value: "<a href='tel:+79090538753'>8-909-053-87-53</a>" }
     ],
     Doctors: [
-        { photoName: "reverchuk.jpg", title: { surname: "Реверчук", name: "Игорь Васильевич", spec: "заведующий кафедрой, главный врач, профессор" } },
+        { photoName: "reverchuk.jpg", title: { surname: "Реверчук", name: "Игорь Васильевич", spec: "заведующий кафедрой, главный врач, профессор" }, file: "reverchuk.html" },
         { photoName: "tutrumova.jpg", title: { surname: "Тютрюмова", name: "Елена Александровна", spec: "психолог-дефектолог, олигофренопедагог, детский психолог" } },
         { photoName: "perevozchikov.jpg", title: { surname: "Перевозчиков", name: "Александр Палович", spec: "врач-психотерапевт, специалист по БОС-ЭЭГ" } },        
         { photoName: "rumyanceva.jpg", title: { surname: "Румянцева", name: "Наталья Анатольевна", spec: "врач-психотерапевт" } },

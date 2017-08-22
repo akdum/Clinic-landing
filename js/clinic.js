@@ -219,6 +219,7 @@ var Clinic = (function() {
     function ShowDoctorCard(doctor_card) {
         $(".doctor-card-info", doctor_card).hide();
         $("#doctors .doctor-big-card_title").text(doctor_card.data("title"));
+        $("#doctors .doctor-big-card_info").load("html/" + doctor_card.data("file"));
         $("#doctors .doctor-big-card").fadeIn("slow");
     }
 
