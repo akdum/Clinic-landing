@@ -602,12 +602,13 @@ header .header-content .header-content-inner p {
     margin-top: 0.5rem;
 }
 
-#doctors .doctor-big-card {
-
-}
-
 #doctors .doctor-big-card_title {
     font-size: 2rem;
+    line-height: 2rem;
+}
+
+#doctors .doctor-big-card_info {
+    margin-top: 1.5rem;
 }
 
 #skype-cons .skype-request-header {
