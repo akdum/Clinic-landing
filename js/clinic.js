@@ -23,7 +23,7 @@ var Clinic = (function() {
         InitTemplate($("#about .license"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });
         InitTemplate($("#about .row.adv"), $("#promo-icon-template"), { "promo": window.ClinicModel.Promo });
         InitTemplate($("#services .row.popular-services-row"), $("#services-template"), { "services": window.ClinicModel.Services });
-        InitTemplate($("#doctors .row.doctors"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
+        InitTemplate($("#doctors .row.doctors .doctors-list"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
         InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), { "contacts": window.ClinicModel.Contacts });
     }
 
@@ -192,6 +192,39 @@ var Clinic = (function() {
                 $(doctorsColumns[hiddenIndex]).fadeIn("slow");
             }
         });
+
+        $(".doctor-card").on('click', function() {
+            var $this = $(this);
+            var showInfo = false;
+            // hide all others doctors.
+            var parent = $this.parent();
+            var otherCards = parent.siblings(".doctor-column");
+            $(".doctors-navigation").toggle();
+            if (otherCards.hasClass("display-none")) {
+                otherCards.removeClass("display-none")
+                showInfo = false;
+            } else {
+                otherCards.addClass("display-none ");
+                showInfo = true;
+            }        
+            
+            if (showInfo) {
+                ShowDoctorCard(parent);
+            } else {
+                HideDoctorCard(parent);
+            }
+        });
+    }
+
+    function ShowDoctorCard(doctor_card) {
+        $(".doctor-card-info", doctor_card).hide();
+        $("#doctors .doctor-big-card_title").text(doctor_card.data("title"));
+        $("#doctors .doctor-big-card").fadeIn("slow");
+    }
+
+    function HideDoctorCard(doctor_card) {
+        $("#doctors .doctor-big-card").hide();
+        $(".doctor-card-info", doctor_card).show();
     }
 
     function MapInit() {

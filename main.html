@@ -11,7 +11,7 @@
     <meta name="yandex-verification" content="5cbf5d462d873f37" />
     <link rel="shortcut icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/clinic.css?v=1.0">
+    <link rel="stylesheet" href="./css/clinic.css?v=1.1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400|Roboto:300|Open+Sans:400,600" rel="stylesheet">
@@ -176,6 +176,11 @@
                     <i class="material-icons md-36 prev-doctor">arrow_back</i>
                     <i class="material-icons md-36 next-doctor">arrow_forward</i>
                 </div>
+                <div class="doctors-list"></div>
+                <div class="col-lg-9 col-md-4 doctor-big-card display-none">
+                    <div class="doctor-big-card_title color-primary"></div>
+                    <div class="doctor-big-card_info"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -266,7 +271,7 @@
     </script>
     <script id="doctors-template" type="x-tmpl-mustache">
         {{#doctors}}
-        <div class="col-lg-3 col-md-4 sr-doctors doctor-column">
+        <div class="col-lg-3 col-md-4 sr-doctors doctor-column" data-title="{{title.surname}} {{ title.name }}" >
             <div class="doctor-card">
                 <img src="./img/doctors/{{photoName}}" />
                 <div class="doctor-card-info">
@@ -306,8 +311,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script src="./js/model.js?v=1.0"></script>
-    <script src="./js/clinic.js?v=1.0"></script>
+    <script src="./js/model.js?v=1.1"></script>
+    <script src="./js/clinic.js?v=1.1"></script>
     <script src="./js/form-submission-handler.js"></script>
 </body>
 
