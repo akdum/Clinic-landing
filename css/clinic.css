@@ -611,6 +611,10 @@ header .header-content .header-content-inner p {
     margin-top: 1.5rem;
 }
 
+#doctors .doctor-big-card_info ol, #doctors .doctor-big-card_info ul {
+    margin-left: 1rem;
+}
+
 #skype-cons .skype-request-header {
     margin-top: 2em;
 }
