@@ -8,7 +8,7 @@ window.ClinicModel = {
     Doctors: [
         { photoName: "reverchuk.jpg", title: { surname: "Реверчук", name: "Игорь Васильевич", spec: "заведующий кафедрой, главный врач, профессор" }, file: "reverchuk.html" },
         { photoName: "tutrumova.jpg", title: { surname: "Тютрюмова", name: "Елена Александровна", spec: "психолог-дефектолог, олигофренопедагог, детский психолог" } },
-        { photoName: "perevozchikov.jpg", title: { surname: "Перевозчиков", name: "Александр Палович", spec: "врач-психотерапевт, специалист по БОС-ЭЭГ" } },        
+        { photoName: "perevozchikov.jpg", title: { surname: "Перевозчиков", name: "Александр Палович", spec: "врач-психотерапевт, специалист по БОС-ЭЭГ" }, file: "perevozchikov.html" },        
         { photoName: "rumyanceva.jpg", title: { surname: "Румянцева", name: "Наталья Анатольевна", spec: "врач-психотерапевт" } },
         { photoName: "pomyitkina.jpg", title: { surname: "Помыткина", name: "Татьяна Юрьевна", spec: "психолог, семейный психолог, специалист по профоринтации, кандидат психологических наук" } },
         { photoName: "zagrtdinova-rizida.jpg", title: { surname: "Загртдинова", name: "Ризида Миннесагитовна", spec: "врач-дерматовенеролог-дерматолог-косметолог, заведующая кафедрой, профессор" } }
