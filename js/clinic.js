@@ -226,6 +226,8 @@ var Clinic = (function() {
     function HideDoctorCard(doctor_card) {
         $("#doctors .doctor-big-card").hide();
         $(".doctor-card-info", doctor_card).show();
+        $("#doctors .doctor-big-card_info *").remove();
+        $("#doctors .doctor-big-card_title").text("");
     }
 
     function MapInit() {
