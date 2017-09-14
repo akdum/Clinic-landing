@@ -195,35 +195,41 @@ var Clinic = (function() {
 
         $(".doctor-card").on('click', function() {
             var $this = $(this);
-            var showInfo = false;
-            // hide all others doctors.
             var parent = $this.parent();
             var otherCards = parent.siblings(".doctor-column");
-            $(".doctors-navigation").toggle();
+            var backButton = $(".doctor-card-back");
+
             if (otherCards.hasClass("display-none")) {
-                otherCards.removeClass("display-none")
-                showInfo = false;
-            } else {
-                otherCards.addClass("display-none ");
-                showInfo = true;
+                HideDoctorCard(parent, otherCards);
+            } else {                
+                ShowDoctorCard(parent, otherCards);
+
+                // init back button.
+                backButton.data("card", $this);
+                backButton.data("siblings", otherCards);
             }        
-            
-            if (showInfo) {
-                ShowDoctorCard(parent);
-            } else {
-                HideDoctorCard(parent);
-            }
+        });
+
+        $(".doctor-card-back").on('click', function() {
+            var $this = $(this);
+            var doctor_card = $this.data("card");
+            var siblings = $this.data("siblings");
+            HideDoctorCard(doctor_card, siblings);
         });
     }
 
-    function ShowDoctorCard(doctor_card) {
+    function ShowDoctorCard(doctor_card, siblings) {
+        $(".doctors-navigation").toggle();
+        siblings.addClass("display-none ");
         $(".doctor-card-info", doctor_card).hide();
         $("#doctors .doctor-big-card_title").text(doctor_card.data("title"));
         $("#doctors .doctor-big-card_info").load("html/" + doctor_card.data("file"));
         $("#doctors .doctor-big-card").fadeIn("slow");
     }
 
-    function HideDoctorCard(doctor_card) {
+    function HideDoctorCard(doctor_card, siblings) {
+        $(".doctors-navigation").toggle();
+        siblings.removeClass("display-none")
         $("#doctors .doctor-big-card").hide();
         $(".doctor-card-info", doctor_card).show();
         $("#doctors .doctor-big-card_info *").remove();

@@ -178,6 +178,7 @@
                 </div>
                 <div class="doctors-list"></div>
                 <div class="col-lg-9 col-md-4 doctor-big-card display-none">
+                    <div class="btn btn-secondary btn-lg doctor-card-back">Назад</div>
                     <div class="doctor-big-card_title color-primary"></div>
                     <div class="doctor-big-card_info"></div>
                 </div>
@@ -272,12 +273,12 @@
     <script id="doctors-template" type="x-tmpl-mustache">
         {{#doctors}}
         <div class="col-lg-3 col-md-4 sr-doctors doctor-column" data-title="{{title.surname}} {{ title.name }}" data-file="{{file}}" >
-            <div class="doctor-card">
+            <div class="doctor-card"> 
                 <img src="./img/doctors/{{photoName}}" />
                 <div class="doctor-card-info">
                     <div class="">
                         <h3>{{ title.surname }}</h3>
-                    </div>
+                    </div>                    
                     <div class="">{{ title.name }}</div>
                     <div class="">{{ title.spec }}</div>
                 </div>
@@ -312,7 +313,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="./js/model.js?v=1.4"></script>
-    <script src="./js/clinic.js?v=1.2"></script>
+    <script src="./js/clinic.js?v=1.3"></script>
     <script src="./js/form-submission-handler.js"></script>
 </body>
 
