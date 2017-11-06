@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/clinic.css?v=1.6">
+    <link rel="stylesheet" href="./css/clinic.css?v=1.7">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400|Roboto:300|Open+Sans:400,600" rel="stylesheet">
@@ -295,7 +295,9 @@
                         <span>О враче</span>
                     </div>
                     <div class="doctor-card-actions__book-now bg-primary">
+                        {{#calendar}}
                         <span>Расписание</span>    
+                        {{/calendar}}
                     </div>
                 </div>
             </div>
@@ -338,8 +340,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script src="./js/model.js?v=1.6"></script>
-    <script src="./js/clinic.js?v=1.3"></script>
+    <script src="./js/model.js?v=1.7"></script>
+    <script src="./js/clinic.js?v=1.4"></script>
     <script src="./js/form-submission-handler.js"></script>
 </body>
 
