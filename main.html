@@ -141,6 +141,13 @@
             <div class="row doctors">
                 <h1>Специалисты</h1>
                 <div class="doctors_block"></div>
+                <div class="doctor-big-card hidden">   
+                    <div class="doctor-big-card__img">
+                        <img />
+                    </div>
+                    <div class="doctor-big-card__text">                        
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -263,8 +270,8 @@
     </script>
     <script id="doctors-template" type="x-tmpl-mustache">
         {{#doctors}}
-        <div class="col-lg-4 col-sm-6">
-            <div class="doctor-card" data-title="{{title.surname}} {{ title.name }}" data-file="{{file}}">            
+        <div class="col-lg-4 col-sm-6 sr-doctors">
+            <div class="doctor-card" data-img="{{photoName}}" data-title="{{title.surname}} {{ title.name }}" data-file="{{file}}">            
                 <img src="./img/doctors/square_150/{{photoName}}" />
                 <div class="doctor-card-info">
                     <div class="doctor-card-info__title_surname">

@@ -65,6 +65,14 @@ var Clinic = (function() {
             scale: .1,
             distance: "0px"
         }, 300);
+        sr.reveal(".sr-doctors", {
+            duration: 200,
+            delay: 100,
+            scale: 0,
+            origin: 'left',
+            distance: "0px",
+            easing: 'ease-in-out'
+        }, 100);
     }
 
     function ScrollInit() {
@@ -162,7 +170,19 @@ var Clinic = (function() {
     }
 
     function DoctorCardsInit() {
+        $(".doctor-card .doctor-card-actions__info").on('click', function() {
+            var $this = $(this);
+            var card = $this.closest(".doctor-card");
+            var doctors_block = $(".doctors_block");
+            var doctor_big_card = $(".doctor-big-card");
 
+            doctors_block.addClass('hidden');
+            // set image.
+            $("img", doctor_big_card).attr('src', './img/doctors/' + card.data('img'));
+            // set text.
+            $(".doctor-big-card__text").load('html/' + card.data('file'));
+            doctor_big_card.removeClass('hidden');
+        })
     }
 
     return root;

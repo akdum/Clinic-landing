@@ -74,7 +74,9 @@ header {
 section {
     padding: 1rem 0px;
 }
-
+.hidden {
+    display: none;
+}
 .btn {
     border: none;
     border-radius: 10px;
@@ -597,6 +599,12 @@ header .header-content .header-content-inner p {
     width: 50%;
     cursor: pointer;
     color: #fff;
+}
+#doctors .doctor-big-card {
+    display: flex;
+}
+#doctors .doctor-big-card__img {
+    
 }
 #doctors .doctor-big-card_title {
     font-size: 2rem;
