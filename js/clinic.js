@@ -170,19 +170,33 @@ var Clinic = (function() {
     }
 
     function DoctorCardsInit() {
+        var doctor_big_card = $(".doctor-big-card");
+
+        $(".doctor-big-card__close", doctor_big_card).on('click', function() {         
+            $("img", doctor_big_card).attr('src', '');   
+            $(".doctor-big-card__title", doctor_big_card).text('');
+            $(".doctor-big-card__body", doctor_big_card)[0].innerHTML = "";
+
+            $(this).addClass('hidden');
+            doctor_big_card.addClass('hidden');
+            $(".doctors_block").removeClass('hidden');
+        })
+
         $(".doctor-card .doctor-card-actions__info").on('click', function() {
             var $this = $(this);
             var card = $this.closest(".doctor-card");
-            var doctors_block = $(".doctors_block");
-            var doctor_big_card = $(".doctor-big-card");
+            var doctors_block = $(".doctors_block");            
 
             doctors_block.addClass('hidden');
             // set image.
             $("img", doctor_big_card).attr('src', './img/doctors/' + card.data('img'));
             // set text.
-            $(".doctor-big-card__title").text(card.data('title'));
-            $(".doctor-big-card__body").load('html/' + card.data('file'));
+            $(".doctor-big-card__title", doctor_big_card).text(card.data('title'));
+            $(".doctor-big-card__body", doctor_big_card).load('html/' + card.data('file'));
+            
+            // show card.
             doctor_big_card.removeClass('hidden');
+            $(".doctor-big-card__close", doctor_big_card).removeClass('hidden');
         })
     }
 

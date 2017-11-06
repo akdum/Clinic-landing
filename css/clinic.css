@@ -355,6 +355,7 @@ header .header-content .header-content-inner p {
     height: 94px;
     position: relative;
     z-index: 2;
+    cursor: pointer;
 }
 
 .medical-treatment>div:nth-child(1) {
@@ -618,7 +619,10 @@ header .header-content .header-content-inner p {
 #doctors .doctor-big-card__body ol, #doctors .doctor-big-card__body ul {
     margin-left: 1rem;
 }
-
+#doctors .doctor-big-card__close {
+    position: absolute;
+    right: 0;
+}
 #skype-cons .skype-request-header {
     margin-top: 2em;
 }
