@@ -603,19 +603,19 @@ header .header-content .header-content-inner p {
 #doctors .doctor-big-card {
     display: flex;
 }
-#doctors .doctor-big-card__img {
-    
+#doctors .doctor-big-card__text {
+    margin-left: 2rem;
 }
-#doctors .doctor-big-card_title {
+#doctors .doctor-big-card__title {
     font-size: 2rem;
     line-height: 2rem;
 }
 
-#doctors .doctor-big-card_info {
+#doctors .doctor-big-card__body {
     margin-top: 1.5rem;
 }
 
-#doctors .doctor-big-card_info ol, #doctors .doctor-big-card_info ul {
+#doctors .doctor-big-card__body ol, #doctors .doctor-big-card__body ul {
     margin-left: 1rem;
 }
 

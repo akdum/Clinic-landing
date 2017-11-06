@@ -180,7 +180,8 @@ var Clinic = (function() {
             // set image.
             $("img", doctor_big_card).attr('src', './img/doctors/' + card.data('img'));
             // set text.
-            $(".doctor-big-card__text").load('html/' + card.data('file'));
+            $(".doctor-big-card__title").text(card.data('title'));
+            $(".doctor-big-card__body").load('html/' + card.data('file'));
             doctor_big_card.removeClass('hidden');
         })
     }
