@@ -152,7 +152,7 @@
                     <div class="doctor-big-card__close btn btn-secondary btn-lg hidden">Закрыть</div>
                 </div>
                 <div class="doctor-book hidden">
-                    <iframe src=""></iframe>
+                    <iframe width="100%" height="500px" src=""></iframe>
                 </div>
             </div>
         </div>
@@ -277,7 +277,7 @@
     <script id="doctors-template" type="x-tmpl-mustache">
         {{#doctors}}
         <div class="col-lg-4 col-sm-6 sr-doctors">
-            <div class="doctor-card" data-img="{{photoName}}" data-title="{{title.surname}} {{ title.name }}" data-file="{{file}}">            
+            <div class="doctor-card" data-img="{{photoName}}" data-title="{{title.surname}} {{ title.name }}" data-file="{{file}}" data-calendar="{{ calendar }}">            
                 <img src="./img/doctors/square_150/{{photoName}}" />
                 <div class="doctor-card-info">
                     <div class="doctor-card-info__title_surname">

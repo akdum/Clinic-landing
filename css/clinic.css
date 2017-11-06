@@ -623,6 +623,9 @@ header .header-content .header-content-inner p {
     position: absolute;
     right: 0;
 }
+#doctors .doctor-book iframe {
+    border: 0;
+}
 #skype-cons .skype-request-header {
     margin-top: 2em;
 }

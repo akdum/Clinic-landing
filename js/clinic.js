@@ -170,21 +170,25 @@ var Clinic = (function() {
     }
 
     function DoctorCardsInit() {
+        var doctors_block = $(".doctors_block"); 
         var doctor_big_card = $(".doctor-big-card");
+        var doctor_book = $(".doctor-book");
 
         $(".doctor-big-card__close", doctor_big_card).on('click', function() {      
-            DoctorCardClose(doctor_big_card, $(this));
-        })
+            DoctorCardClose(doctors_block, doctor_big_card, $(this));
+        });
 
         $(".doctor-card .doctor-card-actions__info").on('click', function() {
-            DoctorCardShow(doctor_big_card, this);
-        })
+            DoctorCardShow(doctors_block, doctor_big_card, this);
+        });
+
+        $(".doctor-card .doctor-card-actions__book-now").on('click', function() {
+            DoctorCalendarShow(doctors_block, doctor_book, this);
+        });
     }
 
-    function DoctorCardShow(doctor_big_card, btn) {
-        var card = $(btn).closest(".doctor-card");
-        var doctors_block = $(".doctors_block");            
-
+    function DoctorCardShow(doctors_block, doctor_big_card, btn) {
+        var card = $(btn).closest(".doctor-card");                   
         doctors_block.addClass('hidden');
         // set image.
         $("img", doctor_big_card).attr('src', './img/doctors/' + card.data('img'));
@@ -197,14 +201,25 @@ var Clinic = (function() {
         $(".doctor-big-card__close", doctor_big_card).removeClass('hidden');
     }
 
-    function DoctorCardClose(doctor_big_card, btn) {
+    function DoctorCardClose(doctors_block, doctor_big_card, btn) {
         $("img", doctor_big_card).attr('src', '');   
         $(".doctor-big-card__title", doctor_big_card).text('');
         $(".doctor-big-card__body", doctor_big_card)[0].innerHTML = "";
 
         $(btn).addClass('hidden');
         doctor_big_card.addClass('hidden');
-        $(".doctors_block").removeClass('hidden');
+        doctors_block.removeClass('hidden');
+    }
+
+    function DoctorCalendarShow(doctors_block, doctor_book, btn) {
+        var card = $(btn).closest(".doctor-card");
+        var calendarUrl = card.data('calendar');
+
+        if (calendarUrl) {
+            doctors_block.addClass('hidden');
+            $("iframe", doctor_book).attr('src', calendarUrl);
+            doctor_book.removeClass('hidden');
+        }                
     }
 
     return root;
