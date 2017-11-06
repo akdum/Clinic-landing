@@ -623,6 +623,12 @@ header .header-content .header-content-inner p {
     position: absolute;
     right: 0;
 }
+#doctors .doctor-book__loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+}
 #doctors .doctor-book iframe {
     border: 0;
 }

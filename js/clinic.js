@@ -218,12 +218,16 @@ var Clinic = (function() {
     function DoctorCalendarShow(doctors_block, doctor_book, btn) {
         var card = $(btn).closest(".doctor-card");
         var calendarUrl = card.data('calendar');
+        var loading = $(".doctor-book__loading", doctor_book);        
 
         if (calendarUrl) {
             doctors_block.addClass('hidden');
+            loading.show();
 
             $(".doctor-book__title", doctor_book).text(card.data('title'));
-            $("iframe", doctor_book).attr('src', calendarUrl);
+            $("iframe", doctor_book).attr('src', calendarUrl).on('load', function() {
+                loading.hide();
+            });
 
             doctor_book.removeClass('hidden');
             $(".doctor-book__close", doctor_book).removeClass('hidden');
