@@ -74,12 +74,6 @@
             </div>
             <div class="collapse navbar-toggleable-sm" id="collapseNavbar">
                 <ul class="nav navbar-nav">
-                    <!-- <li class="nav-item">
-                        <a class="nav-item nav-link page-scroll" href="#services">Услуги и цены</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-item nav-link page-scroll" href="#contacts">Контакты</a>
-                    </li> -->
                     <li class="nav-item">
                         <a href="#skype-cons" class="btn btn-secondary btn-lg page-scroll skype-cons">Skype-консультация</a>
                     </li>
@@ -142,11 +136,11 @@
             </div>
         </div>
     </section>
-    <section id="calendar" class="bg-primary">
+    <section id="doctors" class="bg-primary">
         <div class="container">
-            <div class="row calendar">
-                <h1>Расписание врачей</h1>
-                <iframe src="https://outlook.live.com/owa//calendar/6ef86c27-e15f-4936-a984-c80555125968/42821f52-c099-4571-b760-d5a1943ee709/cid-31776A10A799782C/index.html" frameborder="0" scrolling="no"></iframe>
+            <div class="row doctors">
+                <h1>Специалисты</h1>
+                <div class="doctors_block"></div>
             </div>
         </div>
     </section>
@@ -189,28 +183,11 @@
             </div>
         </div>
     </section>
-    <section id="doctors" class="">
-        <div class="container">
-            <div class="row doctors">
-                <h1>Специалисты</h1>
-                <div class="doctors-navigation">
-                    <i class="material-icons md-36 prev-doctor">arrow_back</i>
-                    <i class="material-icons md-36 next-doctor">arrow_forward</i>
-                </div>
-                <div class="doctors-list"></div>
-                <div class="col-lg-9 col-md-4 doctor-big-card display-none">
-                    <div class="btn btn-secondary btn-lg doctor-card-back">Назад</div>
-                    <div class="doctor-big-card_title color-primary"></div>
-                    <div class="doctor-big-card_info"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="skype-cons" class="bg-primary">
+    <section id="skype-cons" class="">
         <div class="container">
             <div class="row skype-cons">
                 <h1>Заказ консультации по Skype</h1>
-                <div class="color-white">
+                <div class="">
                     <p>В нашей клинике доступна услуга консультации психолога удаленно по Skype. Услуга будет оказана в следущей
                         последовательности:</p>
                     <ol>
@@ -223,36 +200,36 @@
                 <div class="skype-request-header">
                     <h2>Форма запроса консультации</h2>
                     <form method="POST" id="gform" action="https://script.google.com/macros/s/AKfycbwWs0KkRKtkbPq_00Z6zrQLKSjJMRELUyrDdCGV3l9BKjkMX7v6/exec">
-                        <div class="form-group color-white row">
+                        <div class="form-group row">
                             <label for="form_name" class="col-sm-2 col-form-label">Как к Вам обращаться</label>
                             <div class="col-sm-12">
                                 <input class="form-control" name="name" type="text" value="" placeholder="Иван Иванов" id="form_name">
                             </div>
                         </div>
-                        <div class="form-group color-white row">
+                        <div class="form-group row">
                             <label for="form_phone" class="col-sm-2 col-form-label">Телефон</label>
                             <div class="col-sm-12">
                                 <input class="form-control" name="phone" id="form_phone" aria-describedby="emailHelp" placeholder="">
                             </div>
                         </div>
-                        <div class="form-group color-white row">
+                        <div class="form-group row">
                             <label for="form_email" class="col-sm-2 col-form-label">E-mail</label>
                             <div class="col-sm-12">
                                 <input type="email" class="form-control" name="email" id="form_email" aria-describedby="emailHelp" placeholder="E-mail">
                             </div>
                         </div>
-                        <div class="form-group color-white row">
+                        <div class="form-group row">
                             <label for="form_comments" class="col-sm-2 col-form-label">Комментарии</label>
                             <div class="col-sm-12">
                                 <textarea class="form-control" name="comments" id="form_comments" rows="3"></textarea>
                             </div>
                         </div>
                         <div class="row skype-form-send">
-                            <button type="submit" class="btn btn-primary btn-lg skype-send-form">Отправить</button>
+                            <button type="submit" class="btn btn-secondary btn-lg skype-send-form">Отправить</button>
                         </div>
                     </form>
                 </div>
-                <div class="thankyou_message color-white">
+                <div class="thankyou_message">
                     <span>Запрос отправлен!</span>
                 </div>
             </div>
@@ -284,6 +261,21 @@
         </div>
         {{/promo}}
     </script>
+    <script id="doctors-template" type="x-tmpl-mustache">
+        {{#doctors}}
+        <div class="col-lg-4 col-sm-6">
+            <div class="doctor-card" data-title="{{title.surname}} {{ title.name }}" data-file="{{file}}">            
+                <img src="./img/doctors/square_150/{{photoName}}" />
+                <div class="doctor-card-info">
+                    <div class="doctor-card-info__title_surname">
+                        <strong>{{ title.surname }} {{ title.name }}</strong>
+                    </div>
+                    <div class="doctor-card-info__spec">{{ title.spec }}</div>
+                </div>
+            </div>
+        </div>
+        {{/doctors}}
+    </script>
     <script id="license-template" type="x-tmpl-mustache">
         {{#licenses}}
         <div class="col-lg-3 col-md-4">
@@ -292,22 +284,6 @@
             </a>
         </div>
         {{/licenses}}
-    </script>
-    <script id="doctors-template" type="x-tmpl-mustache">
-        {{#doctors}}
-        <div class="col-lg-3 col-md-4 sr-doctors doctor-column" data-title="{{title.surname}} {{ title.name }}" data-file="{{file}}">
-            <div class="doctor-card">
-                <img src="./img/doctors/{{photoName}}" />
-                <div class="doctor-card-info">
-                    <div class="">
-                        <h3>{{ title.surname }}</h3>
-                    </div>
-                    <div class="">{{ title.name }}</div>
-                    <div class="">{{ title.spec }}</div>
-                </div>
-            </div>
-        </div>
-        {{/doctors}}
     </script>
     <script id="contacts-template" type="x-tmpl-mustache">
         {{#contacts}}

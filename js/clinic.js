@@ -9,7 +9,6 @@ var Clinic = (function() {
 
     root.Init = function() {
         InitTemplates();        
-        DoctorsGalleryInit();
         ScrollRevealInit();
         ScrollInit();
         HoverBehaviour();
@@ -17,13 +16,14 @@ var Clinic = (function() {
         GalleryInit();
         MapInit();        
         VkInit();
+        DoctorCardsInit();
     };
 
     function InitTemplates() {
+        InitTemplate($("#doctors .doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
         InitTemplate($("#about .license"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });
         InitTemplate($("#about .row.adv"), $("#promo-icon-template"), { "promo": window.ClinicModel.Promo });
         InitTemplate($("#services .row.popular-services-row"), $("#services-template"), { "services": window.ClinicModel.Services });
-        InitTemplate($("#doctors .row.doctors .doctors-list"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
         InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), { "contacts": window.ClinicModel.Contacts });
     }
 
@@ -60,13 +60,6 @@ var Clinic = (function() {
             easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
             distance: "150px"
         }, 200);
-        // sr.reveal(".sr-doctors", {
-        //     origin: 'left',
-        //     duration: 500,
-        //     opacity: 0,
-        //     easing: 'ease-in-out',
-        //     distance: "150px"
-        // }, 400);
         sr.reveal(".sr-icons", {
             duration: 1000,
             scale: .1,
@@ -138,104 +131,6 @@ var Clinic = (function() {
         })
     }
 
-    function DoctorsGalleryInit() {
-        var doctorsColumns = $(".row.doctors [class*='col-']");
-        var commonWidth = 0;
-        var containerWidth = $("#doctors .container").width();
-        doctorsColumns.each(function() {
-            var $this = $(this);
-            commonWidth += $this.width();
-            if (commonWidth > containerWidth) {
-                $this.removeClass('sr-doctors').hide();
-            }
-        });
-
-        $(".doctors-navigation .next-doctor").on('click', function() {
-            var hiddenCount = 0;
-            var hiddenIndex = -1;
-
-            doctorsColumns.each(function(index) {
-                var $this = $(this);
-                if (!$this.is(':visible')) {
-                    hiddenCount += 1;
-                    if (hiddenIndex == -1) hiddenIndex = index;
-                } else {
-                    hiddenCount = 0;
-                    hiddenIndex = -1;
-                }
-            });
-            if (hiddenCount > 0) {
-                doctorsColumns.filter(function() {
-                    return $(this).is(':visible');
-                }).first().removeAttr('style').hide();
-                $(doctorsColumns[hiddenIndex]).fadeIn("slow");
-            }
-        });
-
-        $(".doctors-navigation .prev-doctor").on('click', function() {
-            var hiddenCount = 0;
-            var hiddenIndex = -1;
-
-            doctorsColumns.each(function(index) {
-                var $this = $(this);
-                if (!$this.is(':visible')) {
-                    hiddenCount += 1;
-                    hiddenIndex = index;
-                } else {
-                    return false;
-                }
-            });
-            if (hiddenCount > 0) {
-                doctorsColumns.filter(function() {
-                    return $(this).is(':visible');
-                }).last().hide();
-                $(doctorsColumns[hiddenIndex]).fadeIn("slow");
-            }
-        });
-
-        $(".doctor-card").on('click', function() {
-            var $this = $(this);
-            var parent = $this.parent();
-            var otherCards = parent.siblings(".doctor-column");
-            var backButton = $(".doctor-card-back");
-
-            if (otherCards.hasClass("display-none")) {
-                HideDoctorCard(parent, otherCards);
-            } else {                
-                ShowDoctorCard(parent, otherCards);
-
-                // init back button.
-                backButton.data("card", $this);
-                backButton.data("siblings", otherCards);
-            }        
-        });
-
-        $(".doctor-card-back").on('click', function() {
-            var $this = $(this);
-            var doctor_card = $this.data("card");
-            var siblings = $this.data("siblings");
-            HideDoctorCard(doctor_card, siblings);
-        });
-    }
-
-    function ShowDoctorCard(doctor_card, siblings) {
-        $(".doctors-navigation").toggle();
-        siblings.addClass("display-none ");
-        $(".doctor-card-info", doctor_card).hide();
-        $("#doctors .doctor-big-card_title").text(doctor_card.data("title"));
-        $("#doctors .doctor-big-card_info").load("html/" + doctor_card.data("file"));
-        $("#doctors .doctor-big-card").fadeIn("slow");
-    }
-
-    function HideDoctorCard(doctor_card, siblings) {
-        $(".doctors-navigation").toggle();
-        siblings.removeClass("display-none")
-        $("#doctors .doctor-big-card").hide();
-        $(".doctor-card-info", doctor_card).show();
-        $("#doctors .doctor-big-card_info *").remove();
-        $("#doctors .doctor-big-card_title").text("");
-    }
-
     function MapInit() {
         ymaps.ready(function() {
             var location1 = 56.86211253;
@@ -264,6 +159,10 @@ var Clinic = (function() {
             height: "600px"
         }
         VK.Widgets.Group("vk_group", options, 133747176);
+    }
+
+    function DoctorCardsInit() {
+
     }
 
     return root;
