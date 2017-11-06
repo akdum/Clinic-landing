@@ -607,7 +607,7 @@ header .header-content .header-content-inner p {
 #doctors .doctor-big-card__text {
     margin-left: 2rem;
 }
-#doctors .doctor-big-card__title {
+#doctors .doctor-big-card__title, #doctors .doctor-book .doctor-book__title {
     font-size: 2rem;
     line-height: 2rem;
 }
@@ -625,6 +625,13 @@ header .header-content .header-content-inner p {
 }
 #doctors .doctor-book iframe {
     border: 0;
+}
+#doctors .doctor-book .doctor-book__meta {
+    margin-bottom: 1rem;
+    display: flex;
+}
+#doctors .doctor-book .doctor-book__title {
+    flex: 1;
 }
 #skype-cons .skype-request-header {
     margin-top: 2em;

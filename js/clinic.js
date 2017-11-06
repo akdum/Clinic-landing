@@ -178,6 +178,10 @@ var Clinic = (function() {
             DoctorCardClose(doctors_block, doctor_big_card, $(this));
         });
 
+        $(".doctor-book__close", doctor_book).on('click', function() {      
+            DoctorCalendarClose(doctors_block, doctor_book, $(this));
+        });
+
         $(".doctor-card .doctor-card-actions__info").on('click', function() {
             DoctorCardShow(doctors_block, doctor_big_card, this);
         });
@@ -217,9 +221,22 @@ var Clinic = (function() {
 
         if (calendarUrl) {
             doctors_block.addClass('hidden');
+
+            $(".doctor-book__title", doctor_book).text(card.data('title'));
             $("iframe", doctor_book).attr('src', calendarUrl);
+
             doctor_book.removeClass('hidden');
+            $(".doctor-book__close", doctor_book).removeClass('hidden');
         }                
+    }
+
+    function DoctorCalendarClose(doctors_block, doctor_book, btn) {
+        $("iframe", doctor_book).attr('src', '');   
+        $(".doctor-book__title", doctor_book).text('');
+
+        $(btn).addClass('hidden');
+        doctor_book.addClass('hidden');
+        doctors_block.removeClass('hidden');
     }
 
     return root;
