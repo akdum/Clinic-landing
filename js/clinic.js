@@ -172,32 +172,39 @@ var Clinic = (function() {
     function DoctorCardsInit() {
         var doctor_big_card = $(".doctor-big-card");
 
-        $(".doctor-big-card__close", doctor_big_card).on('click', function() {         
-            $("img", doctor_big_card).attr('src', '');   
-            $(".doctor-big-card__title", doctor_big_card).text('');
-            $(".doctor-big-card__body", doctor_big_card)[0].innerHTML = "";
-
-            $(this).addClass('hidden');
-            doctor_big_card.addClass('hidden');
-            $(".doctors_block").removeClass('hidden');
+        $(".doctor-big-card__close", doctor_big_card).on('click', function() {      
+            DoctorCardClose(doctor_big_card, $(this));
         })
 
         $(".doctor-card .doctor-card-actions__info").on('click', function() {
-            var $this = $(this);
-            var card = $this.closest(".doctor-card");
-            var doctors_block = $(".doctors_block");            
-
-            doctors_block.addClass('hidden');
-            // set image.
-            $("img", doctor_big_card).attr('src', './img/doctors/' + card.data('img'));
-            // set text.
-            $(".doctor-big-card__title", doctor_big_card).text(card.data('title'));
-            $(".doctor-big-card__body", doctor_big_card).load('html/' + card.data('file'));
-            
-            // show card.
-            doctor_big_card.removeClass('hidden');
-            $(".doctor-big-card__close", doctor_big_card).removeClass('hidden');
+            DoctorCardShow(doctor_big_card, this);
         })
+    }
+
+    function DoctorCardShow(doctor_big_card, btn) {
+        var card = $(btn).closest(".doctor-card");
+        var doctors_block = $(".doctors_block");            
+
+        doctors_block.addClass('hidden');
+        // set image.
+        $("img", doctor_big_card).attr('src', './img/doctors/' + card.data('img'));
+        // set text.
+        $(".doctor-big-card__title", doctor_big_card).text(card.data('title'));
+        $(".doctor-big-card__body", doctor_big_card).load('html/' + card.data('file'));
+        
+        // show card.
+        doctor_big_card.removeClass('hidden');
+        $(".doctor-big-card__close", doctor_big_card).removeClass('hidden');
+    }
+
+    function DoctorCardClose(doctor_big_card, btn) {
+        $("img", doctor_big_card).attr('src', '');   
+        $(".doctor-big-card__title", doctor_big_card).text('');
+        $(".doctor-big-card__body", doctor_big_card)[0].innerHTML = "";
+
+        $(btn).addClass('hidden');
+        doctor_big_card.addClass('hidden');
+        $(".doctors_block").removeClass('hidden');
     }
 
     return root;
