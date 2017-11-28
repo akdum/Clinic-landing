@@ -12,8 +12,7 @@
     />
     <meta name="yandex-verification" content="5cbf5d462d873f37" />
     <link rel="shortcut icon" href="./img/favicon.ico">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/clinic.css?v=1.7">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -59,7 +58,7 @@
     </noscript>
     <!-- /Yandex.Metrika counter -->
 
-    <nav id="mainNavBar" class="navbar navbar-default navbar-fixed-top navbar-light affix">
+    <nav id="mainNavBar" class="navbar navbar-default navbar-light affix">
         <div class="container-fluid">
             <div class="navbar-header clearfix">
                 <div class="navbar-brand">
@@ -81,14 +80,17 @@
             </div>
         </div>
     </nav>
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1 class="sr-left">Решение Ваших проблем</h1>
-                <p class="sr-bottom">Лучшими врачами в своей области</p>
+    <section id="hero">
+        <div class="container">
+        </div>
+    </section>
+    <section id="who-we-are">
+        <div class="container">
+            <div class="row">
+                <div class=""></div>
             </div>
         </div>
-    </header>
+    </section>
     <section id="info">
         <div class="container">
             <div class="row medical-treatment">
@@ -138,27 +140,26 @@
     </section>
     <section id="doctors" class="">
         <div class="container">
-            <div class="row doctors">
-                <h1>Специалисты</h1>
-                <div class="doctors_block"></div>
-                <div class="doctor-big-card hidden">
-                    <div class="doctor-big-card__img">
-                        <img />
-                    </div>
-                    <div class="doctor-big-card__text">                                                
-                        <div class="doctor-big-card__title"></div>
-                        <div class="doctor-big-card__body"></div>
-                    </div>
-                    <div class="doctor-big-card__close btn btn-secondary btn-lg hidden">Закрыть</div>
+            <h1>Специалисты</h1>
+            <div class="doctors_block row">
+            </div>
+            <div class="doctor-big-card hidden">
+                <div class="doctor-big-card__img">
+                    <img />
                 </div>
-                <div class="doctor-book hidden">
-                    <div class="doctor-book__meta">
-                        <div class="doctor-book__title"></div>
-                        <div class="doctor-book__close btn btn-secondary btn-lg hidden">Закрыть</div>
-                    </div>
-                    <img src="./img/spinner.gif" class="doctor-book__loading" style="display:none"/>
-                    <iframe width="100%" height="500px" src=""></iframe>
+                <div class="doctor-big-card__text">                                                
+                    <div class="doctor-big-card__title"></div>
+                    <div class="doctor-big-card__body"></div>
                 </div>
+                <div class="doctor-big-card__close btn btn-secondary btn-lg hidden">Закрыть</div>
+            </div>
+            <div class="doctor-book hidden">
+                <div class="doctor-book__meta">
+                    <div class="doctor-book__title"></div>
+                    <div class="doctor-book__close btn btn-secondary btn-lg hidden">Закрыть</div>
+                </div>
+                <img src="./img/spinner.gif" class="doctor-book__loading" style="display:none"/>
+                <iframe width="100%" height="500px" src=""></iframe>
             </div>
         </div>
     </section>
@@ -281,7 +282,7 @@
     </script>
     <script id="doctors-template" type="x-tmpl-mustache">
         {{#doctors}}
-        <div class="col-lg-4 col-sm-6 sr-doctors">
+        <div class="col col-lg-4 col-sm-6 sr-doctors">
             <div class="doctor-card" data-img="{{photoName}}" data-title="{{title.surname}} {{ title.name }}" data-file="{{file}}" data-calendar="{{ calendar }}">            
                 <img src="./img/doctors/square_150/{{photoName}}" />
                 <div class="doctor-card-info">

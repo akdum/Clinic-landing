@@ -60,17 +60,6 @@ p {
     margin: 1rem 0 1rem 0;
 }
 
-header {
-    height: 650px;
-    background-size: cover;
-    background-position: center top;
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/header.jpg");
-    color: #fff;
-    position: relative;
-    width: 100%;
-    text-align: center
-}
-
 section {
     padding: 1rem 0px;
 }
@@ -83,7 +72,9 @@ section {
     font-weight: 700;
     text-transform: uppercase;
 }
-
+.btn:hover {
+    cursor: pointer;
+}
 .btn-primary {
     color: rgb(30, 128, 185);
     background-color: #fff;
@@ -214,6 +205,7 @@ section {
 
 .navbar .navbar-header .navbar-brand {
     white-space: nowrap;
+    margin-top: 1rem;
 }
 
 .navbar .navbar-header .navbar-brand img {
@@ -268,32 +260,6 @@ section {
 /* ============================================= */
 
 
-/* =============HEADER========================== */
-
-
-/* ============================================= */
-
-header .header-content {
-    padding: 100px 15px;
-}
-
-header .header-content {
-    position: relative;
-    width: 100%;
-    text-align: center
-}
-
-header .header-content .header-content-inner p {
-    font-weight: 400;
-    color: rgba(255, 255, 255, .95);
-    font-size: 16px;
-    margin-bottom: 50px;
-}
-
-
-/* ============================================= */
-
-
 /* =============PAGE STRUCTURE=================== */
 
 
@@ -322,6 +288,19 @@ header .header-content .header-content-inner p {
 .bg-primary h1,
 .bg-primary h2 {
     color: #fff;
+}
+#hero {
+    height: 420px;
+    background: url("../img/Healthcare.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+#who-we-are {
+    padding: 60px 0px;
+    z-index: -100;
+    background: #081b33;
 }
 .medical-treatment {    
     color: #fff;
@@ -552,22 +531,8 @@ header .header-content .header-content-inner p {
     padding-bottom: 2rem;
 }
 
-#doctors .row.doctors {
+#doctors .row {
     position: relative;
-}
-
-#doctors .row.doctors .doctors-navigation {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-}
-
-#doctors .row.doctors .doctors-navigation i {
-    cursor: pointer;
-}
-
-#doctors .row.doctors .doctors-navigation i:nth-of-type(1) {
-    margin-right: 1rem;
 }
 
 #doctors .doctor-card {
@@ -628,6 +593,9 @@ header .header-content .header-content-inner p {
     top: 50%;
     left: 50%;
     width: 50px;
+}
+#doctors .doctor-book {
+    position: relative;
 }
 #doctors .doctor-book iframe {
     border: 0;
@@ -735,7 +703,6 @@ footer .footer-social-links {
         border-color: rgba(34, 34, 34, .05);
     }
     .navbar-default.affix .navbar-header {
-        height: 4rem;
     }
     .navbar-default.affix .navbar-header .navbar-brand img {
         height: 3rem;

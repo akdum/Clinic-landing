@@ -20,7 +20,7 @@ var Clinic = (function() {
     };
 
     function InitTemplates() {
-        InitTemplate($("#doctors .doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
+        InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
         InitTemplate($("#about .license"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });
         InitTemplate($("#about .row.adv"), $("#promo-icon-template"), { "promo": window.ClinicModel.Promo });
         InitTemplate($("#services .row.popular-services-row"), $("#services-template"), { "services": window.ClinicModel.Services });
