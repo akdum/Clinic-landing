@@ -11,6 +11,7 @@ window.ClinicModel = {
         { photoName: "perevozchikov.jpg", title: { surname: "Перевозчиков", name: "Александр Павлович", spec: "врач-психотерапевт, специалист по БОС-ЭЭГ" }, file: "perevozchikov.html" },
         { photoName: "rumyanceva.jpg", title: { surname: "Румянцева", name: "Наталья Анатольевна", spec: "врач-психотерапевт" }, file: "rumyanceva.html" },
         { photoName: "pomyitkina.jpg", title: { surname: "Помыткина", name: "Татьяна Юрьевна", spec: "психолог, семейный психолог, специалист по профоринтации, кандидат психологических наук" }, file: "pomyitkina.html" },
+        { photoName: "lyalin.jpg", title: { surname: "Лялин", name: "Андрей Николаевич", spec: "врач-психотерапевт" }, file: "lyalin.html" },
         { photoName: "zagrtdinova-rizida.jpg", title: { surname: "Загртдинова", name: "Ризида Миннесагитовна", spec: "врач-дерматовенеролог-дерматолог-косметолог, заведующая кафедрой, профессор" }, file: "zagrtdinova-rizida.html" },
         { photoName: "pakriev.jpg", title: { surname: "Пакриев", name: "Сергей Галлинурович", spec: "врач-психиатр, доктор медицинских наук" }, file: "pakriev.html" }
     ],
