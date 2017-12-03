@@ -197,39 +197,6 @@
             </div>
         </div>
     </section>
-    <section id="about" class="">
-        <div class="container">
-            <div class="row description-row">
-                <h1>О клинике</h1>
-                <div class="col-sm-8 col-md-8 col-sm-12 col-xs-12">
-                    <p>Главной задачей Клинической Больницы Восстановительной Медицины Ижевской Государственной Медицинской
-                        Академии является восстановление организма при хронических органических и психосоматических состояниях.
-                        Наша клиника задумана как совместная организация с ИГМА, где профессора и доктора медицинских наук
-                        могут оказать консультацию любому человеку. Специализацией больницы является оказание псиотерапевтической
-                        помощи широкого профиля.</p>
-                    <h2 class="adv-header">Почему стоит прийти к нам</h2>
-                    <div class="row adv"></div>
-                </div>
-                <div class="col-sm-4 col-md-4">
-                    <div id="vk_group"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="card-trigger license-trigger">
-                    <div class="card-detail-button-label color-primary">
-                        <label>Лицензия</label>
-                    </div>
-                    <div class="card-detail-button color-primary">
-                        <i class="material-icons md-36">add_circle</i>
-                    </div>
-                </div>
-                <div class="card-detail">
-                    <div class="row license">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section id="services" class="bg-primary">
         <div class="container">
             <div class="row popular-services-row">
@@ -318,19 +285,6 @@
             <button type="button" class="btn btn-primary btn-lg">Подробнее</button>
         </div>
     </script>
-    <script id="promo-icon-template" type="x-tmpl-mustache">
-        {{#promo}}
-        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-            <div class="promo-icon">
-                <i class="fa fa-4x {{ iconName }} sr-icons color-primary"></i>
-            </div>
-            <div class="promo-text">
-                <h3 class="{{ textClassName}}">{{ title }}</h3>
-                <p class="{{ textClassName}}">{{ comment }}</p>
-            </div>
-        </div>
-        {{/promo}}
-    </script>
     <script id="doctors-template" type="x-tmpl-mustache">
         {{#doctors}}
         <div class="col col-lg-4 col-sm-6 sr-doctors">
@@ -355,15 +309,6 @@
             </div>
         </div>
         {{/doctors}}
-    </script>
-    <script id="license-template" type="x-tmpl-mustache">
-        {{#licenses}}
-        <div class="col-lg-3 col-md-4">
-            <a href="./img/license/fullsize/{{ name }}">
-                <img src="./img/license/thumbnails/{{name}}" />
-            </a>
-        </div>
-        {{/licenses}}
     </script>
     <script id="contacts-template" type="x-tmpl-mustache">
         {{#contacts}}

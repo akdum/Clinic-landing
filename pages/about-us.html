@@ -81,19 +81,61 @@
                 <div class="who-we-are__content"></div>
             </div>
     </section>
+    <section id="about" class="">
+        <div class="container">
+            <div class="">
+                <h2 class="adv-header">Почему стоит прийти к нам</h2>
+                <div class="adv"></div>
+            </div>
+        </div>
+    </section>
+    <section id="license">
+        <div class="container">
+            <div>
+                <h2>Лицензия</h2>
+            </div>
+            <div class="licenses d-flex flex-wrap">
+            </div>
+        </div>
+    </section>
     <footer class="bg-primary color-white">
         <div class="copyright">© 2017 Клиническая больница восстановительной медицины. Все права защищены.</div>
         <div class="footer-social-links">
         </div>
     </footer>
     <script id="who-we-are-template" type="x-tmpl-mustache">
-            <div class="who-we-are__title">
-                <h1>{{ title }}</h1>
+        <div class="who-we-are__title">
+            <h1>{{ title }}</h1>
+        </div>
+        <div class="who-we-are__text">
+            {{ firstPart }}
+        </div>
+        <div class="who-we-are__text">
+            {{ secondPart }}
+        </div>
+    </script>
+    <script id="promo-icon-template" type="x-tmpl-mustache">
+        {{#promo}}
+        <div class="promo__element d-flex">
+            <div class="promo__icon">
+                <i class="fa fa-4x {{ iconName }} sr-icons color-primary"></i>
             </div>
-            <div class="who-we-are__text">
-                {{ firstPart }}
+            <div class="promo__text">
+                <h4 class="{{ textClassName}}">{{ title }}</h4>
+                <div class="{{ textClassName}}">{{ comment }}</div>
             </div>
-        </script>
+        </div>
+        {{/promo}}
+    </script>
+    <script id="license-template" type="x-tmpl-mustache">
+            {{#licenses}}
+            <div class="license__element">
+                <a href="../img/license/fullsize/{{ name }}">
+                    <img src="../img/license/thumbnails/{{name}}" />
+                </a>
+            </div>
+            {{/licenses}}
+    </script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

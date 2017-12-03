@@ -10,9 +10,6 @@ var Clinic = (function() {
     root.Init = function() {
         InitTemplates();        
         ScrollRevealInit();
-        HoverBehaviour();
-        CardShow();
-        GalleryInit();
         MapInit();        
         VkInit();
         DoctorCardsInit();
@@ -22,9 +19,7 @@ var Clinic = (function() {
         InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
         BindLink((".who-we-are__next .btn"), "about-us.html");
 
-        InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
-        InitTemplate($("#about .license"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });
-        InitTemplate($("#about .row.adv"), $("#promo-icon-template"), { "promo": window.ClinicModel.Promo });
+        InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });        
         InitTemplate($("#services .row.popular-services-row"), $("#services-template"), { "services": window.ClinicModel.Services });
         InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), { "contacts": window.ClinicModel.Contacts });
     }
@@ -79,60 +74,6 @@ var Clinic = (function() {
             distance: "0px",
             easing: 'ease-in-out'
         }, 100);
-    }
-
-    function HoverBehaviour() {
-        $("div.hover-action").hover(function() {
-            var $this = $(this);
-            var id = $this.data("expand-id");
-            $this.find("i").text('expand_less');
-            $("#" + id).addClass("opacity-visible").find(".info").addClass('opacity-visible');
-        }, function() {
-            var $this = $(this);
-            var id = $this.data("expand-id");
-            $this.find("i").text('expand_more');
-            $("#" + id).removeClass("opacity-visible").find(".info").removeClass('opacity-visible');
-        });
-    }
-
-    function CardShow() {
-        $(".card-trigger").each(function() {
-            var $this = $(this);
-            var card = $this.closest('.row').find('.card-detail');
-            if (card.length > 0) {
-                var label = $this.find(".card-detail-button-label");
-                var icon = $this.find('i');
-                var button = $this.find('.card-detail-button');
-                $this.on('click', function() {
-                    if (!card.hasClass('expanded')) {
-                        label.addClass('opacity-non-visible');
-                        button.addClass('close-cirlce');
-                        card.addClass('expanded');
-                    } else {
-                        card.removeClass('expanded');
-                        button.removeClass('close-cirlce');
-                        label.removeClass('opacity-non-visible');
-                    }
-                });
-            }
-        });
-    }
-
-    function GalleryInit() {
-        $(".license").magnificPopup({
-            delegate: "a",
-            type: "image",
-            tLoading: "Загружается изображение #%curr%...",
-            mainClass: "mfp-img-mobile",
-            gallery: {
-                enabled: !0,
-                navigateByImgClick: !0,
-                preload: [0, 1]
-            },
-            image: {
-                tError: '<a href="%url%">Изображение #%curr%</a> не загрузилось.'
-            }
-        })
     }
 
     function MapInit() {
