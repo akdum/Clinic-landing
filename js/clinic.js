@@ -10,8 +10,10 @@ var Clinic = (function() {
     root.Init = function() {
         InitTemplates();        
         ScrollRevealInit();
+        CardShow();
+        GalleryInit();
         MapInit();        
-        VkInit();
+        //VkInit();
         DoctorCardsInit();
     };
 
@@ -74,6 +76,46 @@ var Clinic = (function() {
             distance: "0px",
             easing: 'ease-in-out'
         }, 100);
+    }
+
+    function CardShow() {
+        $(".card-trigger").each(function() {
+            var $this = $(this);
+            var card = $this.closest('.row').find('.card-detail');
+            if (card.length > 0) {
+                var label = $this.find(".card-detail-button-label");
+                var icon = $this.find('i');
+                var button = $this.find('.card-detail-button');
+                $this.on('click', function() {
+                    if (!card.hasClass('expanded')) {
+                        label.addClass('opacity-non-visible');
+                        button.addClass('close-cirlce');
+                        card.addClass('expanded');
+                    } else {
+                        card.removeClass('expanded');
+                        button.removeClass('close-cirlce');
+                        label.removeClass('opacity-non-visible');
+                    }
+                });
+            }
+        });
+    }
+
+    function GalleryInit() {
+        $(".license").magnificPopup({
+            delegate: "a",
+            type: "image",
+            tLoading: "Загружается изображение #%curr%...",
+            mainClass: "mfp-img-mobile",
+            gallery: {
+                enabled: !0,
+                navigateByImgClick: !0,
+                preload: [0, 1]
+            },
+            image: {
+                tError: '<a href="%url%">Изображение #%curr%</a> не загрузилось.'
+            }
+        })
     }
 
     function MapInit() {
