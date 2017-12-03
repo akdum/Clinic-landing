@@ -194,51 +194,25 @@ section {
 
 
 /* ============================================= */
-
-.navbar .container-fluid {
-    padding: 0;
-}
-
-.navbar .navbar-header {
-    height: 100px;
-}
-
-.navbar .navbar-header .navbar-brand {
+.navbar .navbar-brand {
     white-space: nowrap;
-    margin-top: 1rem;
 }
-
-.navbar .navbar-header .navbar-brand img {
-    height: 5rem;
-    float: left;
+.navbar .navbar-brand img {
     margin-right: 1rem;
-    position: relative;
-    top: 5px;
+    height: 60px;
+    width: 60px;
 }
-
-.navbar .navbar-header .navbar-brand img,
-.navbar .navbar-header .navbar-brand div {
-    -webkit-transition: all 0.35s;
-    -moz-transition: all 0.35s;
-    transition: all 0.35s;
-}
-
-.navbar .navbar-header .navbar-brand .clinic-logo-title .clinic-academy {
+.navbar .navbar-brand .clinic-logo-title .clinic-academy {
     font-family: 'Exo 2', sans-serif;
     font-weight: 400;
-    font-size: 1rem;
-    height: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 1.2rem;
     color: #777;
 }
 
-.navbar .navbar-header .navbar-brand .clinic-logo-title .clinic-title {
-    font-size: 2rem;
-    height: 3.5rem;
-    line-height: 2rem;
+.navbar .navbar-brand .clinic-logo-title .clinic-title {
+    font-size: 1.5rem;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
-    width: 600px;
     white-space: normal;
 }
 
@@ -698,51 +672,6 @@ footer .footer-social-links {
     /* ============================================= */
     /* =============NAVIGATION====================== */
     /* ============================================= */
-    .navbar-default.affix {
-        background-color: #fff;
-        border-color: rgba(34, 34, 34, .05);
-    }
-    .navbar-default.affix .navbar-header {
-    }
-    .navbar-default.affix .navbar-header .navbar-brand img {
-        height: 3rem;
-        position: relative;
-        top: 4px;
-    }
-    .navbar-default.affix .navbar-header .navbar-brand .clinic-academy {
-        font-size: 1.2rem;
-    }
-    .navbar-default.affix .navbar-header .navbar-brand .clinic-title {
-        font-size: 1.6rem;
-        height: 1.6rem;
-        line-height: 1.6rem;
-        width: 100%;
-        white-space: nowrap;
-    }
-    .navbar-default {
-        background-color: rgba(255, 255, 255, .8);
-    }
-    .navbar-default .container-fluid {
-        position: relative;
-    }
-    .navbar .navbar-header {
-        float: left;
-    }
-    .navbar #collapseNavbar {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .navbar-default .nav>li {
-        margin-right: 1rem;
-    }
-    .navbar-default .nav>li>a {
-        font-size: 1.6rem;
-    }
-    .navbar-default.affix .nav>li>a {
-        font-size: 1.2rem;
-    }
     /* ============================================= */
     /* =============HEADER========================== */
     /* ============================================= */
