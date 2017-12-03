@@ -1,0 +1,235 @@
+/*
+Made by Ivan Steblenko 01/09/17.
+
+Content:
+Global Styles
+Navigation
+Header
+Text Styles
+Page Structure
+Headings
+Forms
+Comments
+Extras
+*/
+
+
+/* ============================================= */
+
+
+/* =============GLOBAL STYLES=================== */
+
+
+/* ============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+a {
+    transition: all .35s;
+}
+
+hr {
+    border-width: 0;
+    margin: 50px 0;
+}
+
+h1 {
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.5;
+    margin: 1rem 0 1rem 0;
+}
+.hidden {
+    display: none;
+}
+.no-gutter>[class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.hidden-column {
+    visibility: hidden;
+    height: 0;
+}
+
+.text-decoration-none {
+    text-decoration: none !important;
+}
+
+.padding-left-2 {
+    padding-left: 2rem !important;
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.opacity-visible {
+    opacity: 1 !important;
+}
+
+.opacity-non-visible {
+    opacity: 0 !important;
+}
+
+.close-cirlce {
+    color: rgba(210, 210, 210, 0.8) !important;
+    transform: rotate(45deg);
+    margin-top: 2rem;
+}
+
+.display-none {
+    display: none;
+}
+.btn:hover {
+    cursor: pointer;
+}
+
+/* ============================================= */
+
+
+/* =============NAVIGATION====================== */
+
+
+/* ============================================= */
+.navbar .navbar-brand {
+    white-space: nowrap;
+}
+.navbar .navbar-brand img {
+    margin-right: 1rem;
+    height: 60px;
+    width: 60px;
+}
+.navbar .navbar-brand .clinic-logo-title .clinic-academy {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #777;
+}
+
+.navbar .navbar-brand .clinic-logo-title .clinic-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    white-space: normal;
+}
+
+.nav .navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    text-transform: uppercase;
+}
+
+.navbar-default {
+    background-color: #fff;
+    border-color: rgba(34, 34, 34, .05);
+    transition: all .35s;
+}
+
+/* ============================================= */
+
+
+/* =============PAGE STRUCTURE=================== */
+
+
+/* ============================================= */
+
+.color-primary {
+    color: #081b33;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.bg-primary {
+    background-color: #081b33 !important;
+}
+
+.bg-secondary {
+    background-color: #2d529f !important;
+}
+
+.bg-tertiary {
+    background-color: #3aabdd !important;
+}
+
+.bg-primary h1,
+.bg-primary h2 {
+    color: #fff;
+}
+
+footer {
+    height: 55px;
+    position: relative;
+}
+
+footer .copyright {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+}
+
+footer .footer-social-links {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+}
+
+@media (max-width: 736px) {
+    /* ============================================= */
+    /* =============GLOBAL STYLES=================== */
+    /* ============================================= */
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    footer {
+        height: 80px;
+    }
+    footer .copyright {
+        font-size: 0.9rem;
+        width: 80%;
+    }
+}
