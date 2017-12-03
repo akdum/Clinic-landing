@@ -12,10 +12,7 @@
     margin-top: 2rem;
 }
 .who-we-are__next .btn {
-    background-color: #081b33;
-    color: #fff;
     border-color: #fff;
-    border-radius: 0;
 }
 #info {
     margin-top: 1rem;
@@ -215,6 +212,11 @@
 #doctors .doctor-big-card__close {
     position: absolute;
     right: 0;
+    border-color: #081b33;
+    border-width: 2px;
+}
+#doctors .doctor-big-card__close:hover {
+    color: #081b33;
 }
 #doctors .doctor-book__loading {
     position: absolute;

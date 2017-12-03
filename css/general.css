@@ -117,6 +117,9 @@ p {
 .display-none {
     display: none;
 }
+.btn {
+    border-radius: 0;
+}
 .btn:hover {
     cursor: pointer;
 }
@@ -192,7 +195,9 @@ p {
 .bg-tertiary {
     background-color: #3aabdd !important;
 }
-
+.bg-white {
+    background-color: #fff;
+}
 .bg-primary h1,
 .bg-primary h2 {
     color: #fff;
