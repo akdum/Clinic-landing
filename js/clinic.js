@@ -10,7 +10,6 @@ var Clinic = (function() {
     root.Init = function() {
         InitTemplates();        
         ScrollRevealInit();
-        ScrollInit();
         HoverBehaviour();
         CardShow();
         GalleryInit();
@@ -21,6 +20,8 @@ var Clinic = (function() {
 
     function InitTemplates() {
         InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
+        BindLink((".who-we-are__next .btn"), "about-us.html");
+
         InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
         InitTemplate($("#about .license"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });
         InitTemplate($("#about .row.adv"), $("#promo-icon-template"), { "promo": window.ClinicModel.Promo });
@@ -34,6 +35,10 @@ var Clinic = (function() {
         var html = Mustache.render(template, view);
 
         container.append(html);
+    }
+
+    function BindLink(selector, pageName) {
+        $(selector).on('click', (() => window.location.href = window.location.href.replace('main.html', "pages/" + pageName)));
     }
 
     function ScrollRevealInit() {
@@ -74,16 +79,6 @@ var Clinic = (function() {
             distance: "0px",
             easing: 'ease-in-out'
         }, 100);
-    }
-
-    function ScrollInit() {
-        $("a.page-scroll").bind("click", function(e) {
-            var l = $(this);
-            $("html, body").stop().animate({
-                scrollTop: $(l.attr("href")).offset().top - 100
-            }, 1000);
-            e.preventDefault();
-        });
     }
 
     function HoverBehaviour() {
