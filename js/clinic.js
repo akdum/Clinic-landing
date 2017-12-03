@@ -20,6 +20,7 @@ var Clinic = (function() {
     };
 
     function InitTemplates() {
+        InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
         InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
         InitTemplate($("#about .license"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });
         InitTemplate($("#about .row.adv"), $("#promo-icon-template"), { "promo": window.ClinicModel.Promo });

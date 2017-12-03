@@ -62,70 +62,6 @@ p {
 .hidden {
     display: none;
 }
-.btn {
-    border: none;
-    border-radius: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.btn:hover {
-    cursor: pointer;
-}
-.btn-primary {
-    color: rgb(30, 128, 185);
-    background-color: #fff;
-    border-color: #fff;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-.btn-secondary {
-    color: #fff;
-    background-color: #3aabdd;
-    border-color: #3aabdd;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-.btn-secondary.active,
-.btn-secondary.focus,
-.btn-secondary:active,
-.btn-secondary:focus,
-.btn-secondary:hover {
-    color: #fff;
-    background-color: #2d529f;
-    border-color: #2d529f;
-}
-
-.btn-primary.active,
-.btn-primary.focus,
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover {
-    color: #fff;
-    background-color: #3aabdd;
-    border-color: #3aabdd;
-}
-
-.btn-default {
-    color: #222;
-    background-color: #fff;
-    border-color: #fff;
-    transition: all .35s;
-}
-
-.btn-default.active,
-.btn-default.focus,
-.btn-default:active,
-.btn-default:focus,
-.btn-default:hover {
-    color: #222;
-    background-color: #fff;
-    border-color: #fff;
-}
-
 .no-gutter>[class*=col-] {
     padding-right: 0;
     padding-left: 0;
@@ -181,7 +117,9 @@ p {
 .display-none {
     display: none;
 }
-
+.btn:hover {
+    cursor: pointer;
+}
 
 /* ============================================= */
 
@@ -236,7 +174,7 @@ p {
 /* ============================================= */
 
 .color-primary {
-    color: rgb(30, 128, 185);
+    color: #081b33;
 }
 
 .color-white {
@@ -244,7 +182,7 @@ p {
 }
 
 .bg-primary {
-    background-color: rgb(30, 128, 185) !important;
+    background-color: #081b33 !important;
 }
 
 .bg-secondary {
@@ -263,9 +201,27 @@ p {
     padding: 0;
 }
 #who-we-are {
-    padding: 60px 0px;
+    padding: 40px 0px;
     z-index: -100;
     background: #081b33;
+}
+#who-we-are .who-we-are__content {
+    color: #fff;
+}
+.who-we-are__title {
+    margin-bottom: 1rem;
+}
+.who-we-are__next {
+    margin-top: 2rem;
+}
+.who-we-are__next .btn {
+    background-color: #081b33;
+    color: #fff;
+    border-color: #fff;
+    border-radius: 0;
+}
+#info {
+    margin-top: 1rem;
 }
 .medical-treatment {    
     color: #fff;
