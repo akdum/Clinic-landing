@@ -12,7 +12,6 @@ var Children = (function() {
     };
 
     function InitTemplates() {
-        var childrenView = window.ClinicModel.Heroes;
         InitTemplate($("#hero .container"), $("#hero-template"), { "heroes": window.ClinicModel.Heroes });
         BindLink(("#book .btn"), "contacts.html");
     }

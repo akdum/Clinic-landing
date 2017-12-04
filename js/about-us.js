@@ -14,21 +14,9 @@ var AboutUs = (function() {
     };
 
     function InitTemplates() {
-        InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
-        InitTemplate($("#about .adv"), $("#promo-icon-template"), { "promo": window.ClinicModel.Promo });
-        InitTemplate($("#license .licenses"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });
-    }
-
-    function InitTemplate(container, templateContainer, view) {
-        var template = templateContainer.html();
-        Mustache.parse(template); // optional, speeds up future uses
-        var html = Mustache.render(template, view);
-
-        container.append(html);
-    }
-
-    function BindLink(selector, pageName) {
-        $(selector).on('click', (() => window.location.href = window.location.href.replace('main.html', "pages/" + pageName)));
+        Common.InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
+        Common.InitTemplate($("#about .adv"), $("#promo-icon-template"), { "promo": window.ClinicModel.Promo });
+        Common.InitTemplate($("#license .licenses"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });
     }
 
     function ScrollRevealInit() {
