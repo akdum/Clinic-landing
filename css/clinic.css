@@ -1,8 +1,13 @@
+#carousel {
+    margin: 0;
+}
+
 #carousel .container-fluid {
     padding: 0;
 }
 
 #who-we-are {
+    margin: 0;
     padding: 40px 0px;
     z-index: -100;
 }
