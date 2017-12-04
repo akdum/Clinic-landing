@@ -14,3 +14,17 @@ section {
 .hero-element__text {
     margin-top: 1rem;
 }
+
+.book__book {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.book__book .btn {
+    border-color: #081b33;
+}
+
+.book__book .btn:hover {
+    color: #081b33;
+    background-color: #fff;
+}
