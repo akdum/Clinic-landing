@@ -8,7 +8,7 @@ var AboutUs = (function() {
     var root = {};
 
     root.Init = function() {
-        InitTemplates();        
+        InitTemplates();
         ScrollRevealInit();
         GalleryInit();
     };
@@ -16,8 +16,7 @@ var AboutUs = (function() {
     function InitTemplates() {
         InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
         InitTemplate($("#about .adv"), $("#promo-icon-template"), { "promo": window.ClinicModel.Promo });
-        InitTemplate($("#license .licenses"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });        
-        //InitTemplate($("#about .license"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });
+        InitTemplate($("#license .licenses"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });
     }
 
     function InitTemplate(container, templateContainer, view) {

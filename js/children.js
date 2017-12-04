@@ -8,10 +8,12 @@ var Children = (function() {
     var root = {};
 
     root.Init = function() {
-        InitTemplates();        
+        InitTemplates();
     };
 
     function InitTemplates() {
+        var childrenView = window.ClinicModel.Heroes;
+        InitTemplate($("#hero .container"), $("#hero-template"), { "heroes": window.ClinicModel.Heroes });
     }
 
     function InitTemplate(container, templateContainer, view) {
