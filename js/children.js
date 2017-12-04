@@ -14,6 +14,7 @@ var Children = (function() {
     function InitTemplates() {
         var childrenView = window.ClinicModel.Heroes;
         InitTemplate($("#hero .container"), $("#hero-template"), { "heroes": window.ClinicModel.Heroes });
+        BindLink(("#book .btn"), "contacts.html");
     }
 
     function InitTemplate(container, templateContainer, view) {
@@ -22,6 +23,10 @@ var Children = (function() {
         var html = Mustache.render(template, view);
 
         container.append(html);
+    }
+
+    function BindLink(selector, pageName) {
+        $(selector).on('click', (() => window.location.href = window.location.href.replace('children.html', pageName)));
     }
 
     return root;

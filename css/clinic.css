@@ -1,145 +1,26 @@
 #carousel .container-fluid {
     padding: 0;
 }
+
 #who-we-are {
     padding: 40px 0px;
     z-index: -100;
 }
+
 .who-we-are__title {
     margin-bottom: 1rem;
 }
+
 .who-we-are__next {
     margin-top: 2rem;
 }
+
 .who-we-are__next .btn {
     border-color: #fff;
 }
+
 #info {
     margin-top: 1rem;
-}
-.medical-treatment {    
-    color: #fff;
-}
-
-.medical-treatment h4 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.6rem;
-}
-
-.medical-treatment .expand-section h5 {
-    font-family: 'Open Sans', sans-serif;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-left: 2.5rem;
-}
-
-.medical-treatment .expand-section i {
-    position: absolute;
-    margin-left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.medical-treatment a {
-    color: #fff;
-}
-
-.medical-treatment>div {
-    height: 94px;
-    position: relative;
-    z-index: 2;
-    cursor: pointer;
-}
-
-.medical-treatment>div:nth-child(1) {
-    z-index: 3;
-}
-
-.medical-treatment>div:nth-child(1)::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: -40px;
-    width: 0;
-    height: 0;
-    border-top: 47px solid transparent;
-    border-bottom: 47px solid transparent;
-    border-left: 40px solid rgb(30, 128, 185);
-    z-index: 5;
-}
-
-.medical-treatment .medical-treatment-box {
-    height: 100%;
-    width: 100%;
-}
-
-.medical-treatment .medical-treatment-box .medical-treatment-box-icon {
-    position: absolute;
-    top: 50%;
-    height: 50px;
-    margin-top: -20px;
-    text-align: center;
-    width: 60px;
-}
-
-.medical-treatment .medical-treatment-box .medical-treatment-box-info {
-    padding-left: 4rem;
-    position: absolute;
-    top: 50%;
-    margin-top: -25px;
-}
-
-.medical-treatment .medical-treatment-box .medical-treatment-box-info label {
-    opacity: 0.5;
-    margin: -3px 0 0;
-    display: block;
-}
-
-.medical-treatment .medical-treatment-box .medical-treatment-box-info strong {
-    font-size: 1.4rem;
-    font-family: 'Open Sans', sans-serif;
-    display: block;
-}
-
-.medical-treatment .expanded-info {
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    bottom: 99%;
-    width: 100%;
-    box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.2);
-    z-index: -1;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    padding: 30px !important;
-}
-
-.medical-treatment .expanded-info .info {
-    opacity: 0;
-    -webkit-transition: all 0.3s ease 0.4s;
-    -moz-transition: all 0.3s ease 0.4s;
-    transition: all 0.3s ease 0.4s;
-}
-
-.medical-treatment .expanded-info div.info:nth-child(1) {
-    margin-bottom: 1rem;
-    -webkit-transition: all 0.3s ease 0.4s;
-    -moz-transition: all 0.3s ease 0.4s;
-    transition: all 0.3s ease 0.4s;
-}
-
-.medical-treatment .expanded-info div.info:nth-child(2) {
-    -webkit-transition: all 0.3s ease 0.5s;
-    -moz-transition: all 0.3s ease 0.5s;
-    transition: all 0.3s ease 0.5s;
-}
-
-.medical-treatment .expanded-info .info>div:nth-child(1) {
-    color: #90c9ea;
-    font-size: 1rem;
 }
 
 #services .popular-services-row [class*="col-"] {
@@ -154,13 +35,16 @@
     text-align: center;
     margin-top: 2rem;
 }
+
 #doctors {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
 #doctors h1 {
     padding-bottom: 1rem;
 }
+
 #doctors .doctor-card {
     margin-top: 1rem;
     display: flex;
@@ -168,36 +52,46 @@
     height: 180px;
     flex-wrap: wrap;
 }
+
 #doctors .doctor-card img {
     margin-right: 1rem;
 }
+
 #doctors .doctor-card-info {
     width: 50%;
 }
+
 #doctors .doctor-card-info__title_surname {
     margin: 1rem 0 0 0;
     font-size: 16px;
 }
+
 #doctors .doctor-card-info__spec {
     font-size: 13px;
 }
+
 #doctors .doctor-card-actions {
     width: 100%;
     display: flex;
     text-align: center;
 }
+
 #doctors .doctor-card-actions div {
     width: 50%;
     cursor: pointer;
     color: #fff;
 }
+
 #doctors .doctor-big-card {
     display: flex;
 }
+
 #doctors .doctor-big-card__text {
     margin-left: 2rem;
 }
-#doctors .doctor-big-card__title, #doctors .doctor-book .doctor-book__title {
+
+#doctors .doctor-big-card__title,
+#doctors .doctor-book .doctor-book__title {
     font-size: 2rem;
     line-height: 2rem;
 }
@@ -206,52 +100,66 @@
     margin-top: 1.5rem;
 }
 
-#doctors .doctor-big-card__body ol, #doctors .doctor-big-card__body ul {
+#doctors .doctor-big-card__body ol,
+#doctors .doctor-big-card__body ul {
     margin-left: 1rem;
 }
+
 #doctors .doctor-big-card__close {
     border-color: #081b33;
     border-width: 2px;
     margin-top: 1rem;
 }
+
 #doctors .doctor-big-card__close:hover {
     color: #081b33;
 }
+
 #doctors .doctor-book__loading {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 50px;
 }
+
 #doctors .doctor-book {
     position: relative;
 }
+
 #doctors .doctor-book iframe {
     border: 0;
 }
+
 #doctors .doctor-book .doctor-book__meta {
     margin-bottom: 1rem;
     display: flex;
 }
+
 #doctors .doctor-book .doctor-book__title {
     flex: 1;
 }
+
 #skype-cons .skype-request-header {
     margin-top: 2em;
 }
+
 #skype-cons .skype-form-send {
     display: flex;
     justify-content: center;
 }
+
 #skype-cons .skype-send-form {
     margin-top: 1rem;
 }
+
 #skype-cons .thankyou_message {
     display: none;
 }
+
 #skype-cons .thankyou_message span {
     font-size: 2rem;
 }
+
 #contacts {
     padding: 0;
 }
@@ -301,29 +209,7 @@
     color: rgb(30, 128, 185);
 }
 
-@media (max-width: 1024px) {
-    .medical-treatment .expand-section h5 {
-        padding-left: 2rem;
-    }
-    .medical-treatment .expand-section i {
-        margin-left: 0.5rem;
-    }
-    .medical-treatment .medical-treatment-box .medical-treatment-box-icon {
-        text-align: left;
-    }
-    .medical-treatment .medical-treatment-box .medical-treatment-box-info {
-        padding-left: 3rem;
-    }
-    .medical-treatment .medical-treatment-box .medical-treatment-box-info strong {
-        font-size: 1.2rem;
-    }
-}
-
 @media (max-width: 736px) {
-    .medical-treatment>div:nth-child(1),
-    .medical-treatment>div:nth-child(1)::after {
-        display: none;
-    }
     #vk_group {
         display: inline-block;
     }
