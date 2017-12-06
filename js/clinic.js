@@ -22,7 +22,6 @@ var Clinic = (function() {
         BindLink((".who-we-are__next .btn"), "about-us.html");
 
         InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });        
-        InitTemplate($("#services .row.popular-services-row"), $("#services-template"), { "services": window.ClinicModel.Services });
         InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), { "contacts": window.ClinicModel.Contacts });
     }
 
