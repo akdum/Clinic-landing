@@ -65,6 +65,10 @@ section {
     margin-bottom: 2rem;
 }
 
+input {
+    border-radius: 0 !important;
+}
+
 .hidden {
     display: none;
 }

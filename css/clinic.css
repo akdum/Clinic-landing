@@ -130,30 +130,20 @@
 #doctors .doctor-book .doctor-book__title {
     flex: 1;
 }
-
-#skype-cons .skype-request-header {
-    margin-top: 2em;
+#book-now .book-now__whole-form{
+    width: 500px;
+    margin: auto;
+    word-wrap: normal;    
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
-
-#skype-cons .skype-form-send {
-    display: flex;
-    justify-content: center;
+#book-now .book-now__button {
+    width: 100%;
+    border-color: #fff;
 }
-
-#skype-cons .skype-send-form {
-    margin-top: 1rem;
-}
-
-#skype-cons .thankyou_message {
-    display: none;
-}
-
-#skype-cons .thankyou_message span {
-    font-size: 2rem;
-}
-
 #contacts {
     padding: 0;
+    margin-bottom: 0;
 }
 
 #contacts .container-fluid {
