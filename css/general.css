@@ -31,7 +31,7 @@ body,
 html {
     height: 100%;
     width: 100%;
-    font-size: 16px;
+    font-size: 1.1rem;
 }
 
 a {
@@ -195,7 +195,7 @@ input {
 /* ============================================= */
 
 .color-primary {
-    color: #081b33;
+    color: #002050;
 }
 
 .color-white {
@@ -203,15 +203,24 @@ input {
 }
 
 .bg-primary {
-    background-color: #081b33 !important;
+    background-color: #002050 !important;
 }
 
 .bg-secondary {
     background-color: #2d529f !important;
 }
 
-.bg-tertiary {
-    background-color: #3aabdd !important;
+.bg-btn {
+    background-color: #d83b01 !important;
+}
+
+.btn-border {
+    border-color: #d83b01;
+    border-radius: 0;
+}
+
+.btn-border:hover {
+    border-color: #d83b01;
 }
 
 .bg-white {

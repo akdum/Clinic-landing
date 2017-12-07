@@ -8,7 +8,7 @@
 
 #who-we-are {
     margin: 0;
-    padding: 40px 0px;
+    padding: 4rem 0px;
     z-index: -100;
 }
 
@@ -17,11 +17,9 @@
 }
 
 .who-we-are__next {
+    margin: auto;
     margin-top: 2rem;
-}
-
-.who-we-are__next .btn {
-    border-color: #fff;
+    width: 500px;
 }
 
 #info {
@@ -130,20 +128,26 @@
 #doctors .doctor-book .doctor-book__title {
     flex: 1;
 }
-#book-now .book-now__whole-form{
+
+#book-now {
+    margin-bottom: 0;
+}
+
+#book-now .book-now__whole-form {
     width: 500px;
     margin: auto;
-    word-wrap: normal;    
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    word-wrap: normal;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
 }
-#book-now .book-now__button {
-    width: 100%;
-    border-color: #fff;
+
+#book-now .book-now__whole-form>div {
+    padding: 2rem 0 1rem 0;
 }
+
 #contacts {
     padding: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 #contacts .container-fluid {
