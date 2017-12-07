@@ -199,7 +199,8 @@
                 <div class="book-now__form">
                     <form method="POST" id="gform" action="https://script.google.com/macros/s/AKfycbwWs0KkRKtkbPq_00Z6zrQLKSjJMRELUyrDdCGV3l9BKjkMX7v6/exec">
                         <div class="form-group">
-                            <input class="form-control form-control-lg" name="phone" id="form_phone" aria-describedby="emailHelp" placeholder="Телефон">
+                            <input class="form-control form-control-lg" name="phone" id="form_phone" aria-describedby="emailHelp" placeholder="Телефон" required>
+                            <div class="book-now__invalid-phone-label">Укажите номер телефона.</div>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg bg-btn btn-border color-white book-now__button w-100">Записаться</button>
                     </form>
