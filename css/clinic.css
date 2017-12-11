@@ -138,6 +138,7 @@
     word-wrap: normal;
     padding-top: 3rem;
     padding-bottom: 4rem;
+    min-height: 540px;
 }
 
 #book-now .book-now__form {
@@ -146,6 +147,12 @@
 
 #book-now .book-now__whole-form>div {
     padding: 2rem 0 1rem 0;
+}
+#book-now .intl-tel-input {
+    display: block;
+}
+#book-now .book-now__success-message {
+    padding-top: 8rem;
 }
 
 #contacts {

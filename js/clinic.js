@@ -220,12 +220,23 @@ var Clinic = (function() {
 
         if (form) {
             form.addEventListener("submit", (event) => {         
-                if ($.trim(input.val())) {
+                event.preventDefault();
+                var value = $.trim(input.val());
+                if (value) {
                     if (input.intlTelInput("isValidNumber")) {
-                        
-                    } else {
-                        event.preventDefault();
+                        $.post({
+                            url: event.target.action,
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded'
+                            },
+                            data: value
+                        }).done(function (response){
+                            $(".book-now__whole-form>div").not("[class*='book-now__success-message']").addClass('d-none');
+                            $(".book-now__success-message").removeClass('d-none');
+                        })
+                    } else {                        
                         event.stopPropagation();
+                        $(".book-now__invalid-phone-label").show();
                     }
                 }       
             }, false);
