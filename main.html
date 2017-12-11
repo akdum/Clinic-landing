@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/general.css?v=1.0">
     <link rel="stylesheet" href="./css/clinic.css?v=1.7">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/libs/intlTelInput.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400|Roboto:300|Open+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
@@ -197,10 +198,10 @@
                     Стоимость первичного приёма — от 1200 рублей
                 </div>
                 <div class="book-now__form">
-                    <form method="POST" id="gform" action="https://script.google.com/macros/s/AKfycbwWs0KkRKtkbPq_00Z6zrQLKSjJMRELUyrDdCGV3l9BKjkMX7v6/exec">
+                    <form method="POST" id="book-form" action="https://script.google.com/macros/s/AKfycbwWs0KkRKtkbPq_00Z6zrQLKSjJMRELUyrDdCGV3l9BKjkMX7v6/exec">
                         <div class="form-group">
-                            <input class="form-control form-control-lg" name="phone" id="form_phone" aria-describedby="emailHelp" placeholder="Телефон" required>
-                            <div class="book-now__invalid-phone-label invalid-feedback">Укажите номер телефона.</div>
+                            <input class="form-control form-control-lg" name="phone" id="form_phone" aria-describedby="phoneHelp" placeholder="Телефон" required>
+                            <div class="book-now__invalid-phone-label invalid-feedback">Укажите правильный номер телефона.</div>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg bg-btn btn-border color-white book-now__button w-100">Записаться</button>
                     </form>
@@ -272,9 +273,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="./js/libs/intlTelInput.min.js"></script>
+    <script src="./js/libs/utils.js"></script>
     <script src="./js/model.js?v=1.7"></script>
     <script src="./js/common.js?v=1.0"></script>
-    <script src="./js/clinic.js?v=1.4"></script>
+    <script src="./js/clinic.js?v=1.4"></script>    
     <!-- <script src="./js/form-submission-handler.js"></script> -->
 </body>
 

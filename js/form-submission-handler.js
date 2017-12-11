@@ -44,6 +44,11 @@ function getFormData() {
 
 function handleFormSubmit(event) {  // handles form submit withtout any jquery
     event.preventDefault();           // we are submitting via xhr below
+
+    if (form.checkValidity() === false) {
+      event.stopPropagation();
+      form.classList.add('was-validated');
+    }
     var data = getFormData();         // get the values submitted in the form
     var url = event.target.action;  //
     var xhr = new XMLHttpRequest();
@@ -62,10 +67,11 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     }).join('&')
     xhr.send(encoded);
 }
+
 function loaded() {
-  console.log('contact form submission handler loaded successfully');
   // bind to the submit event of our form
-  var form = document.getElementById('gform');
+  var form = document.getElementById('book-form');
   form.addEventListener("submit", handleFormSubmit, false);
 };
+
 document.addEventListener('DOMContentLoaded', loaded, false);

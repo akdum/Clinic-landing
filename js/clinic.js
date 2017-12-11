@@ -15,26 +15,15 @@ var Clinic = (function() {
         MapInit();
         //VkInit();
         DoctorCardsInit();
+        BookFormSubmitInit();
     };
 
     function InitTemplates() {
-        InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
+        Common.InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
         Common.BindLink((".who-we-are__next .btn"), /[\w.]+$/, "pages/about-us.html");
 
-        InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
-        InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), { "contacts": window.ClinicModel.Contacts });
-    }
-
-    function InitTemplate(container, templateContainer, view) {
-        var template = templateContainer.html();
-        Mustache.parse(template); // optional, speeds up future uses
-        var html = Mustache.render(template, view);
-
-        container.append(html);
-    }
-
-    function BindLink(selector, pageName) {
-        $(selector).on('click', (() => window.location.href = window.location.href.replace('main.html', "pages/" + pageName)));
+        Common.InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
+        Common.InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), { "contacts": window.ClinicModel.Contacts });
     }
 
     function ScrollRevealInit() {
@@ -219,6 +208,28 @@ var Clinic = (function() {
         $(btn).addClass('hidden');
         doctor_book.addClass('hidden');
         doctors_block.removeClass('hidden');
+    }
+
+    function BookFormSubmitInit() {
+        var form = document.getElementById('book-form');    
+        var input = $(form.querySelector('input'));
+        input.intlTelInput({
+            initialCountry: "ru",
+            utilsScript: "./libs/utils.js" // just for formatting/placeholders etc
+        });
+
+        if (form) {
+            form.addEventListener("submit", (event) => {         
+                if ($.trim(input.val())) {
+                    if (input.intlTelInput("isValidNumber")) {
+                        
+                    } else {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                }       
+            }, false);
+        }        
     }
 
     return root;
