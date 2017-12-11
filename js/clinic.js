@@ -8,11 +8,11 @@ var Clinic = (function() {
     var root = {};
 
     root.Init = function() {
-        InitTemplates();        
+        InitTemplates();
         ScrollRevealInit();
         CardShow();
         GalleryInit();
-        MapInit();        
+        MapInit();
         //VkInit();
         DoctorCardsInit();
     };
@@ -21,7 +21,7 @@ var Clinic = (function() {
         InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
         Common.BindLink((".who-we-are__next .btn"), /[\w.]+$/, "pages/about-us.html");
 
-        InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });        
+        InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
         InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), { "contacts": window.ClinicModel.Contacts });
     }
 
@@ -138,7 +138,7 @@ var Clinic = (function() {
 
     function VkInit() {
         var options = {
-            mode: 2, 
+            mode: 2,
             no_cover: 1,
             width: "auto",
             wide: 1,
@@ -148,15 +148,15 @@ var Clinic = (function() {
     }
 
     function DoctorCardsInit() {
-        var doctors_block = $(".doctors_block"); 
+        var doctors_block = $(".doctors_block");
         var doctor_big_card = $(".doctor-big-card");
         var doctor_book = $(".doctor-book");
 
-        $(".doctor-big-card__close", doctor_big_card).on('click', function() {      
+        $(".doctor-big-card__close", doctor_big_card).on('click', function() {
             DoctorCardClose(doctors_block, doctor_big_card, $(this));
         });
 
-        $(".doctor-book__close", doctor_book).on('click', function() {      
+        $(".doctor-book__close", doctor_book).on('click', function() {
             DoctorCalendarClose(doctors_block, doctor_book, $(this));
         });
 
@@ -170,21 +170,21 @@ var Clinic = (function() {
     }
 
     function DoctorCardShow(doctors_block, doctor_big_card, btn) {
-        var card = $(btn).closest(".doctor-card");                   
+        var card = $(btn).closest(".doctor-card");
         doctors_block.addClass('hidden');
         // set image.
         $("img", doctor_big_card).attr('src', './img/doctors/' + card.data('img'));
         // set text.
         $(".doctor-big-card__title", doctor_big_card).text(card.data('title'));
         $(".doctor-big-card__body", doctor_big_card).load('html/' + card.data('file'));
-        
+
         // show card.
         doctor_big_card.removeClass('hidden');
         $(".doctor-big-card__close", doctor_big_card).removeClass('hidden');
     }
 
     function DoctorCardClose(doctors_block, doctor_big_card, btn) {
-        $("img", doctor_big_card).attr('src', '');   
+        $("img", doctor_big_card).attr('src', '');
         $(".doctor-big-card__title", doctor_big_card).text('');
         $(".doctor-big-card__body", doctor_big_card)[0].innerHTML = "";
 
@@ -196,7 +196,7 @@ var Clinic = (function() {
     function DoctorCalendarShow(doctors_block, doctor_book, btn) {
         var card = $(btn).closest(".doctor-card");
         var calendarUrl = card.data('calendar');
-        var loading = $(".doctor-book__loading", doctor_book);        
+        var loading = $(".doctor-book__loading", doctor_book);
 
         if (calendarUrl) {
             doctors_block.addClass('hidden');
@@ -209,11 +209,11 @@ var Clinic = (function() {
 
             doctor_book.removeClass('hidden');
             $(".doctor-book__close", doctor_book).removeClass('hidden');
-        }                
+        }
     }
 
     function DoctorCalendarClose(doctors_block, doctor_book, btn) {
-        $("iframe", doctor_book).attr('src', '');   
+        $("iframe", doctor_book).attr('src', '');
         $(".doctor-book__title", doctor_book).text('');
 
         $(btn).addClass('hidden');
