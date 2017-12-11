@@ -6,7 +6,7 @@ window.ClinicModel = {
     },
     Contacts: [
         { title: "Адрес:", value: "г. Ижевск, ул. Труда, 48а" },
-        { title: "Почта", value: "<a href='mailto:centr_psy@mail.ru'>centr_psy@mail.ru</a>" },
+        { title: "Почта:", value: "<a href='mailto:centr_psy@mail.ru'>centr_psy@mail.ru</a>" },
         { title: "Телефоны городские:", value: "<a href='tel:+73412233325'>8(3412)23-33-25</a><br /><a href='tel:+73412646706'>8(3412)64-67-06</a>" },
         { title: "Телефон сотовый:", value: "<a href='tel:+79090538753'>8-909-053-87-53</a>" }
     ],
