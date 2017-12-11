@@ -19,7 +19,7 @@ var Clinic = (function() {
 
     function InitTemplates() {
         InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
-        BindLink((".who-we-are__next .btn"), "about-us.html");
+        Common.BindLink((".who-we-are__next .btn"), /[\w.]+$/, "pages/about-us.html");
 
         InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });        
         InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), { "contacts": window.ClinicModel.Contacts });

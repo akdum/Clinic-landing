@@ -15,11 +15,7 @@
     margin-bottom: 2rem;
 }
 
-.book__book .btn {
-    border-color: #081b33;
-}
-
 .book__book .btn:hover {
-    color: #081b33;
+    color: #0e2e5f;
     background-color: #fff;
 }

@@ -195,7 +195,7 @@ input {
 /* ============================================= */
 
 .color-primary {
-    color: #081b33;
+    color: #0e2e5f;
 }
 
 .color-white {
@@ -203,7 +203,7 @@ input {
 }
 
 .bg-primary {
-    background-color: #081b33 !important;
+    background-color: #0e2e5f !important;
 }
 
 .bg-secondary {
@@ -221,6 +221,9 @@ input {
 .bg-primary h1,
 .bg-primary h2 {
     color: #fff;
+}
+.border-primary {
+    border-color: #0e2e5f;
 }
 
 footer {

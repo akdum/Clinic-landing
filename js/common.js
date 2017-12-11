@@ -15,8 +15,8 @@ var Common = (function() {
         container.append(html);
     }
 
-    root.BindLink = function(selector, oldPath, newPath) {
-        $(selector).on('click', (() => window.location.href = window.location.href.replace(oldPath, newPath)));
+    root.BindLink = function(selector, regex, newPath) {
+        $(selector).on('click', (() => window.location.href = window.location.href.replace(regex, newPath)));
     }
 
     return root;
