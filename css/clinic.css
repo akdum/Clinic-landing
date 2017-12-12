@@ -5,7 +5,13 @@
 #carousel .container-fluid {
     padding: 0;
 }
-
+#carousel .carousel-indicators li {
+    height: 15px;
+    background-color: rgba(15, 47, 95, 0.52);
+}
+#carousel .carousel-indicators .active {
+    background-color: #d83b01;
+}
 #who-we-are {
     margin: 0;
     padding: 4rem 0px;
