@@ -13,7 +13,7 @@ var Clinic = (function() {
         CardShow();
         GalleryInit();
         MapInit();
-        //VkInit();
+        VkInit();
         DoctorCardsInit();
         BookFormSubmitInit();
     };
@@ -126,14 +126,7 @@ var Clinic = (function() {
     }
 
     function VkInit() {
-        var options = {
-            mode: 2,
-            no_cover: 1,
-            width: "auto",
-            wide: 1,
-            height: "600px"
-        }
-        VK.Widgets.Group("vk_group", options, 133747176);
+        VK.Widgets.Group("vk_groups", {mode: 3, width: "250", color1: 'FFF', color2: '000', color3: '0E2E5F'}, 133747176);
     }
 
     function DoctorCardsInit() {
