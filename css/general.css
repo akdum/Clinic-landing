@@ -203,6 +203,10 @@ input {
     color: #fff;
 }
 
+.btn.color-white:hover {
+    color: #fff;
+}
+
 .bg-primary {
     background-color: #0e2e5f !important;
 }

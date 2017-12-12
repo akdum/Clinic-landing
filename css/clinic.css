@@ -167,13 +167,13 @@
 }
 
 #contacts .contact-map {
-    height: 600px;
+    height: 750px;
     width: 100%;
 }
 
 #contacts .contacts-layer {
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 10%;
     width: 290px;
     margin-top: -50px;
