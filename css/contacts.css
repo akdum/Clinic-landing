@@ -1,0 +1,17 @@
+.contacts__address-map {
+    height: 350px;
+    width: 100%;
+}
+.contacts__phones {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
+.contacts__phone {
+    margin-right: 2rem;
+}
+.contacts__phone a {
+    color: initial;
+}
+.contacts__phone a:hover {
+    text-decoration: none;
+}

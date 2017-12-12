@@ -10,6 +10,11 @@ window.ClinicModel = {
         { title: "Телефоны городские:", value: "<a href='tel:+73412233325'>8(3412)23-33-25</a><br /><a href='tel:+73412646706'>8(3412)64-67-06</a>" },
         { title: "Телефон сотовый:", value: "<a href='tel:+79090538753'>8-909-053-87-53</a>" }
     ],
+    ContactsData: {
+        address: "г. Ижевск, ул. Труда, 48а",
+        phones: [{html: "<a href='tel:+73412233325'>8(3412)23-33-25</a>"}, {html: "<a href='tel:+73412646706'>8(3412)64-67-06</a>"}, {html: "<a href='tel:+79090538753'>8(909)053-87-53</a>"}],
+        workHours: [{days: "Будни", hours: "с 09-00 до 18-00"}, {days: "Суббота, Воскресенье", hours: "Закрыто"}]
+    },
     Doctors: [
         { photoName: "reverchuk.jpg", title: { surname: "Реверчук", name: "Игорь Васильевич", spec: "заведующий кафедрой, главный врач, профессор" }, file: "reverchuk.html", calendar: "https://outlook.live.com/owa//calendar/00000000-0000-0000-0000-000000000000/c54344d5-a974-4f32-a302-8b1ae9e4abd2/cid-31776A10A799782C/index.html" },
         { photoName: "tutrumova.jpg", title: { surname: "Тютрюмова", name: "Елена Александровна", spec: "психолог-дефектолог, олигофренопедагог, детский психолог" } },

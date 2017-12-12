@@ -12,7 +12,7 @@ var Clinic = (function() {
         ScrollRevealInit();
         CardShow();
         GalleryInit();
-        MapInit();
+        Common.MapInit();
         VkInit();
         DoctorCardsInit();
         BookFormSubmitInit();
@@ -104,25 +104,6 @@ var Clinic = (function() {
                 tError: '<a href="%url%">Изображение #%curr%</a> не загрузилось.'
             }
         })
-    }
-
-    function MapInit() {
-        ymaps.ready(function() {
-            var location1 = 56.86211253;
-            var location2 = 53.28120296;
-            try {
-                var map = new ymaps.Map('map', {
-                    center: [location1, location2],
-                    zoom: 16
-                });
-                map.behaviors.disable('scrollZoom');
-                map.geoObjects.add(new ymaps.Placemark([location1, location2], {
-                    hintContent: 'Клиническая больница восстановительной медицины'
-                }));
-            } catch (error) {
-                console.log(error);
-            }
-        });
     }
 
     function VkInit() {
