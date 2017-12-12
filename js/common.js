@@ -7,6 +7,10 @@ window.onerror = function(error) {
 var Common = (function() {
     var root = {};
 
+    root.Init = function() {
+        InitVKWidgets();
+    }
+
     root.InitTemplate = function(container, templateContainer, view) {
         var template = templateContainer.html();
         Mustache.parse(template); // optional, speeds up future uses
@@ -38,5 +42,16 @@ var Common = (function() {
         });
     }
 
+    function InitVKWidgets() {
+        var options = {
+            tooltipButtonText: "У Вас возникли вопросы?"
+        };
+        VK.Widgets.CommunityMessages("vk_community_messages", 133747176, options);
+    }
+
     return root;
 }(Common || {}))
+
+$(document).ready(function() {
+    Common.Init();
+});
