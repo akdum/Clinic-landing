@@ -1,0 +1,21 @@
+.magazines__new-issue {
+    margin-top: 2rem;
+}
+
+.magazines__new-issue-data img {
+    max-width: 100%;
+}
+
+.magazines__new-issue-look a:hover {
+    text-decoration: none;
+}
+
+.magazines__new-issue-highlights ul {
+    list-style: none;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.magazines__new-issue-highlights li {
+    margin-bottom: 1rem;
+}
