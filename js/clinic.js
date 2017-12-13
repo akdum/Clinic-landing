@@ -9,6 +9,7 @@ var Clinic = (function() {
 
     root.Init = function() {
         InitTemplates();
+        BindLinks();
         ScrollRevealInit();
         CardShow();
         GalleryInit();
@@ -20,10 +21,13 @@ var Clinic = (function() {
 
     function InitTemplates() {
         Common.InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
-        Common.BindLink((".who-we-are__next .btn"), /[\w.]+$/, "pages/about-us.html");
-
         Common.InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
         Common.InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), { "contacts": window.ClinicModel.Contacts });
+    }
+
+    function BindLinks() {
+        Common.BindLink((".who-we-are__next .btn"), /[\w.]+$/, "pages/about-us.html");
+        Common.BindLink((".med-info-btn.btn"), /[\w.]+$/, "pages/med-info.html");
     }
 
     function ScrollRevealInit() {
@@ -107,7 +111,7 @@ var Clinic = (function() {
     }
 
     function VkInit() {
-        VK.Widgets.Group("vk_groups", {mode: 3, width: "250", no_cover: 1, color1: 'FFF', color2: '000', color3: '0E2E5F'}, 133747176);
+        VK.Widgets.Group("vk_groups", { mode: 3, width: "250", no_cover: 1, color1: 'FFF', color2: '000', color3: '0E2E5F' }, 133747176);
     }
 
     function DoctorCardsInit() {
@@ -185,7 +189,7 @@ var Clinic = (function() {
     }
 
     function BookFormSubmitInit() {
-        var form = document.getElementById('book-form');    
+        var form = document.getElementById('book-form');
         var input = $(form.querySelector('input'));
         input.intlTelInput({
             initialCountry: "ru",
@@ -193,7 +197,7 @@ var Clinic = (function() {
         });
 
         if (form) {
-            form.addEventListener("submit", (event) => {         
+            form.addEventListener("submit", (event) => {
                 event.preventDefault();
                 var value = $.trim(input.val());
                 if (value) {
@@ -204,17 +208,17 @@ var Clinic = (function() {
                                 'Content-Type': 'application/x-www-form-urlencoded'
                             },
                             data: value
-                        }).done(function (response){
+                        }).done(function(response) {
                             $(".book-now__whole-form>div").not("[class*='book-now__success-message']").addClass('d-none');
                             $(".book-now__success-message").removeClass('d-none');
                         })
-                    } else {                        
+                    } else {
                         event.stopPropagation();
                         $(".book-now__invalid-phone-label").show();
                     }
-                }       
+                }
             }, false);
-        }        
+        }
     }
 
     return root;
