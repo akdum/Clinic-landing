@@ -193,7 +193,7 @@ var Clinic = (function() {
         var input = $(form.querySelector('input'));
         input.intlTelInput({
             initialCountry: "ru",
-            utilsScript: "./libs/utils.js" // just for formatting/placeholders etc
+            utilsScript: "./js/libs/utils.js" // just for formatting/placeholders etc
         });
 
         if (form) {
