@@ -20,7 +20,9 @@ var Common = (function() {
     }
 
     root.BindLink = function(selector, regex, newPath) {
-        $(selector).on('click', (() => window.location.href = window.location.href.replace(regex, newPath)));
+        $(selector).on('click', (() =>
+            window.location.href = window.location.href.replace(regex, newPath)
+        ));
     }
 
     root.MapInit = function() {
