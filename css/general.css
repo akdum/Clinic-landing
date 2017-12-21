@@ -216,16 +216,16 @@ input {
 }
 
 .bg-btn {
-    background-color: #d83b01 !important;
+    background-color: #e81123 !important;
 }
 
 .btn-border {
-    border-color: #d83b01;
-    border-radius: 0;
+    border-color: #e81123;
+    border-radius: 25px;
 }
 
 .btn-border:hover {
-    border-color: #d83b01;
+    border-color: #e81123;
 }
 
 .bg-white {
