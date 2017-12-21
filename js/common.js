@@ -9,6 +9,7 @@ var Common = (function() {
 
     root.Init = function() {
         InitVKWidgets();
+        InitTemplates();
     }
 
     root.InitTemplate = function(container, templateContainer, view) {
@@ -42,6 +43,10 @@ var Common = (function() {
                 console.log(error);
             }
         });
+    }
+
+    function InitTemplates() {
+        root.InitTemplate($("footer .links"), $("#footer-template"), { "links": window.ClinicModel.FooterLinks })
     }
 
     function InitVKWidgets() {

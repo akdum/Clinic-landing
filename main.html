@@ -175,8 +175,9 @@
     <div id="vk_community_messages"></div>
     <footer class="bg-primary color-white">
         <div class="copyright">© 2017 Клиническая больница восстановительной медицины. Все права защищены.</div>
-        <div class="footer-social-links">
-        </div>
+        <div class="container-fluid">
+        <div class="row links"></div>
+    </div>
     </footer>
     <script id="who-we-are-template" type="x-tmpl-mustache">
         <div class="who-we-are__title">
@@ -221,6 +222,13 @@
         </div>
         {{/contacts}}
         <div id="vk_groups"></div>
+    </script>
+    <script id="footer-template" type="x-tmpl-mustache">
+        {{#links}}
+            <div class="col-md-6 col-sm-12 col-lg-4">
+                <a href="{{address}}">{{title}}</a>
+            </div>
+        {{/links}}
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
