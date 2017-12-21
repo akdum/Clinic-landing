@@ -80,9 +80,17 @@
     <div id="vk_community_messages"></div>
     <footer class="bg-primary color-white">
         <div class="copyright">© 2017 Клиническая больница восстановительной медицины. Все права защищены.</div>
-        <div class="footer-social-links">
+        <div class="container-fluid">
+            <div class="row links">
         </div>
     </footer>
+    <script id="footer-template" type="x-tmpl-mustache">
+        {{#links}}
+            <div class="col-md-6 col-sm-12 col-lg-4">
+                <a href="{{address}}">{{title}}</a>
+            </div>
+        {{/links}}
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://vk.com/js/api/openapi.js?150" type="text/javascript"></script>
     <script src="../js/pages/personal-info.js?v=1.0"></script>
