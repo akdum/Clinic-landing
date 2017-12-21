@@ -93,19 +93,21 @@
     </footer>
     <script id="magazine-new-issue-template" type="x-tmpl-mustache">
         <div class="row">
-            <div class="col-md-6 col-sm-12">
-                <h4>Новый номер</h4>
-                <div class="magazines__new-issue-data">
-                    <div><img src="../img/med-info/{{img}}" /></div>
-                    <div class="magazines__new-issue-look"><a class="color-primary" href="../files/med-info/{{issueName}}">Просмотреть номер</a></div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-4 col-sm-12">
                 <h4>Обратите внимание</h4>
                 <div class="magazines__new-issue-highlights">
                     <ul>
-                        {{{ content }}}
+                        {{#content}}                        
+                            <li><a class="color-primary" target="_blank" href="../files/med-info/{{issueName}}#page={{pageNumber}}">{{text}}</a></li>
+                        {{/content}}
                     </ul>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12">
+                <h4>Новый номер</h4>
+                <div class="magazines__new-issue-data">
+                    <div><img src="../img/med-info/{{img}}" /></div>
+                    <div class="magazines__new-issue-look"><a class="color-primary" target="_blank" href="../files/med-info/{{issueName}}">Просмотреть номер</a></div>
                 </div>
             </div>
         </div>

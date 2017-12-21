@@ -2,12 +2,11 @@
     margin-top: 2rem;
 }
 
+.magazines__new-issue a:hover {
+    text-decoration: none;
+}
 .magazines__new-issue-data img {
     max-width: 100%;
-}
-
-.magazines__new-issue-look a:hover {
-    text-decoration: none;
 }
 
 .magazines__new-issue-highlights ul {
