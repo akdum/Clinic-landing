@@ -261,20 +261,3 @@ footer .links a {
 footer .links a:hover {
     text-decoration: none;
 }
-
-@media (max-width: 736px) {
-    /* ============================================= */
-    /* =============GLOBAL STYLES=================== */
-    /* ============================================= */
-    .row {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    footer {
-        height: 80px;
-    }
-    footer .copyright {
-        font-size: 0.9rem;
-        width: 80%;
-    }
-}

@@ -57,6 +57,7 @@
     margin: auto;
     margin-top: 2rem;
     width: 500px;
+    max-width: 100%;
 }
 
 #info {
@@ -176,6 +177,7 @@
     padding-top: 3rem;
     padding-bottom: 4rem;
     min-height: 540px;
+    max-width: 100%;
 }
 
 #book-now .book-now__form {
