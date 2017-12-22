@@ -18,6 +18,7 @@ window.ClinicModel = {
     Doctors: [
         { photoName: "reverchuk.jpg", title: { surname: "Реверчук", name: "Игорь Васильевич", spec: "заведующий кафедрой, главный врач, профессор" }, file: "reverchuk.html", calendar: "https://outlook.live.com/owa//calendar/00000000-0000-0000-0000-000000000000/c54344d5-a974-4f32-a302-8b1ae9e4abd2/cid-31776A10A799782C/index.html" },
         { photoName: "tutrumova.jpg", title: { surname: "Тютрюмова", name: "Елена Александровна", spec: "психолог-дефектолог, олигофренопедагог, детский психолог" } },
+        { photoName: "shutov.jpg", title: { surname: "Шутов", name: "Игорь Леонидович", spec: "Врач ЛФК и спортивной медицины" }, file: "shutov.html" },
         // { photoName: "perevozchikov.jpg", title: { surname: "Перевозчиков", name: "Александр Павлович", spec: "врач-психотерапевт, специалист по БОС-ЭЭГ" }, file: "perevozchikov.html" },
         { photoName: "rumyanceva.jpg", title: { surname: "Румянцева", name: "Наталья Анатольевна", spec: "врач-психотерапевт" }, file: "rumyanceva.html", calendar: "https://outlook.live.com/owa//calendar/00000000-0000-0000-0000-000000000000/a636d139-c109-46a2-889a-e3dcdd974738/cid-31776A10A799782C/index.html" },
         { photoName: "pomyitkina.jpg", title: { surname: "Помыткина", name: "Татьяна Юрьевна", spec: "психолог, семейный психолог, специалист по профоринтации, кандидат психологических наук" }, file: "pomyitkina.html" },

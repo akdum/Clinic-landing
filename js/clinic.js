@@ -140,7 +140,7 @@ var Clinic = (function() {
         var card = $(btn).closest(".doctor-card");
         doctors_block.addClass('hidden');
         // set image.
-        $("img", doctor_big_card).attr('src', './img/doctors/' + card.data('img'));
+        $("img", doctor_big_card).attr('src', './img/doctors/' + card.data('img')).show();
         // set text.
         $(".doctor-big-card__title", doctor_big_card).text(card.data('title'));
         $(".doctor-big-card__body", doctor_big_card).load('html/' + card.data('file'));
@@ -151,7 +151,7 @@ var Clinic = (function() {
     }
 
     function DoctorCardClose(doctors_block, doctor_big_card, btn) {
-        $("img", doctor_big_card).attr('src', '');
+        $("img", doctor_big_card).attr('src', '').hide();
         $(".doctor-big-card__title", doctor_big_card).text('');
         $(".doctor-big-card__body", doctor_big_card)[0].innerHTML = "";
 
