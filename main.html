@@ -98,14 +98,14 @@
                         </div>
                         <img class="d-block w-100" src="./img/carousel/med-info.png" alt="Second slide">
                     </div>
-                    <!-- <div class="carousel-item">
+                    <div class="carousel-item">
                         <a href="./pages/children.html">
                             <img class="d-block w-100" src="./img/carousel/children.jpg" alt="First slide">
                         </a>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="./img/carousel/healthcare.jpg" alt="Third slide">
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -162,6 +162,12 @@
                     <h2>Спасибо за обращение, Вам ответят в близжайшее время.</h2>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container">
+            <h1>Услуги</h1>
+            <div class="services__list"></div>
         </div>
     </section>
     <section id="contacts">
@@ -230,6 +236,13 @@
                 <a href="{{address}}">{{title}}</a>
             </div>
         {{/links}}
+    </script>
+    <script id="services-template" type="x-tmpl-mustache">
+        {{#services}}
+        <div class="col-md-4 col-sm-12">
+
+        </div>
+        {{/services}}
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
