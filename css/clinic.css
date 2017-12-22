@@ -18,31 +18,24 @@
     background-color: #e81123;
 }
 
-#carousel .carousel-item__data {
-    position: absolute;
+#carousel .carousel-item__data.carousel-caption {
+    right: initial;
+    bottom: initial;
     left: 5%;
     top: 5%;
-}
-
-#carousel .carousel-item__data>div {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-#carousel .carousel-item__title {
-    margin-bottom: 2rem;
-}
-
-#carousel .carousel-item__title h1 {
-    font-weight: 600;
+    text-align: left;
 }
 
 #carousel .carousel-item__text {
-    width: 35%;
-    font-size: 1.4rem;
-    margin-bottom: 2rem;
+    width: 30%;
+    position: fixed;
+    top: 30%;
 }
-
+#carousel .carousel-item__open-btn {
+    position: fixed;
+    bottom: 10%;
+    left: 5%;
+}
 #who-we-are {
     margin: 0;
     padding: 4rem 0px;
