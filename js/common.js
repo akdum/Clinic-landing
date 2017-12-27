@@ -45,6 +45,19 @@ var Common = (function() {
         });
     }
 
+    root.GetHeroes = function (key) {
+        var heroData = window.ClinicModel.Heroes;
+        return heroData.filter((item) => { return item.area === key });
+    }
+
+    root.InitHeroArea = function (key) {
+        var heroes = Common.GetHeroes(key);
+        if (heroes && heroes.length>0) {
+            root.InitTemplate($("#hero .container"), $("#hero-template"), { "heroes": heroes });
+            Common.BindLink(("#book .btn"), /[\w.]+$/,"contacts.html");
+        }
+    }
+
     function InitTemplates() {
         root.InitTemplate($("footer .links"), $("#footer-template"), { "links": window.ClinicModel.FooterLinks })
     }
