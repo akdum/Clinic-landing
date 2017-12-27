@@ -17,24 +17,42 @@
 #carousel .carousel-indicators .active {
     background-color: #e81123;
 }
-
 #carousel .carousel-item__data.carousel-caption {
-    right: initial;
     bottom: initial;
-    left: 5%;
     top: 5%;
+}
+#carousel .carousel-item__data-right {
+    right: 5%;
+    left: initial;
+    text-align: right;
+}
+
+#carousel .carousel-item__data-left {
+    left: 5%;
+    right: initial;
     text-align: left;
 }
 
-#carousel .carousel-item__text {
+#carousel .carousel-item__data-left .carousel-item__text {
     width: 30%;
     position: fixed;
     top: 30%;
 }
-#carousel .carousel-item__open-btn {
+#carousel .carousel-item__data-right .carousel-item__text {
+    right: 5%;
+    width: 30%;
+    position: fixed;
+    top: 30%;
+}
+#carousel .carousel-item__data-left .carousel-item__open-btn {
     position: fixed;
     bottom: 10%;
     left: 5%;
+}
+#carousel .carousel-item__data-right .carousel-item__open-btn {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
 }
 #who-we-are {
     margin: 0;
