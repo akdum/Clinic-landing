@@ -28,6 +28,7 @@ var Clinic = (function() {
     function BindLinks() {
         Common.BindLink((".who-we-are__next .btn"), /[\w.]*$/, "pages/about-us.html");
         Common.BindLink((".med-info-btn.btn"), /[\w.]*$/, "pages/med-info.html");
+        Common.BindLink((".children-btn.btn"), /[\w.]*$/, "pages/children.html");
     }
 
     function ScrollRevealInit() {
