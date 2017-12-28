@@ -145,7 +145,7 @@ var Clinic = (function() {
         $("img", doctor_big_card).attr('src', './img/doctors/' + card.data('img')).show();
         // set text.
         $(".doctor-big-card__title", doctor_big_card).text(card.data('title'));
-        $(".doctor-big-card__body", doctor_big_card).load('html/' + card.data('file'));
+        $(".doctor-big-card__body", doctor_big_card).load('html/doctors/' + card.data('file'));
 
         // show card.
         doctor_big_card.removeClass('hidden');
