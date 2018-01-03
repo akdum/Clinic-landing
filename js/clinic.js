@@ -209,7 +209,7 @@ var Clinic = (function() {
                             headers: {
                                 'Content-Type': 'application/x-www-form-urlencoded'
                             },
-                            data: value
+                            data: {"number": value}
                         }).done(function(response) {
                             $(".book-now__whole-form>div").not("[class*='book-now__success-message']").addClass('d-none');
                             $(".book-now__success-message").removeClass('d-none');
