@@ -221,7 +221,7 @@ var Clinic = (function() {
                     if (input.intlTelInput("isValidNumber")) {
                         $.get({
                             url: event.target.action + '?' + GetDataForMail(value),
-                        }).done(function(response) {
+                        }).always(function(response) {
                             $(".book-now__whole-form>div").not("[class*='book-now__success-message']").addClass('d-none');
                             $(".book-now__success-message").removeClass('d-none');
                         })
