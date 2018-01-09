@@ -190,6 +190,19 @@ var Clinic = (function() {
         doctors_block.removeClass('hidden');
     }
 
+    function GetDataForMail(number) {
+        var message = GetMessagePart('api_user', 'azure_2fd3c0d59752e9dd9f50405beb115075');
+        message = message + '&' + GetMessagePart('api_key', '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');
+        message = message + '&' + GetMessagePart('to', 'akudm2007@yandex.ru');
+        message = message + '&' + GetMessagePart('subject', 'Запись с сайта');
+        message = message + '&' + GetMessagePart('text', number);
+        message = message + '&' + GetMessagePart('from', 'info@domain.com');
+    }
+
+    function GetMessagePart(key, value) {
+        return (key.toString() + '=' + encodeURI(value.toString()));
+    }
+
     function BookFormSubmitInit() {
         var form = document.getElementById('book-form');
         var input = $(form.querySelector('input'));
@@ -204,12 +217,8 @@ var Clinic = (function() {
                 var value = $.trim(input.val());
                 if (value) {
                     if (input.intlTelInput("isValidNumber")) {
-                        $.post({
-                            url: event.target.action,
-                            headers: {
-                                'Content-Type': 'application/x-www-form-urlencoded'
-                            },
-                            data: {"number": value}
+                        $.get({
+                            url: event.target.action + '?' + GetDataForMail(value),
                         }).done(function(response) {
                             $(".book-now__whole-form>div").not("[class*='book-now__success-message']").addClass('d-none');
                             $(".book-now__success-message").removeClass('d-none');
