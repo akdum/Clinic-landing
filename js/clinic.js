@@ -197,6 +197,8 @@ var Clinic = (function() {
         message = message + '&' + GetMessagePart('subject', 'Запись с сайта');
         message = message + '&' + GetMessagePart('text', number);
         message = message + '&' + GetMessagePart('from', 'info@domain.com');
+
+        return message;
     }
 
     function GetMessagePart(key, value) {
