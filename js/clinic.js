@@ -193,10 +193,10 @@ var Clinic = (function() {
     function GetDataForMail(number) {
         var message = GetMessagePart('api_user', 'azure_2fd3c0d59752e9dd9f50405beb115075@azure.com');
         message = message + '&' + GetMessagePart('api_key', 'T6H3c2nbGHBh');
-        message = message + '&' + GetMessagePart('to', 'akudm2007@yandex.ru');
-        message = message + '&' + GetMessagePart('subject', 'Запись с сайта');
+        message = message + '&' + GetMessagePart('to', 'centr_psy@mail.ru');
+        message = message + '&' + GetMessagePart('subject', 'Запись через сайт');
         message = message + '&' + GetMessagePart('text', number);
-        message = message + '&' + GetMessagePart('from', 'info@domain.com');
+        message = message + '&' + GetMessagePart('from', 'clinic@domain.com');
 
         return message;
     }
