@@ -191,8 +191,8 @@ var Clinic = (function() {
     }
 
     function GetDataForMail(number) {
-        var message = GetMessagePart('api_user', 'azure_2fd3c0d59752e9dd9f50405beb115075');
-        message = message + '&' + GetMessagePart('api_key', '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');
+        var message = GetMessagePart('api_user', 'azure_2fd3c0d59752e9dd9f50405beb115075@azure.com');
+        message = message + '&' + GetMessagePart('api_key', 'T6H3c2nbGHBh');
         message = message + '&' + GetMessagePart('to', 'akudm2007@yandex.ru');
         message = message + '&' + GetMessagePart('subject', 'Запись с сайта');
         message = message + '&' + GetMessagePart('text', number);
