@@ -193,13 +193,7 @@
         </div>
     </section>
     <div id="vk_community_messages"></div>
-    <footer class="bg-primary color-white">
-        <div class="copyright">© 2017 Клиническая больница восстановительной медицины. Все права защищены.</div>
-        <div class="container-fluid">
-            <div class="row links">
-        </div>
-    </div>
-    </footer>
+    <div id="footer"></div>
     <script id="who-we-are-template" type="x-tmpl-mustache">
         <div class="who-we-are__title">
             <h1>{{ title }}</h1>
@@ -244,13 +238,6 @@
         {{/contacts}}
         <div id="vk_groups"></div>
     </script>
-    <script id="footer-template" type="x-tmpl-mustache">
-        {{#links}}
-            <div class="col-md-6 col-sm-12 col-lg-4">
-                <a href="{{address}}">{{title}}</a>
-            </div>
-        {{/links}}
-    </script>
     <script id="services-template" type="x-tmpl-mustache">
         {{#services}}
         <div class="col-md-4 col-sm-12">
@@ -269,8 +256,10 @@
     <script src="./js/libs/intlTelInput.min.js"></script>
     <script src="./js/model.js?v=1.7"></script>
     <script src="./js/common.js?v=1.0"></script>
-    <script src="./js/clinic.js?v=1.4"></script>
-    <script src="./dist/clinic.js?v=1.4"></script>
+    <!-- <script src="./js/clinic.js?v=1.4"></script> -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="./dist/clinic.js?v=1.0"></script>
 </body>
 
 </html>

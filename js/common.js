@@ -8,8 +8,8 @@ var Common = (function() {
     var root = {};
 
     root.Init = function() {
-        InitVKWidgets();
-        InitTemplates();
+        // InitVKWidgets();
+        // InitTemplates();
     }
 
     root.InitTemplate = function(container, templateContainer, view) {
@@ -58,16 +58,16 @@ var Common = (function() {
         }
     }
 
-    function InitTemplates() {
-        root.InitTemplate($("footer .links"), $("#footer-template"), { "links": window.ClinicModel.FooterLinks })
-    }
+    // function InitTemplates() {
+    //     root.InitTemplate($("footer .links"), $("#footer-template"), { "links": window.ClinicModel.FooterLinks })
+    // }
 
-    function InitVKWidgets() {
-        var options = {
-            tooltipButtonText: "У Вас возникли вопросы?"
-        };
-        VK.Widgets.CommunityMessages("vk_community_messages", 133747176, options);
-    }
+    // function InitVKWidgets() {
+    //     var options = {
+    //         tooltipButtonText: "У Вас возникли вопросы?"
+    //     };
+    //     VK.Widgets.CommunityMessages("vk_community_messages", 133747176, options);
+    // }
 
     return root;
 }(Common || {}))
