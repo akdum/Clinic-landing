@@ -53,8 +53,5 @@ window.ClinicModel = {
     ],
     MedInfo: [
         { img: 'МИ_04.jpg', issueName: 'МИ_04.pdf', current: "yes", content: [{text:"Инсульт - это не приговор", pageNumber: "2"}, {text:"Кинезотерапия на подвесных системах «Экзарта»", pageNumber: "5"}, {text:"Сеть многопрофильных  клиник «Доктор плюс»", pageNumber: "7"}]}
-    ],
-    FooterLinks: [
-        { title: 'Политика по персональным данным', address: function() { return window.location.origin + '/pages/personal-info.html'} }
     ]
 }

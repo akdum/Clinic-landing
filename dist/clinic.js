@@ -944,6 +944,7 @@ var React = __webpack_require__(1);
 var ReactDOM = __webpack_require__(18);
 var PageFooter_1 = __webpack_require__(27);
 var YandexMetrika_1 = __webpack_require__(35);
+var Header_1 = __webpack_require__(37);
 var FooterLinks = [
     {
         title: "Политика по персональным данным",
@@ -951,6 +952,7 @@ var FooterLinks = [
     }
 ];
 ReactDOM.render(React.createElement(YandexMetrika_1.YandexMetrika, null), document.getElementById('yandexMetrika'));
+ReactDOM.render(React.createElement(Header_1.Header, null), document.getElementById('header'));
 ReactDOM.render(React.createElement(PageFooter_1.PageFooter, { links: FooterLinks }), document.getElementById('footer'));
 
 
@@ -19044,6 +19046,88 @@ var ym;
     }
     ym.initialize = initialize;
 })(ym = exports.ym || (exports.ym = {}));
+
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(1);
+__webpack_require__(38);
+var Header = /** @class */ (function (_super) {
+    __extends(Header, _super);
+    function Header() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Header.prototype.render = function () {
+        return (React.createElement("nav", { className: "navbar" },
+            React.createElement("div", { className: "navbar-brand d-flex" },
+                React.createElement("div", { className: "clinic-logo" }),
+                React.createElement("div", { className: "clinic-logo-title" },
+                    React.createElement("div", { className: "clinic-title" }, "\u041A\u043B\u0438\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0431\u043E\u043B\u044C\u043D\u0438\u0446\u0430 \u0432\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0439 \u043C\u0435\u0434\u0438\u0446\u0438\u043D\u044B"),
+                    React.createElement("div", { className: "clinic-academy color-primary" }, "\u0424\u0413\u0411\u041E\u0423 \u0412\u041E \"\u0418\u0436\u0435\u0432\u0441\u043A\u0430\u044F \u0433\u043E\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043D\u043D\u0430\u044F \u043C\u0435\u0434\u0438\u0446\u0438\u043D\u0441\u043A\u0430\u044F \u0430\u043A\u0430\u0434\u0435\u043C\u0438\u044F \u041C\u0417 \u0420\u0424\"")))));
+    };
+    return Header;
+}(React.Component));
+exports.Header = Header;
+
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(39);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(33)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./header.module.scss", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./header.module.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(32)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".color-primary {\n  color: #0e2e5f; }\n\n.color-white {\n  color: #fff; }\n\n.bg-primary {\n  background-color: #0e2e5f !important; }\n\n.navbar .navbar-brand {\n  white-space: nowrap; }\n  .navbar .navbar-brand .clinic-logo {\n    margin-right: 1rem;\n    height: 60px;\n    width: 60px;\n    margin-top: 5px; }\n  .navbar .navbar-brand .clinic-logo-title .clinic-title {\n    font-family: 'Exo 2', sans-serif;\n    font-weight: 400;\n    font-size: 1.2rem;\n    color: #777; }\n  .navbar .navbar-brand .clinic-logo-title .clinic-academy {\n    font-size: 1.5rem;\n    font-weight: 300;\n    font-family: 'Roboto', sans-serif;\n    white-space: normal; }\n", ""]);
+
+// exports
 
 
 /***/ })
