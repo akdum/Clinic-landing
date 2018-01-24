@@ -943,12 +943,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
 var ReactDOM = __webpack_require__(18);
 var PageFooter_1 = __webpack_require__(27);
+var YandexMetrika_1 = __webpack_require__(35);
 var FooterLinks = [
     {
         title: "Политика по персональным данным",
         address: window.location.origin + '/pages/personal-info.html'
     }
 ];
+ReactDOM.render(React.createElement(YandexMetrika_1.YandexMetrika, null), document.getElementById('yandexMetrika'));
 ReactDOM.render(React.createElement(PageFooter_1.PageFooter, { links: FooterLinks }), document.getElementById('footer'));
 
 
@@ -18960,6 +18962,88 @@ module.exports = function (css) {
 	// send back the fixed css
 	return fixedCss;
 };
+
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(1);
+var react_ym_1 = __webpack_require__(36);
+var YandexMetrika = /** @class */ (function (_super) {
+    __extends(YandexMetrika, _super);
+    function YandexMetrika() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    YandexMetrika.prototype.componentDidMount = function () {
+        react_ym_1.ym.initialize("44724454");
+    };
+    YandexMetrika.prototype.render = function () {
+        return (React.createElement("span", null));
+    };
+    return YandexMetrika;
+}(React.Component));
+exports.YandexMetrika = YandexMetrika;
+
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var ym;
+(function (ym) {
+    function initialize(ymId, options) {
+        if (!ymId) {
+            return;
+        }
+        var customOptions = {};
+        var defaultOptions = {
+            id: ymId,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        };
+        if (options) {
+            customOptions = options;
+            customOptions['id'] = ymId;
+        }
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    var Ya = w['Ya'];
+                    w[("yaCounter" + ymId)] = new Ya.Metrika(options ? customOptions : defaultOptions);
+                }
+                catch (e) { }
+            });
+            var n = d.getElementsByTagName('script')[0], s = d.createElement('script'), f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://mc.yandex.ru/metrika/watch.js';
+            if (w['opera'] == '[object Opera]') {
+                d.addEventListener('DOMContentLoaded', f, false);
+            }
+            else {
+                f();
+            }
+        })(document, window, 'yandex_metrika_callbacks');
+    }
+    ym.initialize = initialize;
+})(ym = exports.ym || (exports.ym = {}));
 
 
 /***/ })
