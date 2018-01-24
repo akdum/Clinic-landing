@@ -239,25 +239,3 @@ input {
 .border-primary {
     border-color: #0e2e5f;
 }
-
-footer {
-    position: relative;
-}
-
-footer .copyright {
-    padding-top: 1rem;
-    padding-left: 1rem;
-}
-
-footer .links {
-    padding: 0.5rem 0 0.5rem 0;
-    font-size: 0.9rem;
-}
-
-footer .links a {
-    color: #fff;
-}
-
-footer .links a:hover {
-    text-decoration: none;
-}

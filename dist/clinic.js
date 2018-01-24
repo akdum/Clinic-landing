@@ -242,7 +242,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, ".color-primary {\n  color: #0e2e5f; }\n\n.color-white {\n  color: #fff; }\n\n.bg-primary {\n  background-color: #0e2e5f !important; }\n\nfooter {\n  position: relative; }\n  footer .copyright {\n    padding-top: 1rem;\n    padding-left: 1rem; }\n\nfooter .links {\n  padding: 0.5rem 0 0.5rem 0;\n  font-size: 0.9rem; }\n\nfooter .links a {\n  color: #fff; }\n\nfooter .links a:hover {\n  text-decoration: none; }\n", ""]);
+exports.push([module.i, ".color-primary {\n  color: #0e2e5f; }\n\n.color-white {\n  color: #fff; }\n\n.bg-primary {\n  background-color: #0e2e5f !important; }\n\nfooter {\n  position: relative; }\n  footer .copyright {\n    padding-top: 1rem;\n    padding-left: 1rem; }\n  footer .links {\n    padding: 0.5rem 0 0.5rem 0;\n    font-size: 0.9rem; }\n    footer .links a {\n      color: #fff; }\n    footer .links a:hover {\n      text-decoration: none; }\n", ""]);
 
 // exports
 
