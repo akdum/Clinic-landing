@@ -20,7 +20,7 @@ export class Header extends React.Component<IHeaderProps,null> {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav row">
-                        {this.props.links.map((link) => <a className="nav-item nav-link col-md-2 text-center color-primary" href={link.address}>{link.title}</a>)}
+                        {this.props.links.map((link) => <a key={link.title} className="nav-item nav-link col-md-2 text-center color-primary" href={link.address}>{link.title}</a>)}
                     </div>
                 </div>
             </nav>

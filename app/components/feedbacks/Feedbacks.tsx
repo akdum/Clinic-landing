@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import './feedbacks.module.scss';
+
 import { IFeedbacksProps } from './IFeedbacksProps';
 import { Feedback } from '../feedback/Feedback';
 

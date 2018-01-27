@@ -1,5 +1,12 @@
 $color-primary: #00426b;
 
+h1 {
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3rem;
+}
+
 .color-primary {
     color: $color-primary;
 }
