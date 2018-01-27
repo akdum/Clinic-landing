@@ -1,11 +1,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { FooterLink } from '../footer-link/FooterLink';
-import { ILinks } from '../../shared/interfaces/ILinks';
 
 import './footer.module.scss';
+import { IFooterProps } from './IFooterProps';
 
-export class Footer extends React.Component<ILinks,null> {
+export class Footer extends React.Component<IFooterProps,null> {
     render() {
         return (
             <footer className="bg-primary color-white">

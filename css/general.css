@@ -22,18 +22,6 @@ Extras
 
 /* ============================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body,
-html {
-    height: 100%;
-    width: 100%;
-    font-size: 1.1rem;
-}
-
 a {
     transition: all .35s;
 }

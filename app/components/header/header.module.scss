@@ -1,28 +1,39 @@
 @import '~../../shared/styles/global.scss';
 
 .navbar {
+    margin: 0.5rem 0 1rem 0;
     .navbar-brand {
-        white-space: nowrap;
         .clinic-logo {
             margin-right: 1rem;
-            height: 60px;
-            width: 60px;
-            margin-top: 5px;
+            height: 4.7rem;
+            width: 4.7rem;
             background: url('academy_logo.jpg') no-repeat;
+            background-size: cover;
         }
         .clinic-logo-title {
+            white-space: normal;
+            width: 250px;
             .clinic-title {
                 font-family: 'Exo 2', sans-serif;
                 font-weight: 400;
-                font-size: 1.2rem;
-                color: #777;
+                font-size: 1rem;
+                line-height: 1rem;
+                text-transform: uppercase;
             }
             .clinic-academy {
-                font-size: 1.5rem;
+                font-size: 0.7rem;
                 font-weight: 300;
                 font-family: 'Roboto', sans-serif;
-                white-space: normal;
+                margin-top: 0.25rem;
+                line-height: 0.7rem;
             }
+        }
+    }
+    .navbar-nav {
+        width: 100%;
+        .nav-item.nav-link {
+            text-transform: uppercase;
+            color: $color-primary;
         }
     }
 }

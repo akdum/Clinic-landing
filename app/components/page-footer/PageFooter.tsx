@@ -1,12 +1,12 @@
 import * as React from "react";
-import { ILinks } from "../../shared/interfaces/ILinks";
 import { Footer } from "../footer/Footer";
+import { IPageFooterProps } from "./IPageFooterProps";
 
 interface VKWindow extends Window {
     VK: any;
 }
 
-export class PageFooter extends React.Component<ILinks, null> {
+export class PageFooter extends React.Component<IPageFooterProps, null> {
     componentDidMount() {
         var options = {
             tooltipButtonText: "У Вас возникли вопросы?"

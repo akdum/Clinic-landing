@@ -1,9 +1,17 @@
+$color-primary: #00426b;
+
 .color-primary {
-    color: #0e2e5f;
+    color: $color-primary;
 }
 .color-white {
     color: #fff;
 }
 .bg-primary {
-    background-color: #0e2e5f !important;
+    background-color: #00426b !important;
+}
+.title-block {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 300;
+    border-bottom: 1px solid #cacaca;
 }
