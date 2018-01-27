@@ -1,8 +1,11 @@
+const ASSET_PATH = process.env.ASSET_PATH || '/';
+
 module.exports = {
     entry: "./app/clinic.tsx",
     output: {
         filename: "clinic.js",
-        path: __dirname + "/dist"
+        path: __dirname + "/dist",
+        publicPath: __dirname + "/dist/"
     },
 
     // Enable sourcemaps for debugging webpack's output.
@@ -26,11 +29,31 @@ module.exports = {
                 use: [{
                     loader: "style-loader" // creates style nodes from JS strings
                 }, {
-                    loader: "css-loader" // translates CSS into CommonJS
+                    loader: "css-loader", options: {
+                        root: __dirname + "dist"
+                    } // translates CSS into CommonJS
                 }, {
-                    loader: "sass-loader" // compiles Sass to CSS
+                    loader: "resolve-url-loader"
+                },
+                {
+                    loader: "sass-loader", options: {
+                        sourceMap: true
+                    } // compiles Sass to CSS
                 }]
-            }
+            },
+
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                  'file-loader',
+                  {
+                    loader: 'image-webpack-loader',
+                    options: {
+                      bypassOnDebug: true,
+                    },
+                  },
+                ],
+              }
         ]
     },
 
