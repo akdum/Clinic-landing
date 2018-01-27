@@ -6,6 +6,12 @@ module.exports = {
         publicPath: "/dist/"
     },
 
+    devServer: {
+        contentBase: __dirname,
+        compress: false,
+        port: 9000
+    },
+
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
 
