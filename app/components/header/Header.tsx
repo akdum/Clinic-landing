@@ -8,13 +8,13 @@ export class Header extends React.Component<IHeaderProps,null> {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-light">
-                <div className="navbar-brand d-flex">
+                <a className="navbar-brand d-flex" href="/">
                     <div className="clinic-logo"></div>
                     <div className="clinic-logo-title color-primary">
                         <div className="clinic-title">Клиническая больница восстановительной медицины</div>
                         <div className="clinic-academy">ФГБОУ ВО "Ижевская государственная медицинская академия МЗ РФ"</div>
                     </div>
-                </div>
+                </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
