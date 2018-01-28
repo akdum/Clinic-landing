@@ -7,12 +7,21 @@ interface VKWindow extends Window {
 }
 
 export class PageFooter extends React.Component<IPageFooterProps, null> {
-    componentDidMount() {
+    componentWillMount () {
+        const script = document.createElement("script");
+        script.src = "https://vk.com/js/api/openapi.js?150";
+        script.async = true;
+        script.onload = this.onScriptLoad
+        document.body.appendChild(script);
+    }
+    
+    onScriptLoad() {
         var options = {
             tooltipButtonText: "У Вас возникли вопросы?"
         };
         (window as VKWindow).VK.Widgets.CommunityMessages("vk_community_messages", 133747176, options);
     }
+
     render() {
         return (
             <div>
