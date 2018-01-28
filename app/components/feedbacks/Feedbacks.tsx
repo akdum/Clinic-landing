@@ -13,9 +13,9 @@ export class Feedbacks extends React.Component<IFeedbacksProps,null> {
                 <div className="title-block">
                     <h1>Отзывы</h1>
                 </div>
-                <div className="row">
-                {this.props.feedbacks.map((feedback) => <Feedback feedback={feedback} />)}
-                </div>
+                <ul className="feedbacks-list">
+                    {this.props.feedbacks.map((feedback) => <li><Feedback feedback={feedback} /></li>)}
+                </ul>
             </div>
         )
     }
