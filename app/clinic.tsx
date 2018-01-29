@@ -57,12 +57,19 @@ const FeedbackData: IFeedback[] = [
     }
 ]
 
+const ContactsData = {
+    isContactsPage: true,
+    lattitude: 56.86211253,
+    longitude: 53.28120296,
+    address: 'г. Ижевск, ул. Труда, 48а'
+}
+
 ReactDOM.render(<YandexMetrika />, document.getElementById('yandexMetrika'));
 ReactDOM.render(<Header links={HeaderLinks} />, document.getElementById('header'));
 if (document.querySelector("#feedbacks")) {
     ReactDOM.render(<Feedbacks feedbacks={FeedbackData} />, document.getElementById('feedbacks'));
 }
 if (document.querySelector("#contacts-page")) {
-    ReactDOM.render(<Contacts isContactsPage={true} lattitude={56.86211253} longitude={53.28120296} />, document.getElementById('contacts-page'));
+    ReactDOM.render(<Contacts {... ContactsData} />, document.getElementById('contacts-page'));
 }
 ReactDOM.render(<PageFooter links={FooterLinks}/>, document.getElementById('footer'));

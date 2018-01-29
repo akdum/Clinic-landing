@@ -1,6 +1,9 @@
 @import '~../../shared/styles/global.scss';
 
 .contacts-page {
+    .contacts-address {
+        margin: 1rem 0 1rem 0;
+    }
     .contacts-map {        
         padding: 0;
         margin: 0;

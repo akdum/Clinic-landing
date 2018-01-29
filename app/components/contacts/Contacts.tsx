@@ -44,8 +44,10 @@ export class Contacts extends React.Component<IContactsProps, null> {
                                 <h1>Контакты</h1>
                             </div>
                             <div>
-                                <div className="contacts-address"></div>
-                                <div className="contacts-pnones"></div>
+                                <div className="contacts-address"><h3>{this.props.address}</h3></div>
+                                <div className="contacts-pnones">
+                                    <h3>Запись по телефонам</h3>                                    
+                                </div>
                             </div>
                         </div>
                         <div className="container-fluid contacts-map">
