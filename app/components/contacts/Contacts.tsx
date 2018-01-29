@@ -46,7 +46,16 @@ export class Contacts extends React.Component<IContactsProps, null> {
                             <div>
                                 <div className="contacts-address"><h3>{this.props.address}</h3></div>
                                 <div className="contacts-pnones">
-                                    <h3>Запись по телефонам</h3>                                    
+                                    <h3>Запись по телефонам</h3>
+                                    <div>
+                                        {this.props.phones.map((phone)=><span>{phone}</span>)}
+                                    </div>
+                                </div>
+                                <div className="contacts-work-hours">
+                                    <h3>Режим работы</h3>
+                                    <div>
+                                        {this.props.workHours.map((hours)=><div>{hours}</div>)}
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -3,4 +3,6 @@ export interface IContactsProps {
     address: string;
     lattitude: number;
     longitude: number;
+    phones: string[];
+    workHours: string[];
 }
