@@ -1,0 +1,11 @@
+@import '~../../shared/styles/global.scss';
+
+.contacts-page {
+    .contacts-map {        
+        padding: 0;
+        margin: 0;
+    }
+    .contacts-map > div {
+        height: 600px;
+    }
+}

@@ -21,6 +21,7 @@
   "dependencies": {
     "@types/react": "^16.0.34",
     "@types/react-dom": "^16.0.3",
+    "@types/yandex-maps": "^2.1.2",
     "css-loader": "^0.28.9",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

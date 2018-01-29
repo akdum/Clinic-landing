@@ -9,7 +9,10 @@ module.exports = {
     devServer: {
         contentBase: __dirname,
         compress: false,
-        port: 9000
+        port: 9000,
+        open: true,
+        progress: true,
+        quiet: false
     },
 
     // Enable sourcemaps for debugging webpack's output.
@@ -58,7 +61,7 @@ module.exports = {
                 ],
               }
         ]
-    },
+    }
 
     // When importing a module whose path matches one of the following, just
     // assume a corresponding global variable exists and use that instead.

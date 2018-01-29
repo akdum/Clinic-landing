@@ -7,6 +7,7 @@ import { Header } from './components/header/Header';
 import { Feedbacks } from './components/feedbacks/Feedbacks';
 import { IFeedback } from './shared/interfaces/IFeedback';
 import { ILink } from './shared/interfaces/ILink';
+import { Contacts } from './components/contacts/Contacts';
 
 const HeaderLinks: ILink[] = [
     {
@@ -60,5 +61,8 @@ ReactDOM.render(<YandexMetrika />, document.getElementById('yandexMetrika'));
 ReactDOM.render(<Header links={HeaderLinks} />, document.getElementById('header'));
 if (document.querySelector("#feedbacks")) {
     ReactDOM.render(<Feedbacks feedbacks={FeedbackData} />, document.getElementById('feedbacks'));
+}
+if (document.querySelector("#contacts-page")) {
+    ReactDOM.render(<Contacts isContactsPage={true} lattitude={56.86211253} longitude={53.28120296} />, document.getElementById('contacts-page'));
 }
 ReactDOM.render(<PageFooter links={FooterLinks}/>, document.getElementById('footer'));
