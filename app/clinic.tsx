@@ -64,7 +64,8 @@ const ContactsData: IContacts = {
     coordinates: {lattitude: 56.86211253, longitude: 53.28120296},
     address: 'г. Ижевск, ул. Труда, 48а',
     phones: ['8(3412)23-33-25','8(3412)64-67-06','8(909)053-87-53'],
-    workHours: ['Будни - с 09-00 до 18-00', 'Суббота, Воскресенье - Закрыто']
+    workHours: ['Будни - с 09-00 до 18-00', 'Суббота, Воскресенье - Закрыто'],
+    email: 'centr_psy@mail.ru'
 }
 
 ReactDOM.render(<YandexMetrika />, document.getElementById('yandexMetrika'));
