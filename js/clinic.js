@@ -13,8 +13,8 @@ var Clinic = (function() {
         ScrollRevealInit();
         CardShow();
         GalleryInit();
-        Common.MapInit();
-        VkInit();
+        //Common.MapInit();
+        //VkInit();
         DoctorCardsInit();
         BookFormSubmitInit();
     };
@@ -22,7 +22,7 @@ var Clinic = (function() {
     function InitTemplates() {
         Common.InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
         Common.InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
-        Common.InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), { "contacts": window.ClinicModel.Contacts });
+        //Common.InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), { "contacts": window.ClinicModel.Contacts });
     }
 
     function BindLinks() {

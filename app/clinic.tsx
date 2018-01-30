@@ -8,6 +8,8 @@ import { Feedbacks } from './components/feedbacks/Feedbacks';
 import { IFeedback } from './shared/interfaces/IFeedback';
 import { ILink } from './shared/interfaces/ILink';
 import { Contacts } from './components/contacts/Contacts';
+import { IContacts } from './shared/interfaces/IContacts';
+import { ContactsSmall } from './components/contacts-small/ContactsSmall';
 
 const HeaderLinks: ILink[] = [
     {
@@ -57,10 +59,9 @@ const FeedbackData: IFeedback[] = [
     }
 ]
 
-const ContactsData = {
+const ContactsData: IContacts = {
     isContactsPage: true,
-    lattitude: 56.86211253,
-    longitude: 53.28120296,
+    coordinates: {lattitude: 56.86211253, longitude: 53.28120296},
     address: 'г. Ижевск, ул. Труда, 48а',
     phones: ['8(3412)23-33-25','8(3412)64-67-06','8(909)053-87-53'],
     workHours: ['Будни - с 09-00 до 18-00', 'Суббота, Воскресенье - Закрыто']
@@ -73,5 +74,8 @@ if (document.querySelector("#feedbacks")) {
 }
 if (document.querySelector("#contacts-page")) {
     ReactDOM.render(<Contacts {... ContactsData} />, document.getElementById('contacts-page'));
+}
+if (document.querySelector("#contacts")) {
+    ReactDOM.render(<ContactsSmall {... ContactsData} />, document.getElementById('contacts'));
 }
 ReactDOM.render(<PageFooter links={FooterLinks}/>, document.getElementById('footer'));
