@@ -10,6 +10,7 @@ import { ILink } from './shared/interfaces/ILink';
 import { Contacts } from './components/contacts/Contacts';
 import { IContacts } from './shared/interfaces/IContacts';
 import { ContactsSmall } from './components/contacts-small/ContactsSmall';
+import { PageHead } from './components/page-head/PageHead';
 
 const HeaderLinks: ILink[] = [
     {
@@ -67,7 +68,7 @@ const ContactsData: IContacts = {
     workHours: ['Будни - с 09-00 до 18-00', 'Суббота, Воскресенье - Закрыто'],
     email: 'centr_psy@mail.ru'
 }
-
+ReactDOM.render(<PageHead />, document.getElementById('pageHead'));
 ReactDOM.render(<YandexMetrika />, document.getElementById('yandexMetrika'));
 ReactDOM.render(<Header links={HeaderLinks} />, document.getElementById('header'));
 if (document.querySelector("#feedbacks")) {
