@@ -14,6 +14,14 @@ const Promo = [
     { iconName: "fa-heartbeat", title: "Психосоматика", comment: "Наша клиника единственная в регионе по лечению психосоматических растройств." }
 ]
 
+const Licenses = [
+    { name: "license1.jpg" },
+    { name: "license2.jpg" },
+    { name: "license3.jpg" },
+    { name: "license4.jpg" },
+    { name: "license5.jpg" }
+]
+
 export class AboutUs extends React.Component<null, null> {
     render() {
         return (
@@ -43,6 +51,20 @@ export class AboutUs extends React.Component<null, null> {
                                 </div>
                             </li>)}
                         </ul>
+                    </div>
+                    <div className="license">
+                        <h2>Лицензия</h2>
+                        <div className="d-flex flex-wrap">
+                            {Licenses.map((item) =><div key={item.name}>
+                                <a href={"../img/license/fullsize/" + item.name}>
+                                    <img src={"../img/license/thumbnails/" + item.name} />
+                                </a>
+                            </div>)}                   
+                        </div>
+                    </div>
+                    <div className="price">
+                        <h2>Стоимость услуг</h2>
+                        <iframe src="https://drive.google.com/file/d/0B5-Aar8wusiubzhXaTFOTER6VEk/preview" width="100%" height="500"></iframe>
                     </div>
                 </div>
             </div>
