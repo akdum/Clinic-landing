@@ -14,8 +14,6 @@ var AboutUs = (function() {
     };
 
     function InitTemplates() {
-        Common.InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
-        Common.InitTemplate($("#about .adv"), $("#promo-icon-template"), { "promo": window.ClinicModel.Promo });
         Common.InitTemplate($("#license .licenses"), $("#license-template"), { "licenses": window.ClinicModel.Licenses });
     }
 

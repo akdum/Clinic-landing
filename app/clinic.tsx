@@ -11,6 +11,7 @@ import { Contacts } from './components/contacts/Contacts';
 import { IContacts } from './shared/interfaces/IContacts';
 import { ContactsSmall } from './components/contacts-small/ContactsSmall';
 import { PageHead } from './components/page-head/PageHead';
+import { AboutUs } from './components/about-us/AboutUs';
 
 const HeaderLinks: ILink[] = [
     {
@@ -71,6 +72,9 @@ const ContactsData: IContacts = {
 ReactDOM.render(<PageHead />, document.getElementById('pageHead'));
 ReactDOM.render(<YandexMetrika />, document.getElementById('yandexMetrika'));
 ReactDOM.render(<Header links={HeaderLinks} />, document.getElementById('header'));
+if (document.querySelector("#aboutUs")) {
+    ReactDOM.render(<AboutUs />, document.getElementById('aboutUs'));
+}
 if (document.querySelector("#feedbacks")) {
     ReactDOM.render(<Feedbacks feedbacks={FeedbackData} />, document.getElementById('feedbacks'));
 }

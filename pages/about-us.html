@@ -7,19 +7,7 @@
     <div id="pageHead"></div>
     <div id="yandexMetrika"></div>
     <div id="header"></div>
-    <section id="who-we-are">
-        <div class="container">
-            <div class="who-we-are__content"></div>
-        </div>
-    </section>
-    <section id="about" class="">
-        <div class="container">
-            <div class="">
-                <h2 class="adv-header">Почему люди выбирают именно нас</h2>
-                <div class="adv"></div>
-            </div>
-        </div>
-    </section>
+    <div id="aboutUs"></div>
     <section id="prices">
         <div class="container">
             <h2>Стоимость услуг</h2>
@@ -36,30 +24,6 @@
         </div>
     </section>
     <div id="footer"></div>
-    <script id="who-we-are-template" type="x-tmpl-mustache">
-        <div class="who-we-are__title">
-            <h1>{{ title }}</h1>
-        </div>
-        <div class="who-we-are__text">
-            {{ firstPart }}
-        </div>
-        <div class="who-we-are__text">
-            {{ secondPart }}
-        </div>
-    </script>
-    <script id="promo-icon-template" type="x-tmpl-mustache">
-        {{#promo}}
-        <div class="promo__element d-flex">
-            <div class="promo__icon">
-                <i class="fa fa-4x {{ iconName }} sr-icons color-primary"></i>
-            </div>
-            <div class="promo__text">
-                <h4 class="{{ textClassName}}">{{ title }}</h4>
-                <div class="{{ textClassName}}">{{ comment }}</div>
-            </div>
-        </div>
-        {{/promo}}
-    </script>
     <script id="license-template" type="x-tmpl-mustache">
         {{#licenses}}
         <div class="license__element">
