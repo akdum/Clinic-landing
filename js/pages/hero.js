@@ -4,17 +4,17 @@ window.onerror = function(error) {
     alert(error);
 };
 
-var Exams = (function() {
+var Hero = (function() {
     var root = {};
-    var area = 'exams';
+    var area = document.hero.area;
 
     root.Init = function() {
         Common.InitHeroArea(area);
     };
 
     return root;
-}(Exams || {}))
+}(Hero || {}))
 
 $(document).ready(function() {
-    Exams.Init();
+    Hero.Init();
 });

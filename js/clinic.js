@@ -29,7 +29,7 @@ var Clinic = (function() {
         Common.BindLink((".who-we-are__next .btn"), /[\w.]*$/, "pages/about-us.html");
         Common.BindLink((".med-info-btn.btn"), /[\w.]*$/, "pages/med-info.html");
         Common.BindLink((".children-btn.btn"), /[\w.]*$/, "pages/children.html");
-        Common.BindLink((".exams-btn.btn"), /[\w.]*$/, "pages/exams.html");
+        Common.BindLink((".shutov-btn.btn"), /[\w.]*$/, "pages/shutov_adv.html");
     }
 
     function ScrollRevealInit() {
