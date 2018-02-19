@@ -2,11 +2,12 @@
 
 .contacts-page {
     .contacts-address {
-        margin: 1rem 0 1rem 0;
+        div > span {
+            font-size: 1.4rem;
+            padding-right: 2rem;        
+        }
     }
     .contacts-pnones {
-        margin: 1rem 0 1rem 0;
-        padding: 1rem 0 1rem 0;
         div > span {
             font-size: 1.4rem;
             padding-right: 2rem;        
@@ -16,8 +17,7 @@
         font-size: 1.4rem;
     }
     .contacts-work-hours {
-        margin: 1rem 0 1rem 0;
-        padding: 1rem 0 1rem 0;
+        margin-bottom: 1rem;
         div > div {
             font-size: 1.4rem;
         }

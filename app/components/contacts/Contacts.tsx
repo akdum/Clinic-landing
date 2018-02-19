@@ -15,21 +15,25 @@ export class Contacts extends React.Component<IContacts, null> {
                             <h1>Контакты</h1>
                         </div>
                         <div>
-                            <div className="contacts-address"><h3>{this.props.address}</h3></div>
+                            <div className="contacts-address">
+                                <div>
+                                    <span>{this.props.address}</span>
+                                </div>
+                            </div>
                             <div className="contacts-pnones">
-                                <h3>Запись по телефонам</h3>
+                                <h2>Запись по телефонам</h2>
                                 <div>
                                     {this.props.phones.map((phone)=><span key={phone}>{phone}</span>)}
                                 </div>
                             </div>
                             <div className="contacts-email">
-                                <h3>Адрес почты</h3>
+                                <h2>Адрес почты</h2>
                                 <div>
                                     <a href={"mailto:" + this.props.email}>{this.props.email}</a>
                                 </div>
                             </div>
                             <div className="contacts-work-hours">
-                                <h3>Режим работы</h3>
+                                <h2>Режим работы</h2>
                                 <div>
                                     {this.props.workHours.map((hours)=><div key={hours}>{hours}</div>)}
                                 </div>
