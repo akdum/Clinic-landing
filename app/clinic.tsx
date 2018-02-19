@@ -12,6 +12,7 @@ import { IContacts } from './shared/interfaces/IContacts';
 import { ContactsSmall } from './components/contacts-small/ContactsSmall';
 import { PageHead } from './components/page-head/PageHead';
 import { AboutUs } from './components/about-us/AboutUs';
+import { Carousel } from './components/carousel/Carousel';
 
 const HeaderLinks: ILink[] = [
     {
@@ -69,9 +70,13 @@ const ContactsData: IContacts = {
     workHours: ['Будни - с 09-00 до 18-00', 'Суббота, Воскресенье - Закрыто'],
     email: 'centr_psy@mail.ru'
 }
+
 ReactDOM.render(<PageHead />, document.getElementById('pageHead'));
 ReactDOM.render(<YandexMetrika />, document.getElementById('yandexMetrika'));
 ReactDOM.render(<Header links={HeaderLinks} />, document.getElementById('header'));
+if (document.querySelector("#carousel")) {
+    ReactDOM.render(<Carousel />, document.getElementById('carousel'));
+}
 if (document.querySelector("#aboutUs")) {
     ReactDOM.render(<AboutUs />, document.getElementById('aboutUs'));
 }
