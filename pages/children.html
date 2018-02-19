@@ -7,34 +7,23 @@
     <div id="pageHead"></div>
     <div id="yandexMetrika"></div>
     <div id="header"></div>
-    <section id="hero">
-        <div class="container">
-        </div>
-    </section>
+    <div id="hero"></div>
     <div id="footer"></div>
-    <script id="hero-template" type="x-tmpl-mustache">
-        {{#heroes}}
-        <div class="row">
-            <div class="col-md-7 col-sm-12 {{order_img}}"><img class="hero-element__img" src="../img/heroes/{{ imgName }}" /></div>
-            <div class="col-md-5 col-sm-12 {{order_text}}">
-                <div class="hero-element__title">
-                    <h4>{{title}}</h4>
-                </div>
-                <div class="hero-element__text">{{{text}}}</div>
-            </div>
-        </div>
-        {{/heroes}}
+    <script>
+        document.hero = {};
+        document.hero.title = "Спокоен ребенок - счастлива мама!";
+        document.hero.rows = [
+        {imgOrder: 'order-1', textOrder: 'order-2', imgName: 'hero-child-1.jpg', title: '', text: 'Какие проблемы могут возникнуть у ребёнка в разные периоды его жизни, при которых необходимо обратиться за консультацией к специалисту?' },
+        {imgOrder: 'order-2', textOrder: 'order-1', imgName: 'hero-child-2.jpg', title: '', text: '<ul><li>Агрессивное и импульсивное поведение; капризы и истерики;</li><li>вредные привычки;</li><li>повышенная тревожность, страхи;</li><li>школьная неуспеваемость;</li><li>плохая работа в классе при отличной работе дома;</li><li>проблемы в общении со сверстниками и взрослыми;</li><li>нарушения в развитии познавательных процессов (память, мышление, внимание, речь ребенка);</li><li>психосоматические проблемы (энурез, энкопрез);</li><li>ревность и соперничество между братьями и сёстрами</li></ul>' },
+        {imgOrder: 'order-1', textOrder: 'order-2', imgName: 'hero-child-3.jpg', title: '', text: '<p>Наладить отношения в семье, помочь ребенку справиться со всеми проблемами и кризисами, Вам помогут лучшие психологи в городе!</p><p>Бережное отношение к семье клиента, это то, что по-настоящему важно для нас!</p><p>Консультируют детей и родителей профессионалы <strong>Ижевской Государственной Медицинской Академии</strong>.</p>' },
+        {imgOrder: 'order-2', textOrder: 'order-1', imgName: 'hero-child-4.jpg', title: 'Прием ведут ведущие профессора и доценты медицинской академи', text: '<ul><li>Заключение логопеда, психолога для детского сада и школы</li><li>Консультация детского психолога</li><li>Консультация детского врача - психотерапевта</li><li>Семейные консультации</li><li>Консультация врача - дерматолога, профессора, доктора медицинских наук</li><li>Лечебный, расслабляющий, висцеральный массаж + парафинотерапия</li><li>Реальная помощь психолога-дефектолога, олигофренопедагога</li><li>Вегетативно-резонансный тест (диагностика) + назначение гомеопатических препаратов по результатам исследования</li><li>Используем технологию Бос-ЭЭГ</li><li>Профориентация старшеклассников</li></ul>' }
+    ]
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
-    <script src="../js/model.js?v=1.7"></script>
-    <script src="../js/common.js?v=1.0"></script>
-    <script src="../js/pages/children.js?v=1.0"></script>
     <script src="../dist/clinic.js?v=1.0"></script>
+    <script src="../dist/heroes.js?v=1.0"></script>
 </body>
 
 </html>

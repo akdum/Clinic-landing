@@ -1,7 +1,10 @@
 module.exports = {
-    entry: "./app/clinic.tsx",
+    entry: {
+        clinic: "./app/clinic.tsx",
+        heroes: "./app/heroes.tsx"
+    },
     output: {
-        filename: "clinic.js",
+        filename: "[name].js",
         path: __dirname + "/dist",
         publicPath: "/dist/"
     },
