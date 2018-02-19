@@ -4,6 +4,7 @@ import * as ReactDOM from 'react-dom';
 import './contacts.module.scss';
 import { IContacts } from '../../shared/interfaces/IContacts';
 import { YandexMap } from '../yandex-map/YandexMap';
+import { Title } from '../title/Title';
 
 export class Contacts extends React.Component<IContacts, null> {
     render() {
@@ -11,9 +12,7 @@ export class Contacts extends React.Component<IContacts, null> {
             <div>
                 <div className="contacts-page">
                     <div className="container">
-                        <div className="title-block">
-                            <h1>Контакты</h1>
-                        </div>
+                        <Title value="Контакты" />
                         <div>
                             <div className="contacts-address">
                                 <div>

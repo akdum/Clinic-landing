@@ -5,14 +5,13 @@ import './feedbacks.module.scss';
 
 import { IFeedbacksProps } from './IFeedbacksProps';
 import { Feedback } from '../feedback/Feedback';
+import { Title } from '../title/Title';
 
 export class Feedbacks extends React.Component<IFeedbacksProps,null> {
     render() {
         return (
             <div className="container">
-                <div className="title-block">
-                    <h1>Отзывы</h1>
-                </div>
+                <Title value="Отзывы" />
                 <ul className="feedbacks-list">
                     {this.props.feedbacks.map((feedback) => <li><Feedback feedback={feedback} /></li>)}
                 </ul>

@@ -2,6 +2,7 @@ import * as React from "react";
 import * as ReactDOM from 'react-dom';
 
 import './aboutus.module.scss';
+import { Title } from "../title/Title";
 
 const WhoWeAre = {
     firstPart: 'Наша клиника задумана как совместная организация с Ижевской Государственной Медицинской Академией, где профессора и доктора медицинских наук могут оказать консультацию любому человеку. Специализацией больницы является оказание психотерапевтической помощи широкого профиля.',
@@ -27,9 +28,7 @@ export class AboutUs extends React.Component<null, null> {
         return (
             <div className="about-us-page">
                 <div className="container">
-                    <div className="title-block">
-                        <h1>О клинике</h1>
-                    </div>
+                    <Title value="О клинике" />
                     <div className="who-we-are__text">
                         <div>
                             {WhoWeAre.firstPart}

@@ -1,0 +1,8 @@
+@import '~../../shared/styles/global.scss';
+
+.title-block {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: $h-font-weight;
+    border-bottom: 1px solid #cacaca;
+}
