@@ -14,6 +14,12 @@ import { PageHead } from './components/page-head/PageHead';
 import { AboutUs } from './components/about-us/AboutUs';
 import { Carousel } from './components/carousel/Carousel';
 
+interface IExtexndedDocument extends Document {
+    carousel: any;
+}
+
+declare const document: IExtexndedDocument;
+
 const HeaderLinks: ILink[] = [
     {
         title: "О клинике",
@@ -71,11 +77,13 @@ const ContactsData: IContacts = {
     email: 'centr_psy@mail.ru'
 }
 
+const carouselData = document.carousel;
+
 ReactDOM.render(<PageHead />, document.getElementById('pageHead'));
 ReactDOM.render(<YandexMetrika />, document.getElementById('yandexMetrika'));
 ReactDOM.render(<Header links={HeaderLinks} />, document.getElementById('header'));
 if (document.querySelector("#carousel")) {
-    ReactDOM.render(<Carousel />, document.getElementById('carousel'));
+    ReactDOM.render(<Carousel {...carouselData} />, document.getElementById('carousel'));
 }
 if (document.querySelector("#aboutUs")) {
     ReactDOM.render(<AboutUs />, document.getElementById('aboutUs'));
