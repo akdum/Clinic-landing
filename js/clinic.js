@@ -30,7 +30,7 @@ var Clinic = (function() {
         Common.BindLink((".med-info-btn.btn"), /[\w.]*$/, "pages/med-info.html");
         Common.BindLink((".children-btn.btn"), /[\w.]*$/, "pages/children.html");
         Common.BindLink((".shutov-btn.btn"), /[\w.]*$/, "pages/shutov_adv.html");
-        Common.BindLink((".child-massage-btn.btn"), /[\w.]*$/, "pages/child-massage.html");
+        Common.BindLink((".child-massage-btn.btn"), /[\w.]*$/, "pages/child_massage.html");
     }
 
     function ScrollRevealInit() {
