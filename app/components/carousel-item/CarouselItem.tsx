@@ -15,7 +15,7 @@ export class CarouselItem extends React.Component<ICarouselItem, null> {
                     <div className="carousel-item__text" dangerouslySetInnerHTML={{__html: this.props.text}}>
                     </div>
                     <div className="carousel-item__open-btn">
-                        <button type="button" className="btn btn-primary btn-lg bg-btn btn-border color-white exams-btn">Подробнее</button>
+                        <a href={window.location.origin + '/pages/' + this.props.pageName} className="btn btn-primary btn-lg bg-btn btn-border color-white">Подробнее</a>
                     </div>
                 </div>
                 <img className="d-block w-100" src={"./img/carousel/" + this.props.imgName} alt="" />
