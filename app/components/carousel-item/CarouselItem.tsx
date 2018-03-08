@@ -2,11 +2,13 @@ import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { ICarouselItem } from "../../shared/interfaces/ICarouselItem";
 
+import './carouselItem.module.scss';
+
 export class CarouselItem extends React.Component<ICarouselItem, null> {
     render() {
         return (
             <div className={"carousel-item" + (this.props.isActive ? " active" : "")}>
-                <div className="carousel-item__data carousel-item__data-left color-primary carousel-caption d-none d-md-block">
+                <div className={"carousel-item__data color-primary carousel-caption d-none d-md-block" + (this.props.isLeftAlign ? " carousel-item__data-left" : " carousel-item__data-right")}>
                     <div className="carousel-item__title">
                         <h1>{this.props.heading}</h1>
                     </div>

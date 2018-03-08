@@ -3,4 +3,5 @@ export interface ICarouselItem {
     text: string;
     imgName: string;
     isActive: boolean;
+    isLeftAlign: boolean;
 }

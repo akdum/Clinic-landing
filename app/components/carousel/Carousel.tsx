@@ -8,7 +8,7 @@ import { ICarouselProps } from "./ICarouselProps";
 export class Carousel extends React.Component<ICarouselProps, null> {
     render() {
         return (
-            <div className="container-fluid">
+            <div className="carousel container-fluid">
                 <div id="carouselIndicators" className="carousel slide" data-ride="carousel" data-interval="3000">
                     <ol className="carousel-indicators">
                         <li data-target="#carouselIndicators" data-slide-to="0" className="active"></li>

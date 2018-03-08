@@ -1,0 +1,32 @@
+.carousel-item {
+    .carousel-caption {
+        bottom: initial;
+        top: 5%;
+    }
+    .carousel-item__open-btn {
+        position: fixed;
+        bottom: 10%;
+        left: 5%;
+    }
+    .carousel-item__text {
+        width: 30%;
+        position: fixed;
+        top: 30%;
+    }
+    .carousel-item__data-right {
+        right: 5%;
+        left: initial;
+        text-align: right;
+        .carousel-item__text {
+            right: 5%;
+        }
+        .carousel-item__open-btn {
+            right: 5%;
+        }
+    }
+    .carousel-item__data-left {
+        left: 5%;
+        right: initial;
+        text-align: left;
+    }
+}
