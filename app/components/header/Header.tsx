@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom';
 
 import './header.module.scss';
 import { IHeaderProps } from './IHeaderProps';
+import { ApplyConsultation } from '../apply-consultation/ApplyConsultation';
 
 export class Header extends React.Component<IHeaderProps,null> {
     render() {
@@ -23,6 +24,7 @@ export class Header extends React.Component<IHeaderProps,null> {
                         {this.props.links.map((link) => <a key={link.title} className="nav-item nav-link col-md-2 text-center color-primary" href={link.address}>{link.title}</a>)}
                     </div>
                 </div>
+                <ApplyConsultation />
             </nav>
         );
     }
