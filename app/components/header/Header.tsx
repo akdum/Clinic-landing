@@ -4,11 +4,34 @@ import * as ReactDOM from 'react-dom';
 import './header.module.scss';
 import { IHeaderProps } from './IHeaderProps';
 import { ApplyConsultation } from '../apply-consultation/ApplyConsultation';
+import { IHeaderState } from './IHeaderState';
 
-export class Header extends React.Component<IHeaderProps,null> {
+export class Header extends React.Component<IHeaderProps,IHeaderState> {
+    constructor(props: IHeaderProps) {
+        super(props);        
+        this.handleScroll = this.handleScroll.bind(this);
+        this.state = {
+            isScrolled: false
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    };
+      
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    };
+    
+    handleScroll(event: any) {
+        this.setState({
+            isScrolled: event.currentTarget.pageYOffset > document.querySelector(".navbar").clientHeight
+        });
+    };
+    
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light">
+            <nav className={"navbar navbar-expand-lg navbar-light" + (this.state.isScrolled ? " fixed-top fixed-navbar-correction" : "")}>
                 <a className="navbar-brand d-flex" href="/">
                     <div className="clinic-logo"></div>
                     <div className="clinic-logo-title color-primary">
@@ -20,8 +43,8 @@ export class Header extends React.Component<IHeaderProps,null> {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div className="navbar-nav row">
-                        {this.props.links.map((link) => <a key={link.title} className="nav-item nav-link col-md-2 text-center color-primary" href={link.address}>{link.title}</a>)}
+                    <div className="navbar-nav nav-pills nav-fill">
+                        {this.props.links.map((link) => <a key={link.title} className="nav-item nav-link color-primary" href={link.address}>{link.title}</a>)}
                     </div>
                 </div>
                 <ApplyConsultation />

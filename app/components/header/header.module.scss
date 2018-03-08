@@ -38,3 +38,33 @@
         }
     }
 }
+
+.navbar.fixed-navbar-correction {
+    margin: 0;
+    background-color: $color-primary;
+    .navbar-brand {
+        .clinic-logo {
+            display: none;
+        }
+        .clinic-logo-title {
+            white-space: normal;
+            width: 250px;
+            color: $color-white;
+            .clinic-title {
+                font-size: 0.7rem;
+                line-height: 0.7rem;
+            }
+            .clinic-academy {
+                font-size: 0.7rem;
+                font-weight: 300;
+                margin-top: 0.3rem;
+                line-height: 0.7rem;
+            }
+        }
+    } 
+    .navbar-nav {
+        .nav-item.nav-link {
+            color: $color-white;
+        }
+    }
+}
