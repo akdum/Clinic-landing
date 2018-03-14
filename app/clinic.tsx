@@ -13,6 +13,7 @@ import { ContactsSmall } from './components/contacts-small/ContactsSmall';
 import { PageHead } from './components/page-head/PageHead';
 import { AboutUs } from './components/about-us/AboutUs';
 import { Carousel } from './components/carousel/Carousel';
+import { ApplyConsultationForm } from './components/apply-consultation-form/ApplyConsultationForm';
 
 interface IExtexndedDocument extends Document {
     carousel: any;
@@ -96,5 +97,8 @@ if (document.querySelector("#contacts-page")) {
 }
 if (document.querySelector("#contacts")) {
     ReactDOM.render(<ContactsSmall {... ContactsData} />, document.getElementById('contacts'));
+}
+if (document.querySelector("#apply-consultation-form")) {
+    ReactDOM.render(<ApplyConsultationForm />, document.getElementById('apply-consultation-form'));
 }
 ReactDOM.render(<PageFooter links={FooterLinks}/>, document.getElementById('footer'));

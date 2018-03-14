@@ -29,3 +29,17 @@ h2 {
 .bg-primary {
     background-color: #00426b !important;
 }
+.bg-btn {
+    background-color: $color-primary-element;
+}
+.bg-btn:hover, .bg-btn:active, .bg-btn:focus {
+    background-color: $color-primary-element !important;
+    box-shadow: none !important;
+}
+.btn-border {
+    border-color: $color-primary-element;
+    border-radius: 0;
+}
+.btn-border:hover, .btn-border:active {
+    border-color: $color-primary-element !important;
+}
