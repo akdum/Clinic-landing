@@ -1,3 +1,5 @@
+@import '~../../shared/styles/global.scss';
+
 .carousel-item {
     .carousel-caption {
         bottom: initial;
@@ -7,6 +9,11 @@
         position: fixed;
         bottom: 10%;
         left: 5%;
+        a {
+            border-radius: 0;
+            background-color: $color-primary-element;
+            border-color: $color-primary-element;
+        }
     }
     .carousel-item__text {
         width: 30%;
