@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import '../../shared/augmentation/react';
 import { Helmet } from 'react-helmet';
 
 export class PageHead extends React.Component<null,null> {

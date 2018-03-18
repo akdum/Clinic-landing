@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
     entry: {
         clinic: "./app/clinic.tsx",
@@ -64,8 +66,24 @@ module.exports = {
                 ],
               }
         ]
-    }
+    },
 
+    node: {
+        console: true,
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
+      },
+
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env.SEND_GRID_USER_ID': JSON.stringify('azure_28c8b4958877157d03398c3df23b5a86@azure.com'),
+            'process.env.SEND_GRID_API_KEY': JSON.stringify('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'),
+            'process.env.SEND_GRID_TO': JSON.stringify('ivansteblenko@hotmail.com'),
+            'process.env.SEND_GRID_SUBJECT': JSON.stringify('Регистрация на консультацию'),
+            'process.env.SEND_GRID_FROM': JSON.stringify('clinic@domain.com'),
+          })
+    ]
     // When importing a module whose path matches one of the following, just
     // assume a corresponding global variable exists and use that instead.
     // This is important because it allows us to avoid bundling all of our

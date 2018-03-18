@@ -3,8 +3,36 @@ import * as ReactDOM from 'react-dom';
 import { Title } from '../title/Title';
 
 import './applyConsultationForm.module.scss';
+import { IApplyConsultationFormState } from './IApplyConsultationFormState';
+import { SendGridApi } from '../../shared/api/SendGridApi';
 
-export class ApplyConsultationForm extends React.Component<null,null> {
+export class ApplyConsultationForm extends React.Component<null,IApplyConsultationFormState> {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            email: "",
+            name: "",
+            phone: ""
+        }
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event: any) {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+    
+        this.setState({
+          [name]: value
+        });
+    }
+
+    async handleSubmit(event: any) {
+        await SendGridApi.SendMail(this.state);
+        event.preventDefault();
+    }
+
     render() {
         return (
             <div className="container">
@@ -14,16 +42,16 @@ export class ApplyConsultationForm extends React.Component<null,null> {
                         Заявки обрабатываются с 9.00 до 18.00
                     </div>
                 </div>
-                <form>
+                <form method="POST" id="book-form" action="https://api.sendgrid.com/api/mail.send.json" onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <input type="text" className="form-control" id="inputName" placeholder="ФИО" />
+                        <input type="text" className="form-control" id="inputName" placeholder="ФИО" name="name" value={this.state.name} onChange={this.handleChange} />
                     </div>
                     <div className="form-row">
                         <div className="form-group col-md-6">
-                            <input type="password" className="form-control" id="inputPhone" placeholder="Телефон" />
+                            <input type="text" className="form-control" id="inputPhone" placeholder="Телефон" name="phone" value={this.state.phone} onChange={this.handleChange} required/>
                         </div>
                         <div className="form-group col-md-6">
-                            <input type="email" className="form-control" id="inputEmail" placeholder="Email" />
+                            <input type="email" className="form-control" id="inputEmail" placeholder="Email" name="email" value={this.state.email} onChange={this.handleChange} />
                         </div>
                     </div>
                     <button type="submit" className="btn btn-primary btn-lg bg-btn btn-border color-white form_submitBtn">Отправить</button>
