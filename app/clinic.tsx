@@ -14,6 +14,7 @@ import { PageHead } from './components/page-head/PageHead';
 import { AboutUs } from './components/about-us/AboutUs';
 import { Carousel } from './components/carousel/Carousel';
 import { ApplyConsultationForm } from './components/apply-consultation-form/ApplyConsultationForm';
+import { AboutUsSmall } from './components/about-us-small/AboutUsSmall';
 
 interface IExtexndedDocument extends Document {
     carousel: any;
@@ -78,6 +79,8 @@ const ContactsData: IContacts = {
     email: 'centr_psy@mail.ru'
 }
 
+const aboutUsPageName = "about-us.html";
+
 const carouselData = document.carousel;
 
 ReactDOM.render(<PageHead />, document.getElementById('pageHead'));
@@ -88,6 +91,9 @@ if (document.querySelector("#carousel")) {
 }
 if (document.querySelector("#aboutUs")) {
     ReactDOM.render(<AboutUs />, document.getElementById('aboutUs'));
+}
+if (document.querySelector("#who-we-are")) {
+    ReactDOM.render(<AboutUsSmall pageName={aboutUsPageName}/>, document.getElementById('who-we-are'));
 }
 if (document.querySelector("#feedbacks")) {
     ReactDOM.render(<Feedbacks feedbacks={FeedbackData} />, document.getElementById('feedbacks'));

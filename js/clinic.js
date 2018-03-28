@@ -20,13 +20,13 @@ var Clinic = (function() {
     };
 
     function InitTemplates() {
-        Common.InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
+        // Common.InitTemplate($("#who-we-are .who-we-are__content"), $("#who-we-are-template"), window.ClinicModel.WhoWeAre);
         Common.InitTemplate($("#doctors .doctors_block"), $("#doctors-template"), { "doctors": window.ClinicModel.Doctors });
         //Common.InitTemplate($("#contacts .contacts-layer"), $("#contacts-template"), { "contacts": window.ClinicModel.Contacts });
     }
 
     function BindLinks() {
-        Common.BindLink((".who-we-are__next .btn"), /[\w.]*$/, "pages/about-us.html");
+        // Common.BindLink((".who-we-are__next .btn"), /[\w.]*$/, "pages/about-us.html");
         Common.BindLink((".med-info-btn.btn"), /[\w.]*$/, "pages/med-info.html");
         Common.BindLink((".children-btn.btn"), /[\w.]*$/, "pages/children.html");
         Common.BindLink((".exams-btn.btn"), /[\w.]*$/, "pages/exams.html");
