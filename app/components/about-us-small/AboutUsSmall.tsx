@@ -14,7 +14,7 @@ export class AboutUsSmall extends React.Component<IAboutUsSmall, null> {
         return (
             <div className="who-we-are">
                 <div className="container">
-                    <div className="who-we-are__title">
+                    <div className="title-block">
                         <h1>{textValues.title}</h1>
                     </div>
                     <div className="who-we-are__text">
