@@ -1,3 +1,22 @@
+@import '~../../shared/styles/global.scss';
+
 .doctor {
-    
+    .doctor__img {
+        margin-bottom: 1rem;
+        img {
+            width: 100%;
+        }
+    }
+    .doctor__name {
+        display: block;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        a, a:active, a:hover, a:visited {
+            color: $color-primary;
+            text-decoration: none;
+            span {
+                text-transform: uppercase;
+            }
+        }
+    }
 }

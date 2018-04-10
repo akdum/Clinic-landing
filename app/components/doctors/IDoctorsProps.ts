@@ -4,5 +4,5 @@ export interface IDoctorsProps {
     showSeeAll: boolean;    
     title: string;
     doctorsRows: IDoctor[][];
-    pageName: string;
+    pageName?: string;
 }

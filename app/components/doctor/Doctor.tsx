@@ -8,9 +8,13 @@ export class Doctor extends React.Component<IDoctor, null> {
     render() {
         return(
             <div className="doctor">
-                <div className="">
+                <div className="doctor__img">
                     <img src={window.location.origin + '/img/doctors/square_150/' + this.props.photoName} />
                 </div>
+                <strong className="doctor__name">
+                    <a href="#"><span>{this.props.title.surname}</span> {this.props.title.name}</a>
+                </strong>
+                <div className="doctor__spec">{this.props.title.spec}</div>
             </div>
         )
     }

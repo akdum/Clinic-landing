@@ -4,9 +4,6 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="./css/general.css?v=1.0"> -->
-    <!-- <link rel="stylesheet" href="./css/clinic.css?v=1.7"> -->    
-    <!-- <link rel="stylesheet" href="./css/libs/intlTelInput.css"> -->
 </head>
 
 <body>
@@ -16,81 +13,8 @@
     <div id="carousel"></div>
     <div id="who-we-are"></div>
     <div id="doctors"></div>
-    <!-- <section id="doctors" class="">
-        <div class="container">
-            <h1>Специалисты</h1>
-            <div class="doctors_block row">
-            </div>
-            <div class="doctor-big-card hidden">
-                <div class="doctor-big-card__img">
-                    <img />
-                </div>
-                <div class="doctor-big-card__text">
-                    <div class="doctor-big-card__title"></div>
-                    <div class="doctor-big-card__body"></div>
-                    <div class="doctor-big-card__close btn btn-outline-primary btn-lg hidden bg-white color-primary border-primary">Закрыть</div>
-                </div>
-            </div>
-            <div class="doctor-book hidden">
-                <div class="doctor-book__meta">
-                    <div class="doctor-book__title"></div>
-                    <div class="doctor-book__close btn btn-secondary btn-lg hidden">Закрыть</div>
-                </div>
-                <img src="./img/spinner.gif" class="doctor-book__loading" style="display:none" />
-                <iframe width="100%" height="500px" src=""></iframe>
-            </div>
-        </div>
-    </section>     -->
-    <!-- <section id="book-now" class="bg-primary color-white">
-        <div class="container">
-            <div class="book-now__whole-form">
-                <div class="book-now__title text-center">
-                    <h2>Запишитесь на консультацию прямо сейчас!</h2>
-                </div>
-                <div class="book-now__min-price text-center">
-                    Стоимость первичного приёма — от 1200 рублей
-                </div>
-                <div class="book-now__form">
-                    <form method="POST" id="book-form" action="https://api.sendgrid.com/api/mail.send.json">
-                        <div class="form-group">
-                            <input class="form-control form-control-lg" name="phone" id="form_phone" aria-describedby="phoneHelp" placeholder="Телефон" required>
-                            <div class="book-now__invalid-phone-label invalid-feedback">Укажите правильный номер телефона.</div>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg bg-btn btn-border color-white book-now__button w-100">Записаться</button>
-                    </form>
-                </div>
-                <div class="book-now__success-message text-center d-none">
-                    <h2>Спасибо за обращение, Вам ответят в близжайшее время.</h2>
-                </div>
-            </div>
-        </div>
-    </section>     -->
     <div id="contacts"></div>
     <div id="footer"></div>
-    <!-- <script id="doctors-template" type="x-tmpl-mustache">
-        {{#doctors}}
-        <div class="col-lg-6 col-md-12 col-xl-4 sr-doctors">
-            <div class="doctor-card" data-img="{{photoName}}" data-title="{{title.surname}} {{ title.name }}" data-file="{{file}}" data-calendar="{{ calendar }}">
-                <img src="./img/doctors/square_150/{{photoName}}" />
-                <div class="doctor-card-info">
-                    <div class="doctor-card-info__title_surname">
-                        <strong>{{ title.surname }} {{ title.name }}</strong>
-                    </div>
-                    <div class="doctor-card-info__spec">{{ title.spec }}</div>
-                </div>
-                <div class="doctor-card-actions">
-                    <div class="doctor-card-actions__info bg-secondary">
-                        <span>О враче</span>
-                    </div>
-                    <div class="doctor-card-actions__book-now bg-primary">
-                        {{#calendar}}
-                        <span>Расписание</span> {{/calendar}}
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{/doctors}}
-    </script> -->
     <script>
         document.carousel = {};
         document.carousel.items = [
@@ -100,18 +24,8 @@
     ]
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script src="./js/libs/intlTelInput.min.js"></script> -->
-    <!-- <script src="./js/model.js?v=1.7"></script>
-    <script src="./js/common.js?v=1.0"></script> -->
-    <!-- <script src="./js/clinic.js?v=1.4"></script> -->
     <script src="./dist/clinic.js?v=1.0"></script>
 </body>
-
 </html>

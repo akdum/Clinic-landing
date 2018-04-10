@@ -32,7 +32,7 @@ const HeaderLinks: ILink[] = [
     },
     {
         title: "Врачи",
-        address: window.location.origin + '/pages/doktors.html'
+        address: window.location.origin + '/pages/doctors.html'
     },
     {
         title: "Услуги",
@@ -76,8 +76,14 @@ const DoctorsData: IDoctor[][] =[
 const DoctorsMainPage = {
     showSeeAll: true,    
     title: 'Врачи и персонал',
-    doctorsRows: [DoctorsData[1]],
+    doctorsRows: [DoctorsData[0]],
     pageName: 'doctors.html'
+}
+
+const DoctorsPage = {
+    showSeeAll: false,    
+    title: 'Врачи и персонал',
+    doctorsRows: DoctorsData
 }
 
 const FeedbackData: IFeedback[] = [
@@ -125,6 +131,9 @@ if (document.querySelector("#who-we-are")) {
 }
 if (document.querySelector("#doctors")) {
     ReactDOM.render(<Doctors {...DoctorsMainPage} />, document.getElementById('doctors'));
+}
+if (document.querySelector("#doctors-all")) {
+    ReactDOM.render(<Doctors {...DoctorsPage} />, document.getElementById('doctors-all'));
 }
 if (document.querySelector("#feedbacks")) {
     ReactDOM.render(<Feedbacks feedbacks={FeedbackData} />, document.getElementById('feedbacks'));
