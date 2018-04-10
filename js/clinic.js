@@ -8,15 +8,15 @@ var Clinic = (function() {
     var root = {};
 
     root.Init = function() {
-        InitTemplates();
-        BindLinks();
-        ScrollRevealInit();
-        CardShow();
-        GalleryInit();
+        //InitTemplates();
+        // BindLinks();
+        //ScrollRevealInit();
+        //CardShow();
+        // GalleryInit();
         //Common.MapInit();
         //VkInit();
-        DoctorCardsInit();
-        BookFormSubmitInit();
+        // DoctorCardsInit();
+        // BookFormSubmitInit();
     };
 
     function InitTemplates() {
@@ -27,9 +27,9 @@ var Clinic = (function() {
 
     function BindLinks() {
         // Common.BindLink((".who-we-are__next .btn"), /[\w.]*$/, "pages/about-us.html");
-        Common.BindLink((".med-info-btn.btn"), /[\w.]*$/, "pages/med-info.html");
-        Common.BindLink((".children-btn.btn"), /[\w.]*$/, "pages/children.html");
-        Common.BindLink((".exams-btn.btn"), /[\w.]*$/, "pages/exams.html");
+        // Common.BindLink((".med-info-btn.btn"), /[\w.]*$/, "pages/med-info.html");
+        // Common.BindLink((".children-btn.btn"), /[\w.]*$/, "pages/children.html");
+        // Common.BindLink((".exams-btn.btn"), /[\w.]*$/, "pages/exams.html");
     }
 
     function ScrollRevealInit() {
