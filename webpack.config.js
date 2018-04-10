@@ -3,7 +3,8 @@ const webpack = require('webpack');
 module.exports = {
     entry: {
         clinic: "./app/clinic.tsx",
-        heroes: "./app/heroes.tsx"
+        heroes: "./app/heroes.tsx",
+        doctors: "./app/doctors.tsx"
     },
     output: {
         filename: "[name].js",
