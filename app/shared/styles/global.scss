@@ -4,7 +4,6 @@ $color-white: #fff;
 $color-primary-element-light: #dc5072;
 $color-primary-element: #c2213c;
 $h-font-weight: 300;
-
 h1 {
     font-weight: $h-font-weight;
     margin-top: 0;
@@ -24,23 +23,36 @@ h2 {
 .color-primary {
     color: $color-primary;
 }
+
 .color-white {
     color: #fff;
 }
+
 .bg-primary {
     background-color: #00426b !important;
 }
+
 .bg-btn {
     background-color: $color-primary-element;
 }
-.bg-btn:hover, .bg-btn:active, .bg-btn:focus {
+
+.bg-btn:hover,
+.bg-btn:active,
+.bg-btn:focus {
     background-color: $color-primary-element !important;
     box-shadow: none !important;
 }
+
 .btn-border {
     border-color: $color-primary-element;
     border-radius: 0;
 }
-.btn-border:hover, .btn-border:active {
+
+.btn-border:hover,
+.btn-border:active {
     border-color: $color-primary-element !important;
+}
+
+.article-block {
+    margin-top: 2rem;
 }

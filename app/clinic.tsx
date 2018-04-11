@@ -17,6 +17,7 @@ import { ApplyConsultationForm } from './components/apply-consultation-form/Appl
 import { AboutUsSmall } from './components/about-us-small/AboutUsSmall';
 import { IDoctor } from './shared/interfaces/IDoctor';
 import { Doctors } from './components/doctors/Doctors';
+import { Services } from './components/services/Services';
 
 
 interface IExtexndedDocument extends Document {
@@ -54,6 +55,55 @@ const FooterLinks: ILink[] = [
         address: window.location.origin + '/pages/personal-info.html'
     }
 ]
+
+const servicesData = {
+    title: 'Что мы лечим',
+    isBlock: true,
+    services: [
+        [
+            {
+                title: 'Депрессия',
+                pageName: 'depressiya.html'
+            },
+            {
+                title: 'Постстрессовые состояния',
+                pageName: 'poststressovye-sostoyaniya.html'
+            },
+            {
+                title: 'Зависимое поведение',
+                pageName: 'zavisimoe-povedenie.html'
+            }
+        ],
+        [
+            {
+                title: 'Нарушения пищевого поведения',
+                pageName: 'narusheniya-pishchevogo-povedeniya.html'
+            },
+            {
+                title: 'Невротические расстройства',
+                pageName: 'nevroticheskie-rasstroystva.html'
+            },
+            {
+                title: 'Пограничные личностные расстройства',
+                pageName: 'pogranichnye-lichnostnye-rasstroystva.html'
+            },
+            {
+                title: 'Психические расстройства позднего возраста ',
+                pageName: 'psihicheskie-rasstroystva-pozdnego-vozrasta.html'
+            }
+        ],
+        [
+            {
+                title: 'Расстройства шизофренического спектра',
+                pageName: 'rasstroystva-shizofrenicheskogo-spektra.html'
+            },
+            {
+                title: 'Тревожные и панические расстройства',
+                pageName: 'trevozhnye-i-panicheskie-rasstroystva.html'
+            }
+        ]
+    ]
+}
 
 const DoctorsData: IDoctor[][] =[
     [
@@ -128,6 +178,9 @@ if (document.querySelector("#aboutUs")) {
 }
 if (document.querySelector("#who-we-are")) {
     ReactDOM.render(<AboutUsSmall pageName={aboutUsPageName}/>, document.getElementById('who-we-are'));
+}
+if (document.querySelector("#services")) {
+    ReactDOM.render(<Services {...servicesData} />, document.getElementById('services'));
 }
 if (document.querySelector("#doctors")) {
     ReactDOM.render(<Doctors {...DoctorsMainPage} />, document.getElementById('doctors'));
