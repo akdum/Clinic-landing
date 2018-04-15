@@ -90,20 +90,16 @@ const servicesData = {
             {
                 title: 'Пограничные личностные расстройства',
                 pageName: 'pogranichnye-lichnostnye-rasstroystva.html'
-            },
-            {
-                title: 'Психические расстройства позднего возраста ',
-                pageName: 'psihicheskie-rasstroystva-pozdnego-vozrasta.html'
             }
         ],
         [
             {
-                title: 'Расстройства шизофренического спектра',
-                pageName: 'rasstroystva-shizofrenicheskogo-spektra.html'
-            },
-            {
                 title: 'Тревожные и панические расстройства',
                 pageName: 'trevozhnye-i-panicheskie-rasstroystva.html'
+            },
+            {
+                title: 'Детская и подростковая психотерапия',
+                pageName: 'detskaya-i-podrostkovaya-psihoterapiya.html'
             }
         ]
     ]
