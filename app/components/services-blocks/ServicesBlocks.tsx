@@ -9,7 +9,7 @@ export class ServicesBlocks extends React.Component<IServicesBlocksProps, null> 
         return(        
         <div className='container'>
             <Title value={this.props.title} />
-            {this.props.blocks.map((block) =><div> <Title value={block.title} subTitle={true} /><Services isBlock={false} services={[block.services.slice(0,4),block.services.slice(5)]}/></div>)}
+            {this.props.blocks.map((block) =><div> <Title value={block.title} subTitle={true} /><Services isBlock={false} services={[block.services.slice(0,4),block.services.slice(4)]}/></div>)}
         </div>
         )
     }
