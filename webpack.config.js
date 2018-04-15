@@ -4,7 +4,8 @@ module.exports = {
     entry: {
         clinic: "./app/clinic.tsx",
         heroes: "./app/heroes.tsx",
-        doctors: "./app/doctors.tsx"
+        doctors: "./app/doctors.tsx",
+        services: "./app/services.tsx"
     },
     output: {
         filename: "[name].js",
@@ -65,6 +66,12 @@ module.exports = {
                     },
                   },
                 ],
+              },
+              {
+                test: /\.(html)$/,
+                use: {
+                  loader: 'html-loader'
+                }
               }
         ]
     },

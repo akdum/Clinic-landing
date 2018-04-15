@@ -4,7 +4,7 @@ import { IServicesProps } from './IServicesProps';
 import { Title } from '../title/Title';
 
 import './services.module.scss';
-import { Service } from '../service/Service';
+import { ServiceItem } from '../service-item/ServiceItem';
 
 export class Services extends React.Component<IServicesProps, null> {
     render() {
@@ -14,7 +14,7 @@ export class Services extends React.Component<IServicesProps, null> {
             <div className="row">
                 {this.props.services.map((serviceColumn, index) => <div className="col-md-4 services__column" key={index}>
                     <ul>
-                        {serviceColumn.map((service) =><li key={service.title}><Service {...service} /></li>)}
+                        {serviceColumn.map((service) =><li key={service.title}><ServiceItem {...service} /></li>)}
                     </ul>
                 </div>)}
             </div>
