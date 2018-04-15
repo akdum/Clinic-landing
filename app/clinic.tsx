@@ -70,6 +70,10 @@ const servicesData = {
                 pageName: 'poststressovye-sostoyaniya.html'
             },
             {
+                title: 'Биполярные аффективные расстройства',
+                pageName: 'lechenie-bipolyarnyh-affektivnyh-rasstroystv.html'
+            },
+            {
                 title: 'Зависимое поведение',
                 pageName: 'zavisimoe-povedenie.html'
             }
