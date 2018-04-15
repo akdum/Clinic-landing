@@ -19,6 +19,7 @@ import { IDoctor } from './shared/interfaces/IDoctor';
 import { Doctors } from './components/doctors/Doctors';
 import { Services } from './components/services/Services';
 import {feedbackData} from './data/feedbacks';
+import {servicesData} from './data/services';
 
 interface IExtexndedDocument extends Document {
     carousel: any;
@@ -56,52 +57,13 @@ const FooterLinks: ILink[] = [
     }
 ]
 
-const servicesData = {
+const services = {
     title: 'Что мы лечим',
     isBlock: true,
     services: [
-        [
-            {
-                title: 'Депрессия',
-                pageName: 'depressiya.html'
-            },
-            {
-                title: 'Постстрессовые состояния',
-                pageName: 'poststressovye-sostoyaniya.html'
-            },
-            {
-                title: 'Биполярные аффективные расстройства',
-                pageName: 'lechenie-bipolyarnyh-affektivnyh-rasstroystv.html'
-            },
-            {
-                title: 'Зависимое поведение',
-                pageName: 'zavisimoe-povedenie.html'
-            }
-        ],
-        [
-            {
-                title: 'Нарушения пищевого поведения',
-                pageName: 'narusheniya-pishchevogo-povedeniya.html'
-            },
-            {
-                title: 'Невротические расстройства',
-                pageName: 'nevroticheskie-rasstroystva.html'
-            },
-            {
-                title: 'Пограничные личностные расстройства',
-                pageName: 'pogranichnye-lichnostnye-rasstroystva.html'
-            }
-        ],
-        [
-            {
-                title: 'Тревожные и панические расстройства',
-                pageName: 'trevozhnye-i-panicheskie-rasstroystva.html'
-            },
-            {
-                title: 'Детская и подростковая психотерапия',
-                pageName: 'detskaya-i-podrostkovaya-psihoterapiya.html'
-            }
-        ]
+        [servicesData[0], servicesData[1], servicesData[2], servicesData[3]],
+        [servicesData[4], servicesData[5], servicesData[6]],
+        [servicesData[7], servicesData[8]]
     ]
 }
 
@@ -162,7 +124,7 @@ if (document.querySelector("#who-we-are")) {
     ReactDOM.render(<AboutUsSmall pageName={aboutUsPageName}/>, document.getElementById('who-we-are'));
 }
 if (document.querySelector("#services")) {
-    ReactDOM.render(<Services {...servicesData} />, document.getElementById('services'));
+    ReactDOM.render(<Services {...services} />, document.getElementById('services'));
 }
 if (document.querySelector("#doctors")) {
     ReactDOM.render(<Doctors {...DoctorsMainPage} />, document.getElementById('doctors'));

@@ -8,7 +8,7 @@ import { IFooterProps } from './IFooterProps';
 export class Footer extends React.Component<IFooterProps,null> {
     render() {
         return (
-            <footer className="bg-primary color-white">
+            <footer className="color-white">
                 <div className="copyright">© 2017 Клиническая больница восстановительной медицины. Все права защищены.</div>
                 <div className="container-fluid">
                     <div className="row links">
