@@ -8,7 +8,7 @@ export class Title extends React.Component<ITitleProps, null> {
     render() {
         return (
             <div className="title-block">
-                <h1>{this.props.value}</h1>
+                {!this.props.subTitle ?<h1>{this.props.value}</h1> : <h2>{this.props.value}</h2>}
             </div>
         );
     }

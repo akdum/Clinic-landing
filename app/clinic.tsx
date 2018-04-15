@@ -20,6 +20,7 @@ import { Doctors } from './components/doctors/Doctors';
 import { Services } from './components/services/Services';
 import {feedbackData} from './data/feedbacks';
 import {servicesData} from './data/services';
+import { ServicesBlocks } from './components/services-blocks/ServicesBlocks';
 
 interface IExtexndedDocument extends Document {
     carousel: any;
@@ -61,9 +62,9 @@ const services = {
     title: 'Что мы лечим',
     isBlock: true,
     services: [
-        [servicesData[0], servicesData[1], servicesData[2], servicesData[3]],
-        [servicesData[4], servicesData[5], servicesData[6]],
-        [servicesData[7], servicesData[8]]
+        [servicesData[0].services[0], servicesData[0].services[1], servicesData[0].services[2], servicesData[0].services[3]],
+        [servicesData[0].services[4], servicesData[0].services[5], servicesData[0].services[6]],
+        [servicesData[0].services[7], servicesData[1].services[0]]
     ]
 }
 
@@ -107,6 +108,11 @@ const ContactsData: IContacts = {
     email: 'centr_psy@mail.ru'
 }
 
+const ServicesPage = {
+    title: 'Услуги',
+    blocks: servicesData
+}
+
 const aboutUsPageName = "about-us.html";
 
 const carouselData = document.carousel;
@@ -143,5 +149,8 @@ if (document.querySelector("#contacts")) {
 }
 if (document.querySelector("#apply-consultation-form")) {
     ReactDOM.render(<ApplyConsultationForm />, document.getElementById('apply-consultation-form'));
+}
+if (document.querySelector("#services-blocks")) {
+    ReactDOM.render(<ServicesBlocks {...ServicesPage} />, document.getElementById('services-blocks'));
 }
 ReactDOM.render(<PageFooter links={FooterLinks}/>, document.getElementById('footer'));

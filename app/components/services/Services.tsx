@@ -10,7 +10,7 @@ export class Services extends React.Component<IServicesProps, null> {
     render() {
         return(        
         <div className={'container' + (this.props.isBlock ? ' article-block' : '')}>
-            <Title value={this.props.title} />
+            {this.props.title && <Title value={this.props.title} />} 
             <div className="row">
                 {this.props.services.map((serviceColumn, index) => <div className="col-md-4 services__column" key={index}>
                     <ul>

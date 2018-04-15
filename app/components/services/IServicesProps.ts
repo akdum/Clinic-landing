@@ -1,7 +1,7 @@
 import { IService } from "../../shared/interfaces/IService";
 
 export interface IServicesProps {
-    title: string;
+    title?: string;
     isBlock: boolean;
     services: IService[][]
 }
