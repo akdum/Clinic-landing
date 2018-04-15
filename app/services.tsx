@@ -7,6 +7,7 @@ interface IServiceDocument extends Document {
     service: IService;
 }
 
+
 declare const document: IServiceDocument;
 const service: IService = document.service;
 

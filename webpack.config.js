@@ -68,10 +68,9 @@ module.exports = {
                 ],
               },
               {
-                test: /\.(html)$/,
-                use: {
-                  loader: 'html-loader'
-                }
+                test: /\.html$/,
+                exclude: /node_modules/,
+                loader: "html-loader?exportAsEs6Default"
               }
         ]
     },
