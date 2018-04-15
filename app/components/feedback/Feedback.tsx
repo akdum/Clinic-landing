@@ -13,7 +13,7 @@ export class Feedback extends React.Component<IFeedbackProps,null> {
                 </div>
                 <div className="feedback-text-author">
                     <div className="feedback-text">{this.props.feedback.text}</div>
-                    <div className="feedback-author">{this.props.feedback.author}</div>
+                    {this.props.feedback && <div className="feedback-author">{this.props.feedback.author}</div>}
                 </div>
             </div>
         )

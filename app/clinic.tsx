@@ -18,7 +18,7 @@ import { AboutUsSmall } from './components/about-us-small/AboutUsSmall';
 import { IDoctor } from './shared/interfaces/IDoctor';
 import { Doctors } from './components/doctors/Doctors';
 import { Services } from './components/services/Services';
-
+import {feedbackData} from './data/feedbacks';
 
 interface IExtexndedDocument extends Document {
     carousel: any;
@@ -136,24 +136,6 @@ const DoctorsPage = {
     doctorsRows: DoctorsData
 }
 
-const FeedbackData: IFeedback[] = [
-    {
-        title: "Все, как всегда, на высоком уровне.",
-        text: 'Все, как всегда, на высоком уровне. Большое спасибо доктору Ильину (неврология) за верный диагноз и назначение лечения.',
-        author: 'Инна, Москва'
-    },
-    {
-        title: "Прекрасный доктор Медведева Анастасия Владимировна",
-        text: 'Прекрасный доктор Медведева Анастасия Владимировна. Очень внимательна к пациенту, её интересует вся история возникновения проблемы, не упускает никаких мелочей, ей важно "докопаться" до истоков возникновения болей, чтобы правильно назначить всестороннее обследование и помочь пациенту с грамотными назначениями лечения. СПАСИБО!!!',
-        author: 'Anonym'
-    },
-    {
-        title: "СПАСИБО ДОКТОРУ НИКОЛАЮ ИЛЬИНУ!",
-        text: 'Врач Ильин, второй прием, было много жалоб, не упустил ни одной по итогам обследования, четкий план действий, очень внимательный! Спасибо!',
-        author: 'Елена, Москва'
-    }
-]
-
 const ContactsData: IContacts = {
     isContactsPage: true,
     coordinates: {lattitude: 56.86211253, longitude: 53.28120296},
@@ -189,7 +171,7 @@ if (document.querySelector("#doctors-all")) {
     ReactDOM.render(<Doctors {...DoctorsPage} />, document.getElementById('doctors-all'));
 }
 if (document.querySelector("#feedbacks")) {
-    ReactDOM.render(<Feedbacks feedbacks={FeedbackData} />, document.getElementById('feedbacks'));
+    ReactDOM.render(<Feedbacks feedbacks={feedbackData} />, document.getElementById('feedbacks'));
 }
 if (document.querySelector("#contacts-page")) {
     ReactDOM.render(<Contacts {... ContactsData} />, document.getElementById('contacts-page'));
