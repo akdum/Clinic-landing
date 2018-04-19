@@ -21,8 +21,10 @@ import { Services } from './components/services/Services';
 import {feedbackData} from './data/feedbacks';
 import {servicesData} from './data/services';
 import {doctorsData} from './data/doctors';
+import {magazinesData} from './data/magazines';
 import { ServicesBlocks } from './components/services-blocks/ServicesBlocks';
 import { Legal } from './components/legal/Legal';
+import { Magazine } from './components/magazine/Magazine';
 
 interface IExtexndedDocument extends Document {
     carousel: any;
@@ -145,5 +147,8 @@ if (document.querySelector("#services-blocks")) {
 }
 if (document.querySelector("#legal")) {
     ReactDOM.render(<Legal />, document.getElementById('legal'));
+}
+if (document.querySelector("#magazine")) {
+    ReactDOM.render(<Magazine magazines={magazinesData} />, document.getElementById('magazine'));
 }
 ReactDOM.render(<PageFooter links={FooterLinks}/>, document.getElementById('footer'));

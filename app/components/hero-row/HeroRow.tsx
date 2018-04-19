@@ -9,7 +9,7 @@ export class HeroRow extends React.Component<IHeroRow,null> {
         return (
             <div className="row">
                 <div className={"col-md-7 col-sm-12 " + this.props.imgOrder}>
-                    <img className="hero-element__img" src={"../img/heroes/" + this.props.imgName} />
+                    <img className="hero-element__img" src={"../../img/heroes/" + this.props.imgName} />
                 </div>
                 <div className={"col-md-5 col-sm-12 " + this.props.textOrder}>
                     <div className="hero-element__title">
