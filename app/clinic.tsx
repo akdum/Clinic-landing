@@ -22,6 +22,7 @@ import {feedbackData} from './data/feedbacks';
 import {servicesData} from './data/services';
 import {doctorsData} from './data/doctors';
 import {magazinesData} from './data/magazines';
+import {carouselData} from './data/carousel';
 import { ServicesBlocks } from './components/services-blocks/ServicesBlocks';
 import { Legal } from './components/legal/Legal';
 import { Magazine } from './components/magazine/Magazine';
@@ -107,13 +108,11 @@ const ServicesPage = {
 
 const aboutUsPageName = "about-us.html";
 
-const carouselData = document.carousel;
-
 ReactDOM.render(<PageHead />, document.getElementById('pageHead'));
 ReactDOM.render(<YandexMetrika />, document.getElementById('yandexMetrika'));
 ReactDOM.render(<Header links={HeaderLinks} />, document.getElementById('header'));
 if (document.querySelector("#carousel")) {
-    ReactDOM.render(<Carousel {...carouselData} />, document.getElementById('carousel'));
+    ReactDOM.render(<Carousel items={carouselData} />, document.getElementById('carousel'));
 }
 if (document.querySelector("#aboutUs")) {
     ReactDOM.render(<AboutUs />, document.getElementById('aboutUs'));
