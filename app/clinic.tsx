@@ -20,6 +20,7 @@ import { Doctors } from './components/doctors/Doctors';
 import { Services } from './components/services/Services';
 import {feedbackData} from './data/feedbacks';
 import {servicesData} from './data/services';
+import {doctorsData} from './data/doctors';
 import { ServicesBlocks } from './components/services-blocks/ServicesBlocks';
 import { Legal } from './components/legal/Legal';
 
@@ -70,21 +71,9 @@ const services = {
 }
 
 const DoctorsData: IDoctor[][] =[
-    [
-        { photoName: "reverchuk.jpg", title: { surname: "Реверчук", name: "Игорь Васильевич", spec: "заведующий кафедрой, главный врач, профессор" }, fileName: "reverchuk.html"},
-        { photoName: "rumyanceva.jpg", title: { surname: "Румянцева", name: "Наталья Анатольевна", spec: "врач-психотерапевт" }, fileName: "rumyanceva.html"},
-        { photoName: "pomyitkina.jpg", title: { surname: "Помыткина", name: "Татьяна Юрьевна", spec: "психолог, семейный психолог, специалист по профоринтации, кандидат психологических наук" }, fileName: "pomyitkina.html" },
-        { photoName: "shutov.jpg", title: { surname: "Шутов", name: "Игорь Леонидович", spec: "Врач ЛФК и спортивной медицины" }, fileName: "shutov.html" }
-    ],
-    [
-        { photoName: "perevozchikov.jpg", title: { surname: "Перевозчиков", name: "Александр Павлович", spec: "врач-психотерапевт, специалист по БОС-ЭЭГ" }, fileName: "perevozchikov.html" },
-        { photoName: "zagrtdinova-rizida.jpg", title: { surname: "Загртдинова", name: "Ризида Миннесагитовна", spec: "врач-дерматовенеролог-дерматолог-косметолог, заведующая кафедрой, профессор" }, fileName: "zagrtdinova-rizida.html" },
-        { photoName: "pakriev.jpg", title: { surname: "Пакриев", name: "Сергей Галлинурович", spec: "врач-психиатр, доктор медицинских наук" }, fileName: "pakriev.html" },
-        { photoName: "lyalin.jpg", title: { surname: "Лялин", name: "Андрей Николаевич", spec: "врач-психотерапевт" }, fileName: "lyalin.html" }
-    ],
-    [
-        { photoName: "tutrumova.jpg", title: { surname: "Тютрюмова", name: "Елена Александровна", spec: "психолог-дефектолог, олигофренопедагог, детский психолог" }, fileName: "tutrumova.html" }
-    ]
+    [doctorsData[0],doctorsData[1],doctorsData[2],doctorsData[3]],
+    [doctorsData[4],doctorsData[5],doctorsData[6],doctorsData[7]],
+    [doctorsData[8]]
 ]
 
 const DoctorsMainPage = {

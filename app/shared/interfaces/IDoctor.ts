@@ -10,7 +10,7 @@ export interface IDoctor {
         name: string;
         spec: string;
     };
-    fileName: string;
+    pageName: string;
     numbers?: DoctorNumber[];
     education?: string;
 }
