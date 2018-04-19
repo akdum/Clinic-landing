@@ -1,5 +1,10 @@
+import * as React from "react";
+import * as ReactDOM from 'react-dom';
+
+import { Title } from '../title/Title';
+
+const text = `
 <div class="content">
-    <h1>Политика в отношении обработки персональных данных</h1>
     <p>
         <strong>Дата вступления Политики в отношении обработки персональных данных в силу:</strong>15 апреля 2013 года
     </p>
@@ -173,3 +178,15 @@
         Политику коррективы, которые будут отражать технологические достижения, изменения в законах, постановлениях и надлежащей
         деловой практике.</p>
 </div>
+`
+
+export class Legal extends React.Component<null,null> {
+    render() {
+        return (
+            <div className="container">
+                <Title value={'ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ'} />
+                <div className="legal__value" dangerouslySetInnerHTML={{__html: text}} ></div>
+            </div>
+        )
+    }
+}
