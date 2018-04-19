@@ -14,6 +14,14 @@ export const carouselData: ICarouselItem[] = [
     },
     {
         isActive: true,
+        isLeftAlign: true,
+        pageName: "shutov_adv.html",
+        heading: "Готовимся к лету",
+        text: `Приём врача по лечебной физической культуре - всего 299р (консультация+ осмотр)!`,
+        imgName: "physiotherapy.jpg"
+    },
+    {
+        isActive: true,
         isLeftAlign: false,
         pageName: "children.html",
         heading: "Дети - цветы жизни!",
