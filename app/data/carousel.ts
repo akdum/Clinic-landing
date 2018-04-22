@@ -12,6 +12,15 @@ export const carouselData: ICarouselItem[] = [
         <div>Парафинотерапия 200 руб</div>`,
         imgName: "child-massage.jpg"
     },
+    {        
+        isActive: true,
+        isLeftAlign: true,
+        pageName: "massage_spine.html",
+        heading: "Избавьтесь от болей в позвоночнике за 3 дня",
+        text: `<p>Пройдя комплексный курс лечения без операций<p><p>Только сегодня для <strong>первых 10 пациентов скидка 20%</strong> на курс по мануальной терапии при единовременной оплате 10 сеансов!</p>`,
+        imgName: "massage_spine.jpg"
+
+    },
     {
         isActive: true,
         isLeftAlign: true,
