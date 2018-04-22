@@ -1,0 +1,20 @@
+@import '~../../shared/styles/global.scss';
+
+footer {
+    background-color: $color-primary;
+    position: relative;
+    .copyright {
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+    .links {
+        padding: 0.5rem 0 0.5rem 0;
+        font-size: 0.9rem;
+        a {
+            color: #fff;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+}

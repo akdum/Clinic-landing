@@ -1,0 +1,25 @@
+@import '~../../shared/styles/global.scss';
+
+.contacts-page {
+    .contacts-address {
+        div > span {
+            font-size: 1.4rem;
+            padding-right: 2rem;        
+        }
+    }
+    .contacts-pnones {
+        div > span {
+            font-size: 1.4rem;
+            padding-right: 2rem;        
+        }
+    }
+    .contacts-email {
+        font-size: 1.4rem;
+    }
+    .contacts-work-hours {
+        margin-bottom: 1rem;
+        div > div {
+            font-size: 1.4rem;
+        }
+    }
+}

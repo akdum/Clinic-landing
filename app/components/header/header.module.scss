@@ -1,0 +1,70 @@
+@import '~../../shared/styles/global.scss';
+
+.navbar {
+    margin: 0.5rem 0 1rem 0;
+    .navbar-brand {
+        .clinic-logo {
+            margin-right: 1rem;
+            height: 4.7rem;
+            width: 4.7rem;
+            background: url('academy_logo.jpg') no-repeat;
+            background-size: cover;
+        }
+        .clinic-logo-title {
+            white-space: normal;
+            width: 250px;
+            .clinic-title {
+                font-family: 'Exo 2', sans-serif;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1rem;
+                text-transform: uppercase;
+            }
+            .clinic-academy {
+                font-size: 0.7rem;
+                font-weight: 300;
+                font-family: 'Roboto', sans-serif;
+                margin-top: 0.25rem;
+                line-height: 0.7rem;
+            }
+        }
+    }
+    .navbar-nav {
+        width: 100%;
+        .nav-item.nav-link {
+            text-transform: uppercase;
+            color: $color-primary;
+            white-space: nowrap;
+        }
+    }
+}
+
+.navbar.fixed-navbar-correction {
+    margin: 0;
+    background-color: $color-primary;
+    .navbar-brand {
+        .clinic-logo {
+            display: none;
+        }
+        .clinic-logo-title {
+            white-space: normal;
+            width: 250px;
+            color: $color-white;
+            .clinic-title {
+                font-size: 0.7rem;
+                line-height: 0.7rem;
+            }
+            .clinic-academy {
+                font-size: 0.7rem;
+                font-weight: 300;
+                margin-top: 0.3rem;
+                line-height: 0.7rem;
+            }
+        }
+    } 
+    .navbar-nav {
+        .nav-item.nav-link {
+            color: $color-white;
+        }
+    }
+}

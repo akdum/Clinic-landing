@@ -1,0 +1,12 @@
+@import '~../../shared/styles/global.scss';
+.services__column {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            margin-bottom: 1rem;
+        }
+    }
+}

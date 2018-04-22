@@ -1,0 +1,25 @@
+@import '~../../shared/styles/global.scss';
+.magazine {
+    ul {
+        list-style: none;
+        padding: 0;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        li {
+            margin-bottom: 1rem;
+            a,
+            a:visited,
+            a:hover,
+            a:any-link,
+            a:active {
+                text-decoration: underline;
+                color: $color-light;
+            }
+        }
+    }
+    .magazine__image {
+        img {
+            width: 100%;
+        }
+    }
+}

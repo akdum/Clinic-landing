@@ -1,0 +1,11 @@
+@import '~../../shared/styles/global.scss';
+.service-item {
+    a,
+    a:visited,
+    a:hover,
+    a:any-link,
+    a:active {
+        text-decoration: underline;
+        color: $color-light;
+    }
+}

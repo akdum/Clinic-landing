@@ -1,0 +1,48 @@
+{
+  "name": "clinic-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "entry.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akdum/Clinic-landing.git"
+  },
+  "author": "Ivan Steblenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akdum/Clinic-landing/issues"
+  },
+  "homepage": "https://github.com/akdum/Clinic-landing#readme",
+  "dependencies": {
+    "@types/react": "^16.0.34",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-helmet": "^5.0.3",
+    "@types/yandex-maps": "^2.1.2",
+    "css-loader": "^0.28.9",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-ym": "0.0.7",
+    "style-loader": "^0.19.1"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.4.1",
+    "file-loader": "^1.1.6",
+    "html-loader": "^0.5.5",
+    "image-webpack-loader": "^4.0.0",
+    "node-sass": "^4.7.2",
+    "resolve-url-loader": "^2.2.1",
+    "sass-loader": "^6.0.6",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.6.2",
+    "typings-for-css-modules-loader": "^1.7.0",
+    "web-request": "^1.0.7",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
