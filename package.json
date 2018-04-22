@@ -28,7 +28,6 @@
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
     "react-ym": "0.0.7",
-    "sendgrid": "^5.2.3",
     "style-loader": "^0.19.1"
   },
   "devDependencies": {
