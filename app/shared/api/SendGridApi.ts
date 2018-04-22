@@ -14,7 +14,7 @@ export class SendGridApi {
                                                                                   process.env.SEND_GRID_FROM)}`;
     }
     static async SendMail(data: IMailBody) {
-        const text = `Имя:_${data.name};_Телефон:_${data.phone};_Почта:_${data.email}`;
+        const text = `Имя: ${data.name}, телефон: ${data.phone}, почта: ${data.email}`;
         WebRequest.get(this.GetUrl(text));        
     }
 } 
