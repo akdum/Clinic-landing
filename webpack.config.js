@@ -85,7 +85,7 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             'process.env.SEND_GRID_USER_ID': JSON.stringify('azure_28c8b4958877157d03398c3df23b5a86@azure.com'),
-            'process.env.SEND_GRID_API_KEY': JSON.stringify('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'),
+            'process.env.SEND_GRID_API_KEY': JSON.stringify('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'),
             'process.env.SEND_GRID_TO': JSON.stringify('ivansteblenko@hotmail.com'),
             'process.env.SEND_GRID_SUBJECT': JSON.stringify('Регистрация на консультацию'),
             'process.env.SEND_GRID_FROM': JSON.stringify('clinic@domain.com'),

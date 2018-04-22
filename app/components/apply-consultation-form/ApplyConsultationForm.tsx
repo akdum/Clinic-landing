@@ -29,8 +29,8 @@ export class ApplyConsultationForm extends React.Component<null,IApplyConsultati
     }
 
     async handleSubmit(event: any) {
-        await SendGridApi.SendMail(this.state);
         event.preventDefault();
+        await SendGridApi.SendMail(this.state);        
     }
 
     render() {
