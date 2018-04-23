@@ -1,6 +1,14 @@
 import { ICarouselItem } from "../shared/interfaces/ICarouselItem";
 
 export const carouselData: ICarouselItem[] = [
+    {        
+        isActive: true,
+        isLeftAlign: true,
+        pageName: "massage_spine.html",
+        heading: "Избавьтесь от болей в позвоночнике за 3 дня",
+        text: `<p>Пройдя комплексный курс лечения без операций<p><p>Только сегодня для <strong>первых 10 пациентов скидка 20%</strong> на курс по мануальной терапии при единовременной оплате 10 сеансов!</p>`,
+        imgName: "massage_spine.jpg"
+    },
     {
         isActive: true,
         isLeftAlign: false,
@@ -11,15 +19,6 @@ export const carouselData: ICarouselItem[] = [
         <div>Общий медицинский массаж 10 сеансов 3650 руб</div>
         <div>Парафинотерапия 200 руб</div>`,
         imgName: "child-massage.jpg"
-    },
-    {        
-        isActive: true,
-        isLeftAlign: true,
-        pageName: "massage_spine.html",
-        heading: "Избавьтесь от болей в позвоночнике за 3 дня",
-        text: `<p>Пройдя комплексный курс лечения без операций<p><p>Только сегодня для <strong>первых 10 пациентов скидка 20%</strong> на курс по мануальной терапии при единовременной оплате 10 сеансов!</p>`,
-        imgName: "massage_spine.jpg"
-
     },
     {
         isActive: true,
