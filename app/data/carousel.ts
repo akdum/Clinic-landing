@@ -19,6 +19,15 @@ export const carouselData: ICarouselItem[] = [
         <div>Общий медицинский массаж 10 сеансов 3650 руб</div>
         <div>Парафинотерапия 200 руб</div>`,
         imgName: "child-massage.jpg"
+    },    
+    {
+        isActive: true,
+        isLeftAlign: true,
+        pageName: "massage_spine_2.html",
+        heading: "Классический массаж",
+        text: `<h2>Акция!</h2>
+        <div>Весь май скидка 20% на комплекс 10 сеансов!</div>`,
+        imgName: "massage_spine_2.jpg"
     },
     {
         isActive: true,
