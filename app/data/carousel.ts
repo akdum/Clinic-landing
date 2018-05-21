@@ -31,6 +31,14 @@ export const carouselData: ICarouselItem[] = [
     },
     {
         isActive: true,
+        isLeftAlign: false,
+        pageName: "school.html",
+        heading: "Скоро школа!",
+        text: `А на сколько Ваш ребёнок ДЕЙСТВИТЕЛЬНО готов к школе?`,
+        imgName: "school.jpg"
+    },
+    {
+        isActive: true,
         isLeftAlign: true,
         pageName: "shutov_adv.html",
         heading: "Готовимся к лету",
