@@ -1,6 +1,14 @@
 import { ICarouselItem } from "../shared/interfaces/ICarouselItem";
 
 export const carouselData: ICarouselItem[] = [
+    {
+        isActive: true,
+        isLeftAlign: false,
+        pageName: "school.html",
+        heading: "Скоро школа!",
+        text: `А на сколько Ваш ребёнок ДЕЙСТВИТЕЛЬНО готов к школе?`,
+        imgName: "school.jpg"
+    },
     {        
         isActive: true,
         isLeftAlign: true,
@@ -28,14 +36,6 @@ export const carouselData: ICarouselItem[] = [
         text: `<h2>Акция!</h2>
         <div>Весь май скидка 20% на комплекс 10 сеансов!</div>`,
         imgName: "massage_spine_2.jpg"
-    },
-    {
-        isActive: true,
-        isLeftAlign: false,
-        pageName: "school.html",
-        heading: "Скоро школа!",
-        text: `А на сколько Ваш ребёнок ДЕЙСТВИТЕЛЬНО готов к школе?`,
-        imgName: "school.jpg"
     },
     {
         isActive: true,
