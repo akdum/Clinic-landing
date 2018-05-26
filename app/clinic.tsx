@@ -76,7 +76,7 @@ const services = {
 const DoctorsData: IDoctor[][] =[
     [doctorsData[0],doctorsData[1],doctorsData[2],doctorsData[3]],
     [doctorsData[4],doctorsData[5],doctorsData[6],doctorsData[7]],
-    [doctorsData[8], doctorsData[9]]
+    [doctorsData[8]]
 ]
 
 const DoctorsMainPage = {
