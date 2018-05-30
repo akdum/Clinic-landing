@@ -63,7 +63,7 @@ export class AboutUs extends React.Component<null, null> {
                     </div>
                     <div className="price">
                         <h2>Стоимость услуг</h2>
-                        <iframe src="https://drive.google.com/file/d/0B5-Aar8wusiubzhXaTFOTER6VEk/preview" width="100%" height="500"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1z8JO7JCMi0UE-8XZEKPEgCCgXtNPdbhL/preview" width="100%" height="500"></iframe>
                     </div>
                 </div>
             </div>
