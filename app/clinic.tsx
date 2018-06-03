@@ -26,6 +26,7 @@ import {carouselData} from './data/carousel';
 import { ServicesBlocks } from './components/services-blocks/ServicesBlocks';
 import { Legal } from './components/legal/Legal';
 import { Magazine } from './components/magazine/Magazine';
+import { Prices } from './components/prices/Prices';
 
 interface IExtexndedDocument extends Document {
     carousel: any;
@@ -35,8 +36,8 @@ declare const document: IExtexndedDocument;
 
 const HeaderLinks: ILink[] = [
     {
-        title: "О клинике",
-        address: window.location.origin + '/pages/about-us.html'
+        title: "Цены",
+        address: window.location.origin + '/pages/prices.html'
     },
     {
         title: "Врачи",
@@ -149,5 +150,8 @@ if (document.querySelector("#legal")) {
 }
 if (document.querySelector("#magazine")) {
     ReactDOM.render(<Magazine magazines={magazinesData} />, document.getElementById('magazine'));
+}
+if (document.querySelector("#prices")) {
+    ReactDOM.render(<Prices />, document.getElementById('prices'));
 }
 ReactDOM.render(<PageFooter links={FooterLinks}/>, document.getElementById('footer'));
