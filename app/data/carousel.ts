@@ -13,6 +13,14 @@ export const carouselData: ICarouselItem[] = [
         isActive: true,
         isLeftAlign: true,
         pageName: "massage_spine.html",
+        heading: "Как избавиться от болей в спине?",
+        text: `<h4>4, 5 и 6 июня</h4><h4>Диагностический приём мануального терапевта</h4><h4>Рекомендации для каждого конкретного случая</h4><p>Предварительная запись <strong>ОБЯЗАТЕЛЬНА</strong></p>`,
+        imgName: "massage_spine_3.jpg"
+    },
+    {        
+        isActive: true,
+        isLeftAlign: true,
+        pageName: "massage_spine.html",
         heading: "Избавьтесь от болей в позвоночнике за 3 дня",
         text: `<p>Пройдя комплексный курс лечения без операций<p><p>Только сегодня для <strong>первых 10 пациентов скидка 20%</strong> на курс по мануальной терапии при единовременной оплате 10 сеансов!</p>`,
         imgName: "massage_spine.jpg"
